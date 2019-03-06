@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0B02EC54-CF50-4104-95CC-822AE295BEB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Time</RootNamespace>
+    <AssemblyName>Time</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ic_timer_128_28821.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.38.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.38.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.38.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Calendar.v3, Version=1.38.0.1482, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Calendar.v3.1.38.0.1482\lib\net45\Google.Apis.Calendar.v3.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.38.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.38.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.38.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.5.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.5\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=2.3.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.2.3.0\lib\net45\MahApps.Metro.IconPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks.Material, Version=2.3.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.Material.2.3.0\lib\net45\MahApps.Metro.IconPacks.Material.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesign, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesign.dll.1.0.0\lib\MaterialDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignXaml.DialogsHelper.1.0.0\lib\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.1.1101, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignXaml.DialogsHelper.1.0.0\lib\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignXaml.DialogsHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignXaml.DialogsHelper.1.0.0\lib\MaterialDesignXaml.DialogsHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="NDde, Version=2.1.563.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NDde.2.01.0563\lib\NDde.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.109.2\lib\net451\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.109.0\lib\net451\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.109.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.109.0\lib\net451\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebDriver, Version=3.141.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Selenium.WebDriver.3.141.0\lib\net45\WebDriver.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.AvalonDock, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Samples.SampleData">
+      <HintPath>.\Xceed.Wpf.Samples.SampleData.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3e4669d2f30244f4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Extended.Wpf.Toolkit.3.5.0\lib\net40\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Code\AlertType.cs" />
+    <Compile Include="Code\GoogleAPI.cs" />
+    <Compile Include="Code\MusicPath.cs" />
+    <Compile Include="Code\site\Convert_Key.cs" />
+    <Compile Include="Code\hook\HookMouse.cs" />
+    <Compile Include="Code\PrintStatistic.cs" />
+    <Compile Include="Code\site\SiteBloc.cs" />
+    <Compile Include="Code\site\Site_opening.cs" />
+    <Compile Include="Code\site\Search_ID.cs" />
+    <Compile Include="Code\hook\WinEventDelegate.cs" />
+    <Compile Include="Code\hook\globalKeyboardHook.cs" />
+    <Compile Include="Code\Test_Element.cs" />
+    <Compile Include="Code\TopWindow.cs" />
+    <Compile Include="Interface\HootKeys.cs" />
+    <Compile Include="Interface\IBig_c.cs" />
+    <Compile Include="Interface\IGreanSite_edit_add_delete.cs" />
+    <Compile Include="Interface\IGrean_add.cs" />
+    <Compile Include="Interface\Index_cell.cs" />
+    <Compile Include="Interface\IRedSite_delete.cs" />
+    <Compile Include="Interface\IRed_site_add_or_edit.cs" />
+    <Compile Include="Interface\ISet_Language.cs" />
+    <Compile Include="Interface\ISound_edit_add_delete.cs" />
+    <Compile Include="Interface\Is_enter_hootkey.cs" />
+    <Compile Include="Interface\Modifine_string.cs" />
+    <Compile Include="Interface\Send_title_window.cs" />
+    <Compile Include="Interface\IStatistic_site_edit_add_delete.cs" />
+    <Compile Include="Interface\Update_Select_Dates.cs" />
+    <Compile Include="ModelSQLite\ApplicationContext.cs" />
+    <Compile Include="ModelSQLite\BigBreakModel.cs" />
+    <Compile Include="ModelSQLite\GreanSite.cs" />
+    <Compile Include="ModelSQLite\OneTimeBreakModel.cs" />
+    <Compile Include="ModelSQLite\RedSite.cs" />
+    <Compile Include="ModelSQLite\ShortBreakModel.cs" />
+    <Compile Include="ModelSQLite\Sound.cs" />
+    <Compile Include="ModelSQLite\StatisticSite.cs" />
+    <Compile Include="Model\NowDate.cs" />
+    <Compile Include="Observer1\ConcreteObserver.cs" />
+    <Compile Include="Observer1\My_grean_site.cs" />
+    <Compile Include="Observer1\Observer.cs" />
+    <Compile Include="Observer1\Subject.cs" />
+    <Compile Include="View\Add_event.xaml.cs">
+      <DependentUpon>Add_event.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Alert.xaml.cs">
+      <DependentUpon>Alert.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View_model\Add_Event_View_Model.cs" />
+    <Compile Include="View_model\Alert_View_Model.cs" />
+    <Compile Include="View_model\Index_View_Model.cs" />
+    <Compile Include="View_model\View_Model_Base.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Code\System\BindingErrorTraceListener.cs" />
+    <Compile Include="Code\System\PasswordBoxAssistant.cs" />
+    <Compile Include="Command\DelegateCommand.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MyControls\ImageButtonUC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\lang.ru-RU.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\lang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Add_event.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Alert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MyControls\ImageButtonUC.xaml.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="bin\Debug\Time.exe.config" />
+    <None Include="bin\Release\System.Data.SQLite.dll.config" />
+    <None Include="bin\Release\time.db" />
+    <None Include="bin\Release\Time.exe.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Content\mdl-v1.1.2\bower.json" />
+    <None Include="Content\mdl-v1.1.2\LICENSE" />
+    <None Include="Content\mdl-v1.1.2\material.min.css.map" />
+    <None Include="Content\mdl-v1.1.2\material.min.js.map" />
+    <None Include="Content\mdl-v1.1.2\package.json" />
+    <None Include="credentials.json" />
+    <None Include="time.db">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-2.1.1.min.map" />
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Time.exe" />
+    <Content Include="bin\Debug\Time.pdb" />
+    <Content Include="bin\Release\ControlzEx.dll" />
+    <Content Include="bin\Release\ControlzEx.pdb" />
+    <Content Include="bin\Release\de\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\EntityFramework.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.dll" />
+    <Resource Include="bin\Release\EntityFramework.SqlServer.xml" />
+    <Resource Include="bin\Release\EntityFramework.xml" />
+    <Content Include="bin\Release\es\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\fr\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\Google.Apis.Auth.dll" />
+    <Content Include="bin\Release\Google.Apis.Auth.pdb" />
+    <Content Include="bin\Release\Google.Apis.Auth.PlatformServices.dll" />
+    <Resource Include="bin\Release\Google.Apis.Auth.xml" />
+    <Content Include="bin\Release\Google.Apis.Calendar.v3.dll" />
+    <Content Include="bin\Release\Google.Apis.Calendar.v3.pdb" />
+    <Resource Include="bin\Release\Google.Apis.Calendar.v3.xml" />
+    <Content Include="bin\Release\Google.Apis.Core.dll" />
+    <Content Include="bin\Release\Google.Apis.Core.pdb" />
+    <Resource Include="bin\Release\Google.Apis.Core.xml" />
+    <Content Include="bin\Release\Google.Apis.dll" />
+    <Content Include="bin\Release\Google.Apis.pdb" />
+    <Content Include="bin\Release\Google.Apis.PlatformServices.dll" />
+    <Resource Include="bin\Release\Google.Apis.xml" />
+    <Content Include="bin\Release\hu\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\it\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\MahApps.Metro.dll" />
+    <Content Include="bin\Release\MahApps.Metro.IconPacks.dll" />
+    <Content Include="bin\Release\MahApps.Metro.IconPacks.Material.dll" />
+    <Content Include="bin\Release\MahApps.Metro.IconPacks.Material.pdb" />
+    <Resource Include="bin\Release\MahApps.Metro.IconPacks.Material.xml" />
+    <Content Include="bin\Release\MahApps.Metro.IconPacks.pdb" />
+    <Resource Include="bin\Release\MahApps.Metro.IconPacks.xml" />
+    <Content Include="bin\Release\MahApps.Metro.pdb" />
+    <Resource Include="bin\Release\MahApps.Metro.xml" />
+    <Content Include="bin\Release\MaterialDesign.dll" />
+    <Content Include="bin\Release\MaterialDesignColors.dll" />
+    <Content Include="bin\Release\MaterialDesignColors.pdb" />
+    <Content Include="bin\Release\MaterialDesignThemes.Wpf.dll" />
+    <Content Include="bin\Release\MaterialDesignThemes.Wpf.pdb" />
+    <Resource Include="bin\Release\MaterialDesignThemes.Wpf.xml" />
+    <Content Include="bin\Release\MaterialDesignXaml.DialogsHelper.dll" />
+    <Content Include="bin\Release\MaterialDesignXaml.DialogsHelper.pdb" />
+    <Content Include="bin\Release\MaterialSkin.dll" />
+    <Content Include="bin\Release\MetroFramework.Design.dll" />
+    <Content Include="bin\Release\MetroFramework.dll" />
+    <Content Include="bin\Release\MetroFramework.Fonts.dll" />
+    <Content Include="bin\Release\NDde.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Resource Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\pt-BR\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\ro\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\ru\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\sv\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="bin\Release\System.Data.SQLite.dll" />
+    <Content Include="bin\Release\System.Data.SQLite.EF6.dll" />
+    <Content Include="bin\Release\System.Data.SQLite.Linq.dll" />
+    <Resource Include="bin\Release\System.Data.SQLite.xml" />
+    <Content Include="bin\Release\System.Windows.Interactivity.dll" />
+    <Content Include="bin\Release\Time.exe" />
+    <Content Include="bin\Release\Time.pdb" />
+    <Content Include="bin\Release\WebDriver.dll" />
+    <Resource Include="bin\Release\WebDriver.xml" />
+    <Content Include="bin\Release\x64\SQLite.Interop.dll" />
+    <Content Include="bin\Release\x86\SQLite.Interop.dll" />
+    <Content Include="bin\Release\Xceed.Wpf.AvalonDock.dll" />
+    <Content Include="bin\Release\Xceed.Wpf.AvalonDock.Themes.Aero.dll" />
+    <Content Include="bin\Release\Xceed.Wpf.AvalonDock.Themes.Metro.dll" />
+    <Content Include="bin\Release\Xceed.Wpf.AvalonDock.Themes.VS2010.dll" />
+    <Content Include="bin\Release\Xceed.Wpf.Toolkit.dll" />
+    <Content Include="bin\Release\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll" />
+    <Content Include="Content\mdl-v1.1.2\material.css" />
+    <Content Include="Content\mdl-v1.1.2\material.js" />
+    <Content Include="Content\mdl-v1.1.2\material.min.css" />
+    <Content Include="Content\mdl-v1.1.2\material.min.js" />
+    <Resource Include="selftimer_23693.ico" />
+    <Resource Include="NDde.xml" />
+    <Resource Include="ic_timer_128_28821.ico" />
+    <Content Include="Scripts\jquery-2.1.1.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.1.js" />
+    <Content Include="Scripts\jquery-2.1.1.min.js" />
+    <Content Include="Scripts\nugetexample.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SHDocVw">
+      <Guid>{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.109.2\build\net451\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,28 @@
+﻿<Window x:Class="Time.View.Add_event"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Time.View"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        Title="Add_event" Height="450" Width="288.287">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Controls:ToggleSwitch  FontSize="16" IsChecked="{Binding All_day,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Header="{DynamicResource Events_Add_all_day}"  VerticalAlignment="Center" />
+        <Controls:DateTimePicker SelectedDate="{Binding Start_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.Row="1" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_start}"/>
+        <Controls:DateTimePicker SelectedDate="{Binding End_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"  Grid.Row="2" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_end}"/>
+        <TextBox VerticalAlignment="Center" Text="{Binding Summary, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Summary}"/>
+        <TextBox VerticalAlignment="Center" Text="{Binding Location, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Location}"/>
+        <TextBox VerticalAlignment="Center" Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Description}"/>
+        <Button VerticalAlignment="Center" Command="{Binding Button_click_create}" Grid.Row="6" Content="{DynamicResource Events_Add_Create}"/>
+    </Grid>
+</Window>

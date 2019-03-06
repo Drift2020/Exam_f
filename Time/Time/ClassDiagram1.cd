@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Time.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAgCAAAAIAAAAggAAAAQAAAIAAAAAAgAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Time.ApplicationContext" Collapsed="true">
+    <Position X="32.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAgAAAgAAAAAAAAAAAAAAQAAADAAAAEAAAAA=</HashCode>
+      <FileName>ModelSQLite\ApplicationContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.GreanSite" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAACQAACAsAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSQLite\GreanSite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.RedSite" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAQAACAMAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSQLite\RedSite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.StatisticSite" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQDAAAEAAAAAAAAAAAAAAQAACAMAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>ModelSQLite\StatisticSite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.globalKeyboardHook" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAABAgAAIQAgAAAASkBDAAACQAAAAAFCCAkQgAgACA=</HashCode>
+      <FileName>Code\hook\globalKeyboardHook.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Time.Code.MouseHook" Collapsed="true">
+    <Position X="25.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIEAAiAAACAAAkAAAQABEAAAAAAAEBIACQAwAJCEIAE=</HashCode>
+      <FileName>Code\hook\HookMouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.API" Collapsed="true">
+    <Position X="29" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAFAAADAAAAAAAAAAAAAEAAAAgAAA=</HashCode>
+      <FileName>Code\hook\HookMouse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.My_form" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACBAAAAAAAAAAAAQAAAEAESAAIAABAAAAI=</HashCode>
+      <FileName>Code\hook\WinEventDelegate.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Time.Code.Convert_Key" Collapsed="true">
+    <Position X="27.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAgAAAAAgAACAAAAAAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Code\site\Convert_Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.Site_opening" Collapsed="true">
+    <Position X="25.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Code\site\Site_opening.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.SiteBloc" Collapsed="true">
+    <Position X="27.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Code\site\SiteBloc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.BindingErrorTraceListener" Collapsed="true">
+    <Position X="25.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Code\System\BindingErrorTraceListener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.PasswordBoxAssistant" Collapsed="true">
+    <Position X="30.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBABAAAAAAAAAAEAAAAAAACoABAgAAAAAAAAAICAAAg=</HashCode>
+      <FileName>Code\System\PasswordBoxAssistant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.AlertType" Collapsed="true">
+    <Position X="27.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Code\AlertType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.MusicPath" Collapsed="true">
+    <Position X="27.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABCAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAA=</HashCode>
+      <FileName>Code\MusicPath.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.StoreDataSetPaginator" Collapsed="true">
+    <Position X="29" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAQAASAEAAAABAASAQAAAAAAQAEAAAADA=</HashCode>
+      <FileName>Code\PrintStatistic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.Test_Element" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Code\Test_Element.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Code.TopWindow" Collapsed="true">
+    <Position X="30.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAQAAAAAAAAAAAAAAAAAARgAAg=</HashCode>
+      <FileName>Code\TopWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApplication1.Search_ID" Collapsed="true">
+    <Position X="32.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAYBAAAAAAAgAAAAAAACgCAAAAAAAAAgAAA=</HashCode>
+      <FileName>Code\site\Search_ID.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.Command.DelegateCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Command\DelegateCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Time.Model.NowDate" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Model\NowDate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.ModelSQLite.BigBreakModel" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAjAQAQAQAAEBAAAgAAAAAAAAAAABAJAAAACAAAIAA=</HashCode>
+      <FileName>ModelSQLite\BigBreakModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.ModelSQLite.OneTimeBreakModel" Collapsed="true">
+    <Position X="18.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AiACBAAgAAAAMAAAACAAAAAgABAAAAAACAAAAIIAAAA=</HashCode>
+      <FileName>ModelSQLite\OneTimeBreakModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.ModelSQLite.ShortBreakModel" Collapsed="true">
+    <Position X="20.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEKAAADiAAAAAAAACEAAAAhAAEAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSQLite\ShortBreakModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.ModelSQLite.Sound" Collapsed="true">
+    <Position X="23" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAIAAAACAAQAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSQLite\Sound.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WpfApp.ImageButtonUC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAABAAAAAABABAAEAAACAAAIgA=</HashCode>
+      <FileName>MyControls\ImageButtonUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Time.View.Alert" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="25.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAGBRBAgECQAAAAABAAAgAEAAAAJhgAAAAAAAAIIAAA=</HashCode>
+      <FileName>View\Alert.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Time.View_model.Alert_View_Model" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IHgAAAARAAABQQwiAJCOAIAAAgARAAIlACAAAIAkAAA=</HashCode>
+      <FileName>View_model\Alert_View_Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.View_model.Index_View_Model" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lIxT4AkGBUJecwCAI4ZUgKACV2ioODFXI9GwtSXNXGw=</HashCode>
+      <FileName>View_model\Index_View_Model.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Time.View_model.View_Model_Base" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View_model\View_Model_Base.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Time.HootKeys" Collapsed="true">
+    <Position X="25.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\HootKeys.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Index_cell" Collapsed="true">
+    <Position X="32.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Index_cell.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Is_enter_hootkey" Collapsed="true">
+    <Position X="29" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Is_enter_hootkey.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Modifine_string" Collapsed="true">
+    <Position X="29" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Modifine_string.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.IBig_c" Collapsed="true">
+    <Position X="27.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IBig_c.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.IGrean_add" Collapsed="true">
+    <Position X="29" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IGrean_add.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.IGreanSite_edit_add_delete" Collapsed="true">
+    <Position X="30.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IGreanSite_edit_add_delete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.IRed_site_add_or_edit" Collapsed="true">
+    <Position X="25.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IRed_site_add_or_edit.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.IRedSite_delete" Collapsed="true">
+    <Position X="27.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IRedSite_delete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.ISet_Language" Collapsed="true">
+    <Position X="30.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ISet_Language.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.ISound_edit_add_delete" Collapsed="true">
+    <Position X="32.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ISound_edit_add_delete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.IStatistic_site_edit_add_delete" Collapsed="true">
+    <Position X="25.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IStatistic_site_edit_add_delete.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.Send_title_window" Collapsed="true">
+    <Position X="30.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Send_title_window.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Time.Interface.IUpdate_Select_Dates" Collapsed="true">
+    <Position X="27.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Update_Select_Dates.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Time.Code.Type_alert" Collapsed="true">
+    <Position X="25.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACACAAAAAAAAAAAAAAAAAAAIAAAAIA=</HashCode>
+      <FileName>Code\AlertType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Time.Hoot_Keys" Collapsed="true">
+    <Position X="29" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\HootKeys.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Index_Cell" Collapsed="true">
+    <Position X="30.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Index_cell.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Is_Enter_hootkey" Collapsed="true">
+    <Position X="32.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Is_enter_hootkey.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Modifine_String" Collapsed="true">
+    <Position X="25.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Modifine_string.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Code.WinEventDelegate" Collapsed="true">
+    <Position X="32.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAgAAAAEAAQAAAAAAAA=</HashCode>
+      <FileName>Code\hook\WinEventDelegate.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface._IBig_c" Collapsed="true">
+    <Position X="29" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IBig_c.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface._Grean_add" Collapsed="true">
+    <Position X="25.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IGrean_add.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface._GreanSite_edit_add_delete" Collapsed="true">
+    <Position X="27.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IGreanSite_edit_add_delete.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface.Red_site_add_or_edit" Collapsed="true">
+    <Position X="27.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IRed_site_add_or_edit.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface._RedSite_delete" Collapsed="true">
+    <Position X="30.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IRedSite_delete.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface.Set_Language" Collapsed="true">
+    <Position X="29" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ISet_Language.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface._Sound_edit_add_delete" Collapsed="true">
+    <Position X="25.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\ISound_edit_add_delete.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface._Statistic_site_edit_add_delete" Collapsed="true">
+    <Position X="27.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\IStatistic_site_edit_add_delete.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface._Send_title_window" Collapsed="true">
+    <Position X="32.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interface\Send_title_window.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Time.Interface.Update_Select_Dates" Collapsed="true">
+    <Position X="30.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Interface\Update_Select_Dates.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,389 @@
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\time.db
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Time.exe.config
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Time.exe
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Time.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\ControlzEx.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\EntityFramework.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesign.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesignColors.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialSkin.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MetroFramework.Design.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MetroFramework.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\NDde.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\System.Data.SQLite.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\WebDriver.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\ControlzEx.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\EntityFramework.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\System.Data.SQLite.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\WebDriver.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.csprojAssemblyReference.cache
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Interop.SHDocVw.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.csproj.ResolveComReference.cache
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\MyControls\ImageButtonUC.baml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Resources\Icons.baml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\MainWindow.g.cs
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\MyControls\ImageButtonUC.g.cs
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\App.g.cs
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time_Content.g.cs
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time_MarkupCompile.cache
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time_MarkupCompile.lref
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\App.baml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\MainWindow.baml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Resources\lang.ru-RU.baml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Resources\lang.baml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.g.resources
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.Properties.Resources.resources
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.csproj.GenerateResource.cache
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.csproj.CoreCompileInputs.cache
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.csproj.CopyComplete
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.exe
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Time.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Interop.SHDocVw.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.csproj.ResolveComReference.cache
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\MyControls\ImageButtonUC.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Resources\Icons.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Resources\IconsNonShared.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\MyControls\ImageButtonUC.g.cs
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\View\Alert.g.cs
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\App.g.cs
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time_Content.g.cs
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time_MarkupCompile.cache
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time_MarkupCompile.lref
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\time.db
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Time.exe.config
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Time.exe
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Time.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\ControlzEx.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\EntityFramework.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesign.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesignColors.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialSkin.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MetroFramework.Design.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MetroFramework.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\NDde.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\WebDriver.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\ControlzEx.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\EntityFramework.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\WebDriver.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\MainWindow.g.cs
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\App.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\MainWindow.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Resources\lang.ru-RU.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Resources\lang.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\View\Alert.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.g.resources
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.Properties.Resources.resources
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.csproj.GenerateResource.Cache
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.csproj.CoreCompileInputs.cache
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.exe
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Time.csprojResolveAssemblyReference.cache
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\obj\Debug\Interop.WMPLib.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Auth.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Core.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Auth.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Core.pdb
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Google.Apis.Core.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\Interop.WMPLib.dll
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\View\Alert.g.cs
+C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Time\Time\Time\obj\Debug\View\Alert.baml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Core.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Core.pdb
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Core.xml
+C:\Users\Mamory\Documents\GitHub\Time\Time\Time\bin\Debug\Newtonsoft.Json.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\time.db
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Time.exe.config
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Time.exe
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Time.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\ControlzEx.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\EntityFramework.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\EntityFramework.SqlServer.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Core.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.PlatformServices.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesign.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesignColors.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialSkin.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MetroFramework.Design.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MetroFramework.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MetroFramework.Fonts.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\NDde.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Newtonsoft.Json.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.EF6.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.Linq.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\System.Windows.Interactivity.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\WebDriver.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Xceed.Wpf.Toolkit.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\ControlzEx.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\EntityFramework.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\EntityFramework.SqlServer.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Auth.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Calendar.v3.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Core.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Google.Apis.Core.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesignColors.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.pdb
+E:\Program\GitHub\Time\Time\Time\bin\Debug\Newtonsoft.Json.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\System.Data.SQLite.dll.config
+E:\Program\GitHub\Time\Time\Time\bin\Debug\WebDriver.xml
+E:\Program\GitHub\Time\Time\Time\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Interop.SHDocVw.dll
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Interop.WMPLib.dll
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.csproj.ResolveComReference.cache
+E:\Program\GitHub\Time\Time\Time\obj\Debug\MyControls\ImageButtonUC.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Resources\Icons.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Resources\IconsNonShared.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\MainWindow.g.cs
+E:\Program\GitHub\Time\Time\Time\obj\Debug\MyControls\ImageButtonUC.g.cs
+E:\Program\GitHub\Time\Time\Time\obj\Debug\View\Alert.g.cs
+E:\Program\GitHub\Time\Time\Time\obj\Debug\App.g.cs
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time_Content.g.cs
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time_MarkupCompile.cache
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time_MarkupCompile.lref
+E:\Program\GitHub\Time\Time\Time\obj\Debug\App.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\MainWindow.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Resources\lang.ru-RU.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Resources\lang.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\View\Alert.baml
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.g.resources
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.Properties.Resources.resources
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.csproj.GenerateResource.cache
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.csproj.CoreCompileInputs.cache
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.csproj.CopyComplete
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.exe
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\time.db
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Time.exe.config
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Time.exe
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Time.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\ControlzEx.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\EntityFramework.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\EntityFramework.SqlServer.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Auth.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Calendar.v3.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Core.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.PlatformServices.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.IconPacks.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesign.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesignColors.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialSkin.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MetroFramework.Design.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MetroFramework.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MetroFramework.Fonts.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\NDde.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Newtonsoft.Json.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\System.Data.SQLite.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\System.Data.SQLite.EF6.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\System.Data.SQLite.Linq.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\System.Windows.Interactivity.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\WebDriver.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Xceed.Wpf.Toolkit.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\ControlzEx.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\EntityFramework.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\EntityFramework.SqlServer.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Auth.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Auth.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Calendar.v3.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Calendar.v3.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Core.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Google.Apis.Core.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.IconPacks.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.IconPacks.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MahApps.Metro.IconPacks.Material.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesignColors.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesignThemes.Wpf.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\MaterialDesignXaml.DialogsHelper.pdb
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\Newtonsoft.Json.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\System.Data.SQLite.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\System.Data.SQLite.dll.config
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\WebDriver.xml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.csprojAssemblyReference.cache
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Interop.SHDocVw.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Interop.WMPLib.dll
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.csproj.ResolveComReference.cache
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\MyControls\ImageButtonUC.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Resources\Icons.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Resources\IconsNonShared.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\MainWindow.g.cs
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\MyControls\ImageButtonUC.g.cs
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\View\Alert.g.cs
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\App.g.cs
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time_Content.g.cs
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time_MarkupCompile.cache
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time_MarkupCompile.lref
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\App.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\MainWindow.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Resources\lang.ru-RU.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Resources\lang.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\View\Alert.baml
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.g.resources
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.Properties.Resources.resources
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.csproj.GenerateResource.cache
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.csproj.CoreCompileInputs.cache
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.csproj.CopyComplete
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.exe
+F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\Debug\Time.pdb
+E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.csprojAssemblyReference.cache
+E:\Program\GitHub\Time\Time\Time\obj\Debug\View\Add_event.g.cs
+E:\Program\GitHub\Time\Time\Time\obj\Debug\View\Add_event.baml

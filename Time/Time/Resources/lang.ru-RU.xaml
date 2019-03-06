@@ -1,0 +1,157 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:Time.Resources">
+
+    <v:String x:Key="m_menu_Language">РУС</v:String>
+
+    <v:String x:Key="Index_tab_event">События</v:String>
+    <v:String x:Key="Index_tab_timer">Таймер</v:String>
+    <v:String x:Key="Index_tab_filter">Фильтры</v:String>
+    <v:String x:Key="Index_tab_seting">Настройки</v:String>
+
+    <v:String x:Key="Index_button_delete">Удалить</v:String>
+    <v:String x:Key="Index_button_edit">Изменить</v:String>
+    <v:String x:Key="Index_button_Add">Добавить</v:String>
+
+    <v:String x:Key="Filter_title_Gsite">Зелёные сайты</v:String>
+    <v:String x:Key="Filter_title_Gsite_name">Имя</v:String>
+    <v:String x:Key="Filter_title_Gsite_hotKey">Макрос</v:String>
+    <v:String x:Key="Filter_title_Gsite_url">Ссылка</v:String>
+
+    <v:String x:Key="Filter_title_Rsite">Красные сайты</v:String>
+    <v:String x:Key="Filter_title_Rsite_name">Имя</v:String>
+    <v:String x:Key="Filter_title_Rsite_url">Ссылка</v:String>
+
+    <v:String x:Key="Filter_button_statistic">Статистика</v:String>
+    <v:String x:Key="Filter_button_sites">Сайты</v:String>
+
+    <v:String x:Key="Sites_button_group">Группа</v:String>
+    <v:String x:Key="Sites_list_name">Имя</v:String>
+    <v:String x:Key="Sites_list_time">Время</v:String>
+    <v:String x:Key="Sites_list_Status">Статус</v:String>
+    <v:String x:Key="Sites_list_url">Ссылка</v:String>
+    <v:String x:Key="Sites_button_print">Печать</v:String>
+
+    <v:String x:Key="Massege_title">ПРЕДУПРЕЖДЕНИЕ!</v:String>
+    <v:String x:Key="Massege_title_massege">Покиньте этот сайт!</v:String>
+    <v:String x:Key="Massege_button_OK">Подтверждаю</v:String>
+
+    <v:String x:Key="Statistic_title">Статистика</v:String>
+    <v:String x:Key="Statistic_list_name">Имя</v:String>
+    <v:String x:Key="Statistic_list_time">Время</v:String>
+    <v:String x:Key="Statistic_list_status">Статус</v:String>
+    <v:String x:Key="Statistic_list_url">Ссылка</v:String>
+    <v:String x:Key="Statistic_button">Распечатка...</v:String>
+
+    <v:String x:Key="Timer_volum">Громкость:</v:String>
+    <v:String x:Key="Timer_chec_big_break">Большой перерыв</v:String>
+    <v:String x:Key="Timer_combo_break_time_big">Время перерыва</v:String>
+    <v:String x:Key="Timer_combo_break_duration_big">Промежуток перерыва</v:String>
+    <v:String x:Key="Timer_chec_strict_regime">Строгий режим</v:String>
+
+    <v:String x:Key="Timer_chec_short_break">Короткий перерыв</v:String>
+    <v:String x:Key="Timer_combo_break_time_short">Время перерыва</v:String>
+    <v:String x:Key="Timer_combo_break_duration_short">Промежуток перерыва</v:String>
+
+    <v:String x:Key="Timer_chec_one_time_break">Однократный перерыв</v:String>
+    <v:String x:Key="Timer_combo_break_time_one_time_break">Время перерыва</v:String>
+    <v:String x:Key="Timer_combo_break_duration_one_time_break">Промежуток перерыва</v:String>
+
+    <v:String x:Key="Timer_combo_sound">Звук</v:String>
+    <v:String x:Key="Timer_combo_sounds">Звуки</v:String>
+    <v:String x:Key="Timer_chec_sounds">Включить</v:String>
+    <v:String x:Key="Timer_button_sounds">Путь...</v:String>
+
+    <v:String x:Key="Timer_minutes">минут</v:String>
+    <v:String x:Key="Timer_second">секунд</v:String>
+
+    <v:String x:Key="Message_title">Предупреждение</v:String>
+    <v:String x:Key="Message_text">это запрещённый сайт, уйдите с него.</v:String>
+
+    <v:String x:Key="Timer_sound_name">Имя</v:String>
+    <v:String x:Key="Timer_sound_path">Путь</v:String>
+
+    <v:String x:Key="Date_title">Дата:</v:String>
+    <v:String x:Key="Events_Date">Дата</v:String>
+    <v:String x:Key="Events_Login">Учётная запись</v:String>
+    <v:String x:Key="Events_Login_">Логин:</v:String>
+    <v:String x:Key="Events_Sing_out">Выход</v:String>
+    <v:String x:Key="Events_Sing_in">Вход</v:String>
+    
+    <v:String x:Key="Events_Add_all_day">Весь день</v:String>
+    <v:String x:Key="Events_Add_Summary">Краткое изложение</v:String>
+    <v:String x:Key="Events_Add_Location">Местонахождение</v:String>
+    <v:String x:Key="Events_Add_Description">Описание</v:String>
+    <v:String x:Key="Events_Add_Create">Создать</v:String>
+    <v:String x:Key="Events_Add_Select_a_date_start">Выберите дату начала</v:String>
+    <v:String x:Key="Events_Add_Select_a_date_end">Выберите дату окончания</v:String>
+
+    <v:String x:Key="Alert_button_ok">Подтвердить</v:String>
+    <v:String x:Key="Alert_button_cancel">Отмена</v:String>
+    <v:String x:Key="Alert_button_next">Ещё 3 минуты</v:String>
+
+    <v:String x:Key="Alert_message_delete">Вы хотите удалить выбранное?</v:String>
+
+    <v:String x:Key="Alert_title">Внимание</v:String>
+    <v:String x:Key="Alert_message_1">Закрывайте и откройте глаза медленно</v:String>
+    <v:String x:Key="Alert_message_1_big">Пожалуйста, встаньте из-за пк и проделайте следующие: подвигайтесь, фокусируйте зрение на объектах в дали (10~70 метров), больше моргайте, двигайте глазами вправо, влево, верх, вниз, попейте воды.</v:String>
+
+    <v:String x:Key="Settings_lang">Язык:</v:String>
+    <v:String x:Key="Settings_auto">Авто запуск</v:String>
+    <v:String x:Key="Settings_info_title">Перерыв</v:String>
+    <v:String x:Key="Settings_info">
+        Программа предназначена для контроля перерывов при работе с компьютерами. Данный продукт предлагает просмотр ваших "событий" в гугле, выбор перерыва: большой, малый, однократный. Также программа предлагает создание макросов для открытия нужных сайтов в браузере по умолчанию. Программа может вести статистику сайтов и помогать не заходить на сторонние ресурсы с помощью "Фильтров".</v:String>
+
+    <v:String x:Key="ToolTip_Events">Вкладка событий, можно посмотреть события из google аккаунта</v:String>
+    <v:String x:Key="ToolTip_Events_Events">Это ваши события из google аккаунта</v:String>
+    <v:String x:Key="ToolTip_Events_Date">Это даты для просмотра событий</v:String>
+    <v:String x:Key="ToolTip_Events_Login">Учётная запись, можно зайти в гугл аккаунт</v:String>
+    <v:String x:Key="ToolTip_Events_Login_button">Вход в аккаунт</v:String>
+
+    <v:String x:Key="ToolTip_Timer">Вкладка таймеров, можно включить разные перерывы</v:String>
+    <v:String x:Key="ToolTip_Timer_time_big">При активации запустится таймер большого перерыва</v:String>
+    <v:String x:Key="ToolTip_Timer_big_break">Время между активацией большого перерыва</v:String>
+    <v:String x:Key="ToolTip_Timer_big_duration">Время отдыха в большой перерыв</v:String>
+    <v:String x:Key="ToolTip_Timer_strict_mode">При активации нельзя пропустить большой перерыв</v:String>
+
+    <v:String x:Key="ToolTip_Timer_time_short">При активации запустится таймер короткого перерыва</v:String>
+    <v:String x:Key="ToolTip_Timer_short_break">Время между активацией короткого перерыва</v:String>
+    <v:String x:Key="ToolTip_Timer_short_duration">Время отдыха в короткий перерыв</v:String>
+
+    <v:String x:Key="ToolTip_Timer_time_one">При активации запустится таймер однократного перерыва</v:String>
+    <v:String x:Key="ToolTip_Timer_one_break">Время активацией однократного перерыва</v:String>
+    <v:String x:Key="ToolTip_Timer_one_duration">Время отдыха в однократный перерыв</v:String>
+
+    <v:String x:Key="ToolTip_Timer_sound">Добавление, удаление и выбор звуков для перерывов</v:String>
+    <v:String x:Key="ToolTip_Timer_sound_combobox">Выбор таймера для установки звука в перерыве</v:String>
+    <v:String x:Key="ToolTip_Timer_sound_path">Выбор папки с музыкой</v:String>
+    <v:String x:Key="ToolTip_Timer_sound_check">Включение или отключение звуков для выбранного таймера в "Sounds"</v:String>
+
+    <v:String x:Key="ToolTip_Filters">Фильтры сайтов, макросы, статистика посещения сайтов</v:String>
+    <v:String x:Key="ToolTip_Filters_sites">Фильтры сайтов и макросы</v:String>
+
+    <v:String x:Key="ToolTip_Filters_sites_red">Сайты на которые заходить нельзя, нужно добавить ссылку на домен сайта</v:String>
+    <v:String x:Key="ToolTip_Filters_sites_red_name">Имя сайта которое будет отображаться в статистике</v:String>
+    <v:String x:Key="ToolTip_Filters_sites_red_URL">Ссылка для отслеживания, лучше записывать домен</v:String>
+
+    <v:String x:Key="ToolTip_Filters_sites_green">Макросы для быстрого запуска сайта</v:String>
+    <v:String x:Key="ToolTip_Filters_sites_green_name">Имя сайта которое будет отображаться в статистике</v:String>
+    <v:String x:Key="ToolTip_Filters_sites_green_macros">Макросы, зажимаете последовательность кнопок для создания, для подтверждения нажмите Enter или Esc, чтобы стереть одну команду используйте Backspace</v:String>
+    <v:String x:Key="ToolTip_Filters_sites_green_URL">Ссылка для перехода при нажатие на сочетание макросов</v:String>
+
+    <v:String x:Key="ToolTip_Filters_stasis">Статистика посещенных сайтов за последнее время</v:String>
+    <v:String x:Key="ToolTip_Filters_stasis_calendar">Выбор статистики за определённую дату, отображает то что было до выбранной даты, можно выбрать диапазон зажав Shift</v:String>
+    <v:String x:Key="ToolTip_Filters_stasis_sites">Все сайты на которые заходил пользователь, можно добавлять, удалять, изменять кликнув два раза на поле</v:String>
+    <v:String x:Key="ToolTip_Filters_stasis_name">Имена сайтов</v:String>
+    <v:String x:Key="ToolTip_Filters_stasis_time">Когда и в котором часу зашли на сайт</v:String>
+    <v:String x:Key="ToolTip_Filters_stasis_status">Статус сайта: Red - запрещённый, Yellow - обычный, Green - сайт из макросов</v:String>
+    <v:String x:Key="ToolTip_Filters_stasis_url">Ссылки на которые заходил пользователь</v:String>
+
+    <v:String x:Key="ToolTip_Settings">Настройки приложения</v:String>
+    <v:String x:Key="ToolTip_Settings_Language">Язык приложения</v:String>
+    <v:String x:Key="ToolTip_Settings_Auto_start">Запуск приложения при включение компьютера</v:String>
+    <v:String x:Key="ToolTip_Settings_info">О приложении</v:String>
+    
+    
+</ResourceDictionary>
