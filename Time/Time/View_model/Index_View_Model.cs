@@ -2055,13 +2055,16 @@ namespace Time.View_model
                     {
                         Add_event view_add = new Add_event();
 
-                    Add_Event_View_Model view_model = new Add_Event_View_Model();
+                        Add_Event_View_Model view_model = new Add_Event_View_Model();
 
-                    view_add.DataContext = view_model;
+                        view_add.DataContext = view_model;
 
-                    view_model.close = new Action(view_add.Close);
+                        view_model.close = new Action(view_add.Close);
+                        view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
 
-                    view_add.ShowDialog();
+                        view_model.Time_select += new Interface._Time_select(view_add.SelectTime);
+
+                        view_add.ShowDialog();
                    
                         if (!view_model.is_close)
                             my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);

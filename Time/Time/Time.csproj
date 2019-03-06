@@ -185,6 +185,7 @@
     <Compile Include="Code\TopWindow.cs" />
     <Compile Include="Interface\HootKeys.cs" />
     <Compile Include="Interface\IBig_c.cs" />
+    <Compile Include="Interface\IDate_select.cs" />
     <Compile Include="Interface\IGreanSite_edit_add_delete.cs" />
     <Compile Include="Interface\IGrean_add.cs" />
     <Compile Include="Interface\Index_cell.cs" />
@@ -193,6 +194,7 @@
     <Compile Include="Interface\ISet_Language.cs" />
     <Compile Include="Interface\ISound_edit_add_delete.cs" />
     <Compile Include="Interface\Is_enter_hootkey.cs" />
+    <Compile Include="Interface\ITime_select.cs" />
     <Compile Include="Interface\Modifine_string.cs" />
     <Compile Include="Interface\Send_title_window.cs" />
     <Compile Include="Interface\IStatistic_site_edit_add_delete.cs" />

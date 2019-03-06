@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Program\GitHub\Time\Time\Time\obj\Debug\
+E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\
 Time
 none
 false
 DEBUG;TRACE
-E:\Program\GitHub\Time\Time\Time\App.xaml
+E:\Program\GitHub\Exam_f\Time\Time\App.xaml
 8-1227137655
 67-969501609
-592139385515
-561046416519
+61-221362168
+561639349037
 MainWindow.xaml;MyControls\ImageButtonUC.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;Resources\lang.ru-RU.xaml;Resources\lang.xaml;View\Add_event.xaml;View\Alert.xaml;
 
-True
+False
 

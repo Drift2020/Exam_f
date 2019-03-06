@@ -387,7 +387,6 @@ F:\загрузки\Time-ee8845e924ed9a97f0bdc90f67b2b3add905c7e1\Time\Time\obj\
 E:\Program\GitHub\Time\Time\Time\obj\Debug\Time.csprojAssemblyReference.cache
 E:\Program\GitHub\Time\Time\Time\obj\Debug\View\Add_event.g.cs
 E:\Program\GitHub\Time\Time\Time\obj\Debug\View\Add_event.baml
-E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Time.csprojAssemblyReference.cache
 E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Interop.SHDocVw.dll
 E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Interop.WMPLib.dll
 E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Time.csproj.ResolveComReference.cache
@@ -486,3 +485,4 @@ E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Time.Properties.Resources.resources
 E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Time.csproj.GenerateResource.cache
 E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Time.csproj.CoreCompileInputs.cache
 E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Time.csproj.CopyComplete
+E:\Program\GitHub\Exam_f\Time\Time\obj\Debug\Time.csprojAssemblyReference.cache

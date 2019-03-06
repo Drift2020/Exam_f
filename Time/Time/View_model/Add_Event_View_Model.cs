@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Time.Command;
+using Time.Interface;
 
 namespace Time.View_model
 {
-    class Add_Event_View_Model : View_Model_Base
+    class Add_Event_View_Model : View_Model_Base, IDate_select, ITime_select
     {
         #region Variables
 
@@ -20,11 +21,14 @@ namespace Time.View_model
         {
             set
             {
+               
                 start_date = value;
                 OnPropertyChanged(nameof(Start_date));
+                Date_select.Invoke(start_date);
             }
             get
             {
+              
                 return start_date;
             }
         }
@@ -42,6 +46,7 @@ namespace Time.View_model
             {
                 end_date = value;
                 OnPropertyChanged(nameof(End_date));
+                Time_select.Invoke(start_date, end_date);
             }
             get
             {
@@ -172,9 +177,12 @@ namespace Time.View_model
         #region action 
 
         public Action close;
+     
 
+        public event _Date_select Date_select;
+        public event _Time_select Time_select;
         #endregion action 
 
-     
+
     }
 }
