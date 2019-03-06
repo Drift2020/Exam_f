@@ -2051,7 +2051,9 @@ namespace Time.View_model
             await Task.Run(() => {
                 try
                 {
-                    Add_event view_add = new Add_event();
+                    App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
+                    {
+                        Add_event view_add = new Add_event();
 
                     Add_Event_View_Model view_model = new Add_Event_View_Model();
 
@@ -2060,10 +2062,10 @@ namespace Time.View_model
                     view_model.close = new Action(view_add.Close);
 
                     view_add.ShowDialog();
-
-                    if (!view_model.is_close)
-                        my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
-
+                   
+                        if (!view_model.is_close)
+                            my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
+                    });
                 }
                 catch (Exception ex)
                 {

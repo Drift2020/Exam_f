@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Time.View"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="Add_event" Height="450" Width="288.287">
+        Title="{DynamicResource Events_Add_title}" Height="450" Width="288.287" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -18,7 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Controls:ToggleSwitch x:Name="IsCheck"  FontSize="16" IsChecked="{Binding All_day,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Header="{DynamicResource Events_Add_all_day}"  VerticalAlignment="Center" Checked="ToggleSwitch_Checked" />
-        <Controls:DateTimePicker SelectedDate="{Binding Start_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.Row="1" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_start}"/>
+        <Controls:DateTimePicker SelectedDate="{Binding Start_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.Row="1" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_start}"  DragEnter="DateTimePicker_DragEnter"/>
         <Controls:DateTimePicker x:Name="EndDate" SelectedDate="{Binding End_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"  Grid.Row="2" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_end}"/>
         <TextBox VerticalAlignment="Center" Text="{Binding Summary, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Summary}"/>
         <TextBox VerticalAlignment="Center" Text="{Binding Location, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Location}"/>

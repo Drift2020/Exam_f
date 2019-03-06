@@ -86,6 +86,7 @@
     <v:String x:Key="Events_Add_Create">Создать</v:String>
     <v:String x:Key="Events_Add_Select_a_date_start">Выберите дату начала</v:String>
     <v:String x:Key="Events_Add_Select_a_date_end">Выберите дату окончания</v:String>
+    <v:String x:Key="Events_Add_title">Создание собития</v:String>
 
     <v:String x:Key="Alert_button_ok">Подтвердить</v:String>
     <v:String x:Key="Alert_button_cancel">Отмена</v:String>

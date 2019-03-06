@@ -35,5 +35,12 @@ namespace Time.View
                 EndDate.IsEnabled = true;
             }
         }
+
+       
+
+        private void DateTimePicker_DragEnter(object sender, DragEventArgs e)
+        {
+            int a = 0;
+        }
     }
 }
