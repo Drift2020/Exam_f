@@ -56,7 +56,7 @@ namespace Time.Code
 
 
 
-
+            
 
 
 
@@ -89,13 +89,33 @@ namespace Time.Code
             return My_list;
         }
 
-        public void Add_event(string _Summary,string _Location,string _Description, DateTime? Start, DateTime? End)
+        public void Add_event(bool isAll,string _Summary,string _Location,string _Description, DateTime? Start, DateTime? End)
         {
             try
             {
+                Event newEvent = null;
+         if (isAll)
+                    newEvent = new Event()
+                    {
 
-         
-            Event newEvent = new Event()
+                        Summary = _Summary,
+                        Location = _Location,
+                        Description = _Description,
+                        Start = new EventDateTime()
+                        {
+                            Date = Start.Value.Year.ToString() + "-" + Start.Value.Month.ToString() + '-' + Start.Value.Day.ToString(),
+                           
+
+                        },
+                        End = new EventDateTime()
+                        {//"2019-03-06"
+                            Date = Start.Value.Year.ToString() + "-" + Start.Value.Month.ToString() + '-' + Start.Value.Day.ToString(),
+                          
+                        },
+
+                    };
+                else
+             newEvent = new Event()
             {
 
                 Summary = _Summary,

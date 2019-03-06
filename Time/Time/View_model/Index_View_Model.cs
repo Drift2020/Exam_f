@@ -2061,8 +2061,8 @@ namespace Time.View_model
 
                     view_add.ShowDialog();
 
-                    if(!view_model.is_close)
-                    my_google.Add_event(view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
+                    if (!view_model.is_close)
+                        my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
 
                 }
                 catch (Exception ex)

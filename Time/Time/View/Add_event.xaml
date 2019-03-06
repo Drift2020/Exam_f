@@ -17,9 +17,9 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Controls:ToggleSwitch  FontSize="16" IsChecked="{Binding All_day,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Header="{DynamicResource Events_Add_all_day}"  VerticalAlignment="Center" />
+        <Controls:ToggleSwitch x:Name="IsCheck"  FontSize="16" IsChecked="{Binding All_day,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Header="{DynamicResource Events_Add_all_day}"  VerticalAlignment="Center" Checked="ToggleSwitch_Checked" />
         <Controls:DateTimePicker SelectedDate="{Binding Start_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center" Grid.Row="1" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_start}"/>
-        <Controls:DateTimePicker SelectedDate="{Binding End_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"  Grid.Row="2" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_end}"/>
+        <Controls:DateTimePicker x:Name="EndDate" SelectedDate="{Binding End_date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Center"  Grid.Row="2" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Select_a_date_end}"/>
         <TextBox VerticalAlignment="Center" Text="{Binding Summary, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Summary}"/>
         <TextBox VerticalAlignment="Center" Text="{Binding Location, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Location}"/>
         <TextBox VerticalAlignment="Center" Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Description}"/>

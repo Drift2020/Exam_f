@@ -23,5 +23,17 @@ namespace Time.View
         {
             InitializeComponent();
         }
+
+        private void ToggleSwitch_Checked(object sender, RoutedEventArgs e)
+        {
+            if(IsCheck.IsChecked==true)
+            {
+                EndDate.IsEnabled = false;
+            }
+          else
+            {
+                EndDate.IsEnabled = true;
+            }
+        }
     }
 }

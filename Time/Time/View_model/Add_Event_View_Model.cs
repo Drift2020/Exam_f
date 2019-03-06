@@ -175,10 +175,6 @@ namespace Time.View_model
 
         #endregion action 
 
-        #region function 
-
-
-
-        #region function
+     
     }
 }
