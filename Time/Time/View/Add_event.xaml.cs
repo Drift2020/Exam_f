@@ -53,21 +53,21 @@ namespace Time.View
         {
 
 
-            if(start.Value.Hour <= end.Value.Hour)
-            {
-                if (start.Value.Minute <= end.Value.Minute)
-                {
-                    if (start.Value.Second <= end.Value.Second)
-                    {
+            //if(start.Value.Hour <= end.Value.Hour)
+            //{
+            //    if (start.Value.Minute <= end.Value.Minute)
+            //    {
+            //        if (start.Value.Second <= end.Value.Second)
+            //        {
 
-                        return;
-                    }
+            //            return;
+            //        }
 
-                }
-            }
+            //    }
+            //}
            
-                EndDate.DisplayDateStart = start;
-                EndDate.SelectedDate = start;
+            //    EndDate.DisplayDateStart = start;
+            //    EndDate.SelectedDate = start;
             
 
         

@@ -9,7 +9,7 @@ using Time.Interface;
 
 namespace Time.View_model
 {
-    class Add_Event_View_Model : View_Model_Base, IDate_select, ITime_select
+    class Add_Event_View_Model : View_Model_Base, IDate_select
     {
         #region Variables
 
@@ -23,8 +23,9 @@ namespace Time.View_model
             {
                
                 start_date = value;
-                OnPropertyChanged(nameof(Start_date));
                 Date_select.Invoke(start_date);
+                OnPropertyChanged(nameof(Start_date));
+              
             }
             get
             {
@@ -45,13 +46,33 @@ namespace Time.View_model
             set
             {
                 end_date = value;
+                Set_time();
                 OnPropertyChanged(nameof(End_date));
-                Time_select.Invoke(start_date, end_date);
+               
             }
             get
             {
                 return end_date;
             }
+        }
+
+        void Set_time()
+        {
+            if (start_date.Value.Hour <= end_date.Value.Hour)
+            {
+                if (start_date.Value.Minute <= end_date.Value.Minute)
+                {
+                    if (start_date.Value.Second <= end_date.Value.Second)
+                    {
+
+                        return;
+                    }
+
+                }
+            }
+
+            end_date = start_date;
+          
         }
 
         #endregion date end
@@ -180,7 +201,7 @@ namespace Time.View_model
      
 
         public event _Date_select Date_select;
-        public event _Time_select Time_select;
+     
         #endregion action 
 
 

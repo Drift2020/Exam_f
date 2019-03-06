@@ -2062,7 +2062,7 @@ namespace Time.View_model
                         view_model.close = new Action(view_add.Close);
                         view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
 
-                        view_model.Time_select += new Interface._Time_select(view_add.SelectTime);
+                     
 
                         view_add.ShowDialog();
                    
