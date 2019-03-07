@@ -202,7 +202,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{DynamicResource Timer_combo_break_time_big}" VerticalAlignment="Center"/>
+                                        <TextBlock Text="{DynamicResource Timer_combo_break_duration_big}" VerticalAlignment="Center"/>
                                         <ComboBox ToolTip="{DynamicResource ToolTip_Timer_big_break}" x:Name="BreeakT" SelectedIndex="{Binding Index_time_big,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
                                             <StackPanel   Orientation="Horizontal" Width="90">
                                                 <TextBlock   Text="20" Padding="10,0,5,0"/>
@@ -252,7 +252,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{DynamicResource Timer_combo_break_duration_big}"  VerticalAlignment="Center"/>
+                                        <TextBlock  Text="{DynamicResource Timer_combo_break_time_big}"  VerticalAlignment="Center"/>
                                         <ComboBox ToolTip="{DynamicResource ToolTip_Timer_big_duration}" x:Name="BreeakD" SelectedIndex="{Binding Index_duration_big,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
                                             <StackPanel  Orientation="Horizontal" Width="90" HorizontalAlignment="Center">
                                                 <TextBlock   Text="2" Padding="10,0,5,0"/>
@@ -301,7 +301,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{DynamicResource Timer_combo_break_time_short}"  VerticalAlignment="Center"/>
+                                        <TextBlock Text="{DynamicResource Timer_combo_break_duration_short}" VerticalAlignment="Center"/>
                                         <ComboBox  ToolTip="{DynamicResource ToolTip_Timer_short_break}" x:Name="ShortTime" SelectedIndex="{Binding Index_time_short, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
                                             <StackPanel  Orientation="Horizontal"   Width="90">
                                                 <TextBlock   Text="5" Padding="10,0,5,0"/>
@@ -335,7 +335,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{DynamicResource Timer_combo_break_duration_short}"  VerticalAlignment="Center"/>
+                                        <TextBlock Text="{DynamicResource Timer_combo_break_time_short}" VerticalAlignment="Center"/>
                                         <ComboBox ToolTip="{DynamicResource ToolTip_Timer_short_duration}" x:Name="ShortDuration" SelectedIndex="{Binding Index_duration_short, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
                                             <StackPanel  Orientation="Horizontal" Width="90">
                                                 <TextBlock   Text="8" Padding="10,0,5,0"/>
@@ -360,7 +360,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition Width="120"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{DynamicResource Timer_combo_break_time_one_time_break}"  VerticalAlignment="Center"/>
+                                        <TextBlock Text="{DynamicResource Timer_combo_break_duration_one_time_break}" VerticalAlignment="Center"/>
 
 
                                         <xctk:MaskedTextBox ToolTip="{DynamicResource ToolTip_Timer_one_break}" Padding="3" x:Name="mask" Text="{Binding Time_timer_textbox,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
@@ -375,7 +375,7 @@
                                             <ColumnDefinition/>
                                             <ColumnDefinition Width="120"/>
                                         </Grid.ColumnDefinitions>
-                                        <TextBlock Text="{DynamicResource Timer_combo_break_duration_one_time_break}"  VerticalAlignment="Center"/>
+                                        <TextBlock Text="{DynamicResource Timer_combo_break_time_one_time_break}"   VerticalAlignment="Center"/>
 
 
                                         <xctk:MaskedTextBox ToolTip="{DynamicResource ToolTip_Timer_one_duration}" Padding="3" x:Name="mask1" Text="{Binding Time_duration_textbox,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
