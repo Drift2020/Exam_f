@@ -2093,25 +2093,28 @@ namespace Time.View_model
 
                 view_add.EditWindow(Add_Event_View_Model_type.Edit);
                 view_model.my_type = Add_Event_View_Model_type.Edit;
-                view_model.End_date = my_google.GetEvent(selectedItemEvent.Id).End.DateTime;
-                view_model.Start_date = my_google.GetEvent(selectedItemEvent.Id).Start.DateTime;
-                view_model.Summary = selectedItemEvent.Summary;
-                view_model.Description =selectedItemEvent.Description;
-                view_model.Location = selectedItemEvent.Location;
-                view_model.All_day = selectedItemEvent.IsAll;
 
-                view_add.DataContext = view_model;
+               
 
                 view_model.close = new Action(view_add.Close);
                 view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
                 view_model.dict = dict;
 
+                view_model.End_date = my_google.GetEvent(selectedItemEvent.Id).End?.DateTime;
+                DateTime? t = my_google.GetEvent(selectedItemEvent.Id).Start.DateTime;
+                view_model.Start_date = t;
 
+                view_model.Summary = selectedItemEvent.Summary;
+                view_model.Description = selectedItemEvent.Description;
+                view_model.Location = selectedItemEvent.Location;
+                view_model.All_day = selectedItemEvent.IsAll;
+
+                view_add.DataContext = view_model;
 
                 view_add.ShowDialog();
 
                 if (!view_model.is_close)
-                    my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
+                    my_google.Edit_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date, selectedItemEvent.Id);
 
             }
             catch (Exception ex)

@@ -16,7 +16,7 @@ namespace Time.View_model
     class Add_Event_View_Model : View_Model_Base, IDate_select
     {
         #region Variables
-
+        public Add_Event_View_Model_type my_type;
         #region date start
 
         DateTime? start_date=null;
@@ -193,6 +193,38 @@ namespace Time.View_model
         {
             if(Start_date!= null && End_date != null && Set_time(End_date,Start_date))
             return true;
+
+
+            return false;
+        }
+
+        #endregion  Button_click_create
+
+
+        #region Button_click_edit
+
+        private DelegateCommand _Command_edit;
+        public ICommand Button_click_edit
+        {
+            get
+            {
+                if (_Command_edit == null)
+                {
+                    _Command_edit = new DelegateCommand(Execute_edit, CanExecute_edit);
+                }
+                return _Command_edit;
+            }
+        }
+        private void Execute_edit(object o)
+        {
+            is_close = false;
+            close();
+
+        }
+        private bool CanExecute_edit(object o)
+        {
+            if (Start_date != null && End_date != null && Set_time(End_date, Start_date))
+                return true;
 
 
             return false;

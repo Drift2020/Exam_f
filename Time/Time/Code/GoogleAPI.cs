@@ -86,9 +86,11 @@ namespace Time.Code
 
                     My_list.Add(new NowDate() { Summary = eventItem.Summary,
                         Time = eventItem.Start.DateTime.ToString(),
-                        Location = eventItem.Location.ToString(),
-                    Description = eventItem.Description.ToString(),
-                    IsAll = temp
+                        Location = eventItem.Location?.ToString(),
+                    Description = eventItem.Description?.ToString(),
+                    IsAll = temp,
+                    Id = eventItem.Id
+
                     });
                    
                 }
@@ -98,7 +100,7 @@ namespace Time.Code
 
         public Event GetEvent(string id)
         {          
-            return service.Events.Get("primary", "eventId").Execute();
+            return service.Events.Get("primary", id).Execute();
         }
      
         public void Edit_event(bool isAll, string _Summary, string _Location, string _Description, DateTime? Start, DateTime? End, string idevent)
