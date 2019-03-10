@@ -12,6 +12,7 @@ using Time.View;
 
 namespace Time.View_model
 {
+   
     class Add_Event_View_Model : View_Model_Base, IDate_select
     {
         #region Variables

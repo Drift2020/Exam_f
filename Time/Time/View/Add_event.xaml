@@ -23,6 +23,7 @@
         <TextBox Margin="5,10,5,0" VerticalAlignment="Center" Text="{Binding Summary, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="3" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Summary}"/>
         <TextBox Margin="5,0,5,0" VerticalAlignment="Center" Text="{Binding Location, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="4" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Location}"/>
         <TextBox Margin="5,0,5,0" VerticalAlignment="Center" Text="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Grid.Row="5" Controls:TextBoxHelper.Watermark="{DynamicResource Events_Add_Description}"/>
-        <Button Margin="5,0,5,0"  VerticalAlignment="Center" Command="{Binding Button_click_create}" Grid.Row="6" Content="{DynamicResource Events_Add_Create}"/>
+        <Button Margin="5,0,5,0" x:Name="createB" VerticalAlignment="Center" Command="{Binding Button_click_create}" Grid.Row="6" Content="{DynamicResource Events_Add_Create}"/>
+        <Button Margin="5,0,5,0" x:Name="editB" VerticalAlignment="Center" Command="{Binding Button_click_edit}" Grid.Row="6" Content="{DynamicResource Events_Add_edit}"/>
     </Grid>
 </Window>

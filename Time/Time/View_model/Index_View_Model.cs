@@ -2091,8 +2091,8 @@ namespace Time.View_model
 
                 Add_Event_View_Model view_model = new Add_Event_View_Model();
 
-
-
+                view_add.EditWindow(Add_Event_View_Model_type.Edit);
+                view_model.my_type = Add_Event_View_Model_type.Edit;
                 view_model.End_date = my_google.GetEvent(selectedItemEvent.Id).End.DateTime;
                 view_model.Start_date = my_google.GetEvent(selectedItemEvent.Id).Start.DateTime;
                 view_model.Summary = selectedItemEvent.Summary;

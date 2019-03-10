@@ -14,11 +14,13 @@ using System.Windows.Shapes;
 
 namespace Time.View
 {
+    public enum Add_Event_View_Model_type { Create = 0, Edit }
     /// <summary>
     /// Interaction logic for Add_event.xaml
     /// </summary>
     public partial class Add_event : Window
     {
+     
         public Add_event()
         {
             InitializeComponent();
@@ -36,9 +38,29 @@ namespace Time.View
             }
         }
 
-       
+        public void EditWindow(Add_Event_View_Model_type i)
+        {
 
-      public void SelectDate(DateTime? i)
+
+            switch (i)
+            {
+                case Add_Event_View_Model_type.Create:
+                    {
+                        editB.Visibility = Visibility.Collapsed;
+                    }
+                    break;
+                case Add_Event_View_Model_type.Edit:
+                    {
+                        createB.Visibility = Visibility.Collapsed;
+                    }
+                    break;
+            }
+
+
+         
+        }
+
+        public void SelectDate(DateTime? i)
         {
             
            

@@ -87,6 +87,8 @@
     <v:String x:Key="Events_Add_Location">Location</v:String>
     <v:String x:Key="Events_Add_Description">Description</v:String>
     <v:String x:Key="Events_Add_Create">Create</v:String>
+    <v:String x:Key="Events_Add_edit">Edit</v:String>
+    
     <v:String x:Key="Events_Add_Select_a_date_start">Select a date start</v:String>
     <v:String x:Key="Events_Add_Select_a_date_end">Select a date end</v:String>
     <v:String x:Key="Events_Add_title">Event creation</v:String>
