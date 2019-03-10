@@ -48,36 +48,6 @@ namespace Time.View
 
             EndDate.SelectedDate = i;
         }
-
-        public void SelectTime(DateTime? start, DateTime? end)
-        {
-
-
-            //if(start.Value.Hour <= end.Value.Hour)
-            //{
-            //    if (start.Value.Minute <= end.Value.Minute)
-            //    {
-            //        if (start.Value.Second <= end.Value.Second)
-            //        {
-
-            //            return;
-            //        }
-
-            //    }
-            //}
-           
-            //    EndDate.DisplayDateStart = start;
-            //    EndDate.SelectedDate = start;
-            
-
-        
-        }
-
-
-
-
-
-
-
+       
     }
 }

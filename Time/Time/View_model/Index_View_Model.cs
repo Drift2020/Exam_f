@@ -2046,13 +2046,12 @@ namespace Time.View_model
 
         #region function
 
-        private async void Open_window_add_event()
+        private void Open_window_add_event()
         {
-            await Task.Run(() => {
+          
                 try
                 {
-                    App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
-                    {
+                   
                         Add_event view_add = new Add_event();
 
                         Add_Event_View_Model view_model = new Add_Event_View_Model();
@@ -2061,14 +2060,15 @@ namespace Time.View_model
 
                         view_model.close = new Action(view_add.Close);
                         view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
+                        view_model.dict = dict;
 
-                     
+
 
                         view_add.ShowDialog();
-                   
+                    
                         if (!view_model.is_close)
                             my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
-                    });
+                  
                 }
                 catch (Exception ex)
                 {
@@ -2076,7 +2076,7 @@ namespace Time.View_model
                     System.Windows.MessageBox.Show(ex.Message , "Open_window_add_event");
 #endif
                 }
-            });
+           
 
         }
         #endregion function 

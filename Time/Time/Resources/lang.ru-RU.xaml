@@ -78,7 +78,11 @@
     <v:String x:Key="Events_Login_">Логин:</v:String>
     <v:String x:Key="Events_Sing_out">Выход</v:String>
     <v:String x:Key="Events_Sing_in">Вход</v:String>
-    
+    <v:String x:Key="Events_Create">Создать</v:String>
+    <v:String x:Key="Events_Delete">Удалить</v:String>
+    <v:String x:Key="Events_Edit">Изменить</v:String>
+    <v:String x:Key="Events_Message_Error_time">Неправильное время завершения события</v:String>
+
     <v:String x:Key="Events_Add_all_day">Весь день</v:String>
     <v:String x:Key="Events_Add_Summary">Краткое изложение</v:String>
     <v:String x:Key="Events_Add_Location">Местонахождение</v:String>

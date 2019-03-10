@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
+using Time.Code;
 using Time.Command;
 using Time.Interface;
+using Time.View;
 
 namespace Time.View_model
 {
@@ -16,7 +19,7 @@ namespace Time.View_model
         #region date start
 
         DateTime? start_date=null;
-
+        public ResourceDictionary dict { set; get; }
         public DateTime? Start_date
         {
             set
@@ -45,8 +48,9 @@ namespace Time.View_model
         {
             set
             {
+
                 end_date = value;
-                Set_time();
+              
                 OnPropertyChanged(nameof(End_date));
                
             }
@@ -56,23 +60,24 @@ namespace Time.View_model
             }
         }
 
-        void Set_time()
+        bool Set_time(DateTime? End_date, DateTime? Start_date)
         {
-            if (start_date.Value.Hour <= end_date.Value.Hour)
+            if(End_date!=null && Start_date!=null)
+            if (Start_date.Value.Hour <= End_date.Value.Hour)
             {
-                if (start_date.Value.Minute <= end_date.Value.Minute)
+                if (Start_date.Value.Minute <= End_date.Value.Minute)
                 {
-                    if (start_date.Value.Second <= end_date.Value.Second)
+                    if (Start_date.Value.Second <= End_date.Value.Second)
                     {
 
-                        return;
+                        return true;
                     }
 
                 }
             }
-
-            end_date = start_date;
-          
+           
+           
+            return false;
         }
 
         #endregion date end
@@ -185,8 +190,9 @@ namespace Time.View_model
         }
         private bool CanExecute_create(object o)
         {
-            if(Start_date!= null && End_date != null)
+            if(Start_date!= null && End_date != null && Set_time(End_date,Start_date))
             return true;
+
 
             return false;
         }

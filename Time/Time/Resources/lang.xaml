@@ -75,6 +75,10 @@
     <v:String x:Key="Events_Login_">Login: </v:String>
     <v:String x:Key="Events_Sing_out">Sign out</v:String>
     <v:String x:Key="Events_Sing_in">Sign in</v:String>
+    <v:String x:Key="Events_Create">Create</v:String>
+    <v:String x:Key="Events_Delete">Delete</v:String>
+    <v:String x:Key="Events_Edit">Edit</v:String>
+    <v:String x:Key="Events_Message_Error_time">Incorrect event completion time</v:String>
 
     <v:String x:Key="Events_Add_all_day">All day</v:String>
     <v:String x:Key="Events_Add_Summary">Summary</v:String>

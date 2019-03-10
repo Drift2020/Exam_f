@@ -91,10 +91,21 @@ namespace Time.Code
 
         public void Add_event(bool isAll,string _Summary,string _Location,string _Description, DateTime? Start, DateTime? End)
         {
+           
             try
             {
                 Event newEvent = null;
-         if (isAll)
+
+                var i = String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
+                   Start.Value.Year.ToString(),
+                   Start.Value.Month > 9 ? Start.Value.Month.ToString(): "0" + Start.Value.Month.ToString(),
+                    Start.Value.Day>9? Start.Value.Day.ToString() : "0" + Start.Value.Day.ToString(),
+                   (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
+                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
+                   (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
+                   (End.Value.Minute>9? End.Value.Minute.ToString(): "0"+ End.Value.Minute.ToString()));
+
+                if (isAll)
                     newEvent = new Event()
                     {
 
@@ -123,18 +134,49 @@ namespace Time.Code
                 Description = _Description,
                 Start = new EventDateTime()
                 {
-                    Date = Start.Value.Year.ToString()+"-"+ Start.Value.Month.ToString()+'-'+ Start.Value.Day.ToString(), DateTime = Start
+                  DateTime = DateTime.Parse(String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
+                   Start.Value.Year.ToString(),
+                   Start.Value.Month > 9 ? Start.Value.Month.ToString() : "0" + Start.Value.Month.ToString(),
+                    Start.Value.Day > 9 ? Start.Value.Day.ToString() : "0" + Start.Value.Day.ToString(),
+                   (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
+                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
+                   (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
+                   (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()))),
+                    TimeZone = "America/Los_Angeles",
 
                 },
                 End = new EventDateTime()
                 {//"2019-03-06"
-                    Date = End.Value.Year.ToString() + "-" + End.Value.Month.ToString() + '-' + End.Value.Day.ToString(), DateTime = End
+                    DateTime = DateTime.Parse(String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
+                   End.Value.Year.ToString(),
+                   End.Value.Month > 9 ? End.Value.Month.ToString() : "0" + End.Value.Month.ToString(),
+                    End.Value.Day > 9 ? End.Value.Day.ToString() : "0" + End.Value.Day.ToString(),
+                   (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
+                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
+                   (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
+                   (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()))),
+                    TimeZone = "America/Los_Angeles",
                 },
 
             };
+                //Event newEvent = new Event()
+                //{
+                //    Summary = "Google I/O 2015",
+                //    Location = "800 Howard St., San Francisco, CA 94103",
+                //    Description = "A chance to hear more about Google's developer products.",
+                //    Start = new EventDateTime()
+                //    {
+                //        DateTime = DateTime.Parse("2015-05-28T09:00:00-07:00"),
+                //        TimeZone = "America/Los_Angeles",
+                //    },
+                //    End = new EventDateTime()
+                //    {
+                //        DateTime = DateTime.Parse("2015-05-28T17:00:00-07:00"),
+                //        TimeZone = "America/Los_Angeles",
+                //    },
+                //};
 
-                
-            String calendarId = "primary";
+                    String calendarId = "primary";
             EventsResource.InsertRequest request = service.Events.Insert(newEvent, calendarId);
             Event createdEvent = request.Execute();
             }
