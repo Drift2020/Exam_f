@@ -2079,11 +2079,71 @@ namespace Time.View_model
            
 
         }
+
+
+        private void Open_window_edit_event()
+        {
+
+            try
+            {
+
+                Add_event view_add = new Add_event();
+
+                Add_Event_View_Model view_model = new Add_Event_View_Model();
+
+
+
+                view_model.End_date = my_google.GetEvent(selectedItemEvent.Id).End.DateTime;
+                view_model.Start_date = my_google.GetEvent(selectedItemEvent.Id).Start.DateTime;
+                view_model.Summary = selectedItemEvent.Summary;
+                view_model.Description =selectedItemEvent.Description;
+                view_model.Location = selectedItemEvent.Location;
+                view_model.All_day = selectedItemEvent.IsAll;
+
+                view_add.DataContext = view_model;
+
+                view_model.close = new Action(view_add.Close);
+                view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
+                view_model.dict = dict;
+
+
+
+                view_add.ShowDialog();
+
+                if (!view_model.is_close)
+                    my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
+
+            }
+            catch (Exception ex)
+            {
+#if test
+                System.Windows.MessageBox.Show(ex.Message, "Open_window_add_event");
+#endif
+            }
+
+
+        }
         #endregion function 
 
 
         #region list event
+
+
         public ObservableCollection<NowDate> My_list { get; set; }
+
+        NowDate selectedItemEvent = null;
+        public NowDate SelectedItemEvent
+        {
+            set
+            {
+                selectedItemEvent = value;
+                OnPropertyChanged(nameof(SelectedItemEvent));
+            }
+            get
+            {
+                return selectedItemEvent;
+            }
+        }
 
         DateTime selected_date = DateTime.Now;
         public DateTime Selected_date
@@ -2130,7 +2190,32 @@ namespace Time.View_model
         }
 
         #endregion  Button_click_add_event
+        #region Button_click_edit_event
 
+        private DelegateCommand _Command_edit_event;
+        public ICommand Button_click_edit_event
+        {
+            get
+            {
+                if (_Command_edit_event == null)
+                {
+                    _Command_edit_event = new DelegateCommand(Execute_edit_event, CanExecute_edit_event);
+                }
+                return _Command_edit_event;
+            }
+        }
+        private void Execute_edit_event(object o)
+        {
+
+            Open_window_edit_event();
+
+        }
+        private bool CanExecute_edit_event(object o)
+        {
+            return true;
+        }
+
+        #endregion  Button_click_edit_event
         #region _Command_sing_in
 
 

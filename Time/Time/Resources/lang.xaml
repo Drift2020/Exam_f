@@ -27,7 +27,9 @@
     <v:String x:Key="Filter_button_sites">Sites</v:String>
 
     <v:String x:Key="Sites_button_group">Group</v:String>
-    <v:String x:Key="Sites_list_name">Name</v:String>
+    <v:String x:Key="Sites_list_Summary">Summary</v:String>
+    <v:String x:Key="Sites_list_Location">Location</v:String>
+    <v:String x:Key="Sites_list_Description">Description</v:String>
     <v:String x:Key="Sites_list_time">Time</v:String>
     <v:String x:Key="Sites_list_Status">Status</v:String>
     <v:String x:Key="Sites_list_url">URL</v:String>

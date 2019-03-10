@@ -46,12 +46,15 @@
                             </Grid.RowDefinitions>
                             <DataGrid    CanUserSortColumns="False"                         
                                 ItemsSource="{Binding My_list, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                         SelectedItem="{Binding SelectedItemEvent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                               IsReadOnly="True"
                                     AutoGenerateColumns="False">
 
                                 <DataGrid.Columns>
                                     <DataGridTextColumn   Header="{DynamicResource Sites_list_time}"  Width="150" Binding="{Binding Time , Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                                    <DataGridTextColumn  Header="{DynamicResource Sites_list_name }" Width="150" Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <DataGridTextColumn  Header="{DynamicResource Sites_list_Summary }" Width="150" Binding="{Binding Summary, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <DataGridTextColumn  Header="{DynamicResource Sites_list_Location }" Width="150" Binding="{Binding Location, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                    <DataGridTextColumn  Header="{DynamicResource Sites_list_Description }" Width="150" Binding="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 
 
                                 </DataGrid.Columns>

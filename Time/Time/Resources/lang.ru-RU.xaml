@@ -27,7 +27,9 @@
     <v:String x:Key="Filter_button_sites">Сайты</v:String>
 
     <v:String x:Key="Sites_button_group">Группа</v:String>
-    <v:String x:Key="Sites_list_name">Имя</v:String>
+    <v:String x:Key="Sites_list_Summary">Имя</v:String>
+    <v:String x:Key="Sites_list_Location">Местонахождение</v:String>
+    <v:String x:Key="Sites_list_Description">Описание</v:String>
     <v:String x:Key="Sites_list_time">Время</v:String>
     <v:String x:Key="Sites_list_Status">Статус</v:String>
     <v:String x:Key="Sites_list_url">Ссылка</v:String>

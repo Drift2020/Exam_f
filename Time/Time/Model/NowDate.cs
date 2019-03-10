@@ -9,19 +9,23 @@ namespace Time.Model
 {
     class NowDate : View_Model_Base
     {
-        string name;
-        public string Name
+
+
+
+        string id;
+        public string Id
         {
             get
             {
-                return name;
+                return id;
             }
             set
             {
-                name = value;
-                OnPropertyChanged(nameof(Name));
+                id = value;
+                OnPropertyChanged(nameof(Id));
             }
         }
+
 
         string time;
         public string Time
@@ -34,6 +38,64 @@ namespace Time.Model
             {
                 time = value;
                 OnPropertyChanged(nameof(Time));
+            }
+        }
+
+
+        string summary;
+        public string Summary
+        {
+            get
+            {
+                return summary;
+            }
+            set
+            {
+                summary = value;
+                OnPropertyChanged(nameof(Summary));
+            }
+        }
+
+        string location;
+        public string Location
+        {
+            get
+            {
+                return location;
+            }
+            set
+            {
+                location = value;
+                OnPropertyChanged(nameof(Location));
+            }
+        }
+
+        string description;
+        public string Description
+        {
+            get
+            {
+                return description;
+            }
+            set
+            {
+                description = value;
+                OnPropertyChanged(nameof(Description));
+            }
+        }
+
+
+        bool isAll;
+        public bool IsAll
+        {
+            get
+            {
+                return isAll;
+            }
+            set
+            {
+                isAll = value;
+                OnPropertyChanged(nameof(IsAll));
             }
         }
     }
