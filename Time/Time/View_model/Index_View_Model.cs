@@ -144,6 +144,18 @@ namespace Time.View_model
             message.ShowDialog();
             return message_model.Message_result;
         }
+        bool ShowMessage2(string info)
+        {
+            Alert message = new Alert();
+            message.type = Type_alert.Message;
+            Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
+            message_model.Closenig = new Action(message.Close);
+            message.Activated_message_style_2();
+            message_model.Text_info = info;
+            message.DataContext = message_model;
+            message.ShowDialog();
+            return message_model.Message_result;
+        }
 
 
 
@@ -2075,6 +2087,7 @@ namespace Time.View_model
                 {
                     my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
                     SelectedItemEvent = null;
+                    Selected_date = selected_date;
                 }
                 }
                 catch (Exception ex)
@@ -2124,6 +2137,7 @@ namespace Time.View_model
                 {
                     my_google.Edit_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date, selectedItemEvent.Id);
                     SelectedItemEvent = null;
+                    Selected_date = selected_date;
                 }
 
             }
@@ -2141,10 +2155,12 @@ namespace Time.View_model
         private void Delete_event()
         {
 
-            if (ShowMessage(dict["Events_Delete_message"].ToString()))
+            if (ShowMessage2(dict["Events_Delete_message"].ToString()))
             {
                 my_google.Delete_event(selectedItemEvent.Id);
                 SelectedItemEvent = null;
+                Selected_date = selected_date;
+
             }
         }
         #endregion function 

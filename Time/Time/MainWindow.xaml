@@ -71,7 +71,7 @@
                                 </Grid.ColumnDefinitions>
                                 <Button Margin="5,0,5,0" Grid.Column="2" Command="{Binding Button_click_add_event}" Content="{DynamicResource Events_Create}"/>
                                 <Button Margin="5,0,5,0" Grid.Column="1" Command="{Binding Button_click_edit_event}" Content="{DynamicResource Events_Edit}"/>
-                                <Button Margin="5,0,5,0" Grid.Column="0" Command="{Binding Button_click_del_event}" Content="{DynamicResource Events_Delete}"/>
+                                <Button Margin="5,0,5,0" Grid.Column="0" Command="{Binding Button_click_delete_event}" Content="{DynamicResource Events_Delete}"/>
                             </Grid>
                            
                         </Grid>

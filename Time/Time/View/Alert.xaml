@@ -59,6 +59,9 @@
                     <Button Width="125" x:Name="Alert_button_cancel" Grid.Column="2" Margin="5"
                     Content="{DynamicResource Alert_button_cancel}" Command="{Binding  Button_clik_button_cancel}"/>
 
+                    <Button Width="125" x:Name="Alert_button_cancel2" Grid.Column="1" Margin="5"  Visibility="Collapsed"
+                    Content="{DynamicResource Alert_button_cancel}" Command="{Binding  Button_clik_button_cancel}"/>
+
                     <Button Width="125" x:Name="Alert_button_ok2" Grid.Column="2" Margin="5"  Visibility="Collapsed"
                     Content="{DynamicResource Alert_button_ok}" />
                     <!--Command="{Binding  Button_clik_button_ok}"-->
