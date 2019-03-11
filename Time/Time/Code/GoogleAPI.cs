@@ -102,7 +102,10 @@ namespace Time.Code
         {          
             return service.Events.Get("primary", id).Execute();
         }
-     
+     public void Delete_event(string eventId)
+        {
+            service.Events.Delete("primary", eventId).Execute();
+        }
         public void Edit_event(bool isAll, string _Summary, string _Location, string _Description, DateTime? Start, DateTime? End, string idevent)
         {
 
@@ -117,16 +120,9 @@ namespace Time.Code
 
 
                 String calendarId = "primary";
-                Event newEvent = service.Events.Get("primary", "eventId").Execute();
+                Event newEvent = service.Events.Get(calendarId, idevent).Execute();
 
-                var i = String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
-                   Start.Value.Year.ToString(),
-                   Start.Value.Month > 9 ? Start.Value.Month.ToString() : "0" + Start.Value.Month.ToString(),
-                    Start.Value.Day > 9 ? Start.Value.Day.ToString() : "0" + Start.Value.Day.ToString(),
-                   (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
-                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
-                   (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
-                   (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()));
+              
 
                 if (isAll)
                     newEvent = new Event()
@@ -199,7 +195,7 @@ namespace Time.Code
                 //    },
                 //};
 
-                Event updatedEvent = service.Events.Update(newEvent,"primary", newEvent.Id).Execute();
+                Event updatedEvent = service.Events.Update(newEvent, calendarId, idevent).Execute();
                 
              //   EventsResource.InsertRequest request = service.Events.Insert(newEvent, calendarId);
               //  Event createdEvent = request.Execute();
@@ -216,14 +212,7 @@ namespace Time.Code
             {
                 Event newEvent = null;
 
-                var i = String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
-                   Start.Value.Year.ToString(),
-                   Start.Value.Month > 9 ? Start.Value.Month.ToString(): "0" + Start.Value.Month.ToString(),
-                    Start.Value.Day>9? Start.Value.Day.ToString() : "0" + Start.Value.Day.ToString(),
-                   (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
-                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
-                   (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
-                   (End.Value.Minute>9? End.Value.Minute.ToString(): "0"+ End.Value.Minute.ToString()));
+               
 
                 if (isAll)
                     newEvent = new Event()

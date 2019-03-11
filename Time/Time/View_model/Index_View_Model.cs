@@ -130,6 +130,23 @@ namespace Time.View_model
 
 
         }
+
+
+        bool ShowMessage(string info)
+        {
+            Alert message = new Alert();
+            message.type = Type_alert.Message;
+            Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
+            message_model.Closenig = new Action(message.Close);
+            message.Activated_message_style();
+            message_model.Text_info = info;
+            message.DataContext = message_model;
+            message.ShowDialog();
+            return message_model.Message_result;
+        }
+
+
+
         #region Saves
 
         void SaveGrean()
@@ -1921,19 +1938,7 @@ namespace Time.View_model
         }
 
 
-        bool ShowMessage(string info)
-        {
-            Alert message = new Alert();
-            message.type = Type_alert.Message;
-            Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
-            message_model.Closenig = new Action(message.Close);
-            message.Activated_message_style();
-            message_model.Text_info = info;
-            message.DataContext = message_model;
-            message.ShowDialog();
-            return message_model.Message_result;
-        }
-
+       
         void Delete_elements_red(List<RedSite> element)
         {
             element.ForEach(x =>
@@ -2055,7 +2060,7 @@ namespace Time.View_model
                         Add_event view_add = new Add_event();
 
                         Add_Event_View_Model view_model = new Add_Event_View_Model();
-
+                        view_add.EditWindow(Add_Event_View_Model_type.Create);
                         view_add.DataContext = view_model;
 
                         view_model.close = new Action(view_add.Close);
@@ -2065,10 +2070,12 @@ namespace Time.View_model
 
 
                         view_add.ShowDialog();
-                    
-                        if (!view_model.is_close)
-                            my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
-                  
+
+                if (!view_model.is_close)
+                {
+                    my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
+                    SelectedItemEvent = null;
+                }
                 }
                 catch (Exception ex)
                 {
@@ -2089,10 +2096,10 @@ namespace Time.View_model
 
                 Add_event view_add = new Add_event();
 
-                Add_Event_View_Model view_model = new Add_Event_View_Model();
+               Edit_Event_View_Model view_model = new Edit_Event_View_Model();
 
                 view_add.EditWindow(Add_Event_View_Model_type.Edit);
-                view_model.my_type = Add_Event_View_Model_type.Edit;
+             
 
                
 
@@ -2114,7 +2121,10 @@ namespace Time.View_model
                 view_add.ShowDialog();
 
                 if (!view_model.is_close)
+                {
                     my_google.Edit_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date, selectedItemEvent.Id);
+                    SelectedItemEvent = null;
+                }
 
             }
             catch (Exception ex)
@@ -2125,6 +2135,17 @@ namespace Time.View_model
             }
 
 
+        }
+
+
+        private void Delete_event()
+        {
+
+            if (ShowMessage(dict["Events_Delete_message"].ToString()))
+            {
+                my_google.Delete_event(selectedItemEvent.Id);
+                SelectedItemEvent = null;
+            }
         }
         #endregion function 
 
@@ -2189,7 +2210,9 @@ namespace Time.View_model
         }
         private bool CanExecute_add_event(object o)
         {
+            if(my_google.service!=null)
             return true;
+            return false;
         }
 
         #endregion  Button_click_add_event
@@ -2215,14 +2238,48 @@ namespace Time.View_model
         }
         private bool CanExecute_edit_event(object o)
         {
-            return true;
+            if (my_google.service != null&& selectedItemEvent!=null)
+                return true;
+            return false;
         }
 
         #endregion  Button_click_edit_event
-        #region _Command_sing_in
+
+        #region Button_click_delete_event
+
+        private DelegateCommand _Command_delete_event;
+        public ICommand Button_click_delete_event
+        {
+            get
+            {
+                if (_Command_delete_event == null)
+                {
+                    _Command_delete_event = new DelegateCommand(Execute_delete_event, CanExecute_delete_event);
+                }
+                return _Command_delete_event;
+            }
+        }
+        private void Execute_delete_event(object o)
+        {
+
+            Delete_event();
+
+        }
+        private bool CanExecute_delete_event(object o)
+        {
+            if (my_google.service != null && selectedItemEvent != null)
+                return true;
+            return false;
+        }
+
+        #endregion  Button_click_delete_event
+
+ 
+
+#region _Command_sing_in
 
 
-        private DelegateCommand _Command_sing_in;
+private DelegateCommand _Command_sing_in;
         public ICommand Button_clik_sing_in
         {
             get

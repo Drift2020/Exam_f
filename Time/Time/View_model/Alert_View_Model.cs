@@ -165,6 +165,11 @@ namespace Time.View_model
 
                 big_timer.Change(System.Threading.Timeout.Infinite, 0);
             }
+            else
+            {
+                Message_result = false;
+                Closenig();
+            }
         }
         private bool CanExecute_button_cancel(object o)
         {

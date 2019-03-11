@@ -96,6 +96,9 @@
     <v:String x:Key="Events_Add_Select_a_date_end">Выберите дату окончания</v:String>
     <v:String x:Key="Events_Add_title">Создание собития</v:String>
 
+    <v:String x:Key="Events_Delete_message">Вы хотите удалить это событие?</v:String>
+    <v:String x:Key="Events_Delete_title">Удаление события</v:String>
+
     <v:String x:Key="Alert_button_ok">Подтвердить</v:String>
     <v:String x:Key="Alert_button_cancel">Отмена</v:String>
     <v:String x:Key="Alert_button_next">Ещё 3 минуты</v:String>
