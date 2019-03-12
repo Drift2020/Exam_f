@@ -30,6 +30,8 @@
     <v:String x:Key="Sites_list_Summary">Имя</v:String>
     <v:String x:Key="Sites_list_Location">Местонахождение</v:String>
     <v:String x:Key="Sites_list_Description">Описание</v:String>
+
+   
     <v:String x:Key="Sites_list_time">Время</v:String>
     <v:String x:Key="Sites_list_Status">Статус</v:String>
     <v:String x:Key="Sites_list_url">Ссылка</v:String>

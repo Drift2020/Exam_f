@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:v="clr-namespace:System;assembly=mscorlib"
                     xmlns:local="clr-namespace:Time.Resources">
-
+ 
     <v:String x:Key="m_menu_Language">EN</v:String>
 
     <v:String x:Key="Index_tab_event">Events</v:String>
@@ -30,6 +30,8 @@
     <v:String x:Key="Sites_list_Summary">Summary</v:String>
     <v:String x:Key="Sites_list_Location">Location</v:String>
     <v:String x:Key="Sites_list_Description">Description</v:String>
+
+    <v:String x:Key="Sites_list_name">Name</v:String>
     <v:String x:Key="Sites_list_time">Time</v:String>
     <v:String x:Key="Sites_list_Status">Status</v:String>
     <v:String x:Key="Sites_list_url">URL</v:String>

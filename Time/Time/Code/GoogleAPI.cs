@@ -84,8 +84,22 @@ namespace Time.Code
 
                     bool temp = eventItem.Start.DateTime == eventItem.End.DateTime;
 
+                    
+
+
+
                     My_list.Add(new NowDate() { Summary = eventItem.Summary,
-                        Time = eventItem.Start.DateTime.ToString(),
+
+                        Time = eventItem.Start.DateTime == null ? null : eventItem.Start.DateTime == eventItem.End.DateTime ? String.Format("{0}:{1}",
+                             (eventItem.Start.DateTime.Value.Hour > 9 ? eventItem.Start.DateTime.Value.Hour.ToString() : "0" + eventItem.Start.DateTime.Value.Hour.ToString()),
+                              (eventItem.Start.DateTime.Value.Minute > 9 ? eventItem.Start.DateTime.Value.Minute.ToString() : "0" + eventItem.Start.DateTime.Value.Minute.ToString()))
+                              : String.Format("{0}:{1} - {2}:{3}",
+                             (eventItem.Start.DateTime.Value.Hour > 9 ? eventItem.Start.DateTime.Value.Hour.ToString() : "0" + eventItem.Start.DateTime.Value.Hour.ToString()),
+                              (eventItem.Start.DateTime.Value.Minute > 9 ? eventItem.Start.DateTime.Value.Minute.ToString() : "0" + eventItem.Start.DateTime.Value.Minute.ToString()),
+                              (eventItem.End.DateTime.Value.Hour > 9 ? eventItem.End.DateTime.Value.Hour.ToString() : "0" + eventItem.End.DateTime.Value.Hour.ToString()),
+                              (eventItem.End.DateTime.Value.Minute > 9 ? eventItem.End.DateTime.Value.Minute.ToString() : "0" + eventItem.End.DateTime.Value.Minute.ToString())
+
+                              ),
                         Location = eventItem.Location?.ToString(),
                     Description = eventItem.Description?.ToString(),
                     IsAll = temp,

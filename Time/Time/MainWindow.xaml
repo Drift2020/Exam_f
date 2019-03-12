@@ -568,28 +568,28 @@
                                   
 
                                     <DataGrid.Columns>
-                                        <DataGridTextColumn   Header="{DynamicResource Sites_list_name}"  Width="150" Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                        <DataGridTextColumn   Header="{DynamicResource Statistic_list_name}"  Width="150" Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                                             <DataGridTextColumn.CellStyle>
                                                 <Style TargetType="DataGridCell">
                                                     <Setter Property="ToolTip" Value="{DynamicResource ToolTip_Filters_stasis_name}" />
                                                 </Style>
                                             </DataGridTextColumn.CellStyle>
                                         </DataGridTextColumn>
-                                        <DataGridTextColumn  Header="{DynamicResource Sites_list_time}" Width="150" Binding="{Binding Time, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                        <DataGridTextColumn  Header="{DynamicResource Statistic_list_time}" Width="150" Binding="{Binding Time, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                                             <DataGridTextColumn.CellStyle>
                                                 <Style TargetType="DataGridCell">
                                                     <Setter Property="ToolTip" Value="{DynamicResource ToolTip_Filters_stasis_time}" />
                                                 </Style>
                                             </DataGridTextColumn.CellStyle>
                                         </DataGridTextColumn>
-                                        <DataGridHyperlinkColumn  Header="{DynamicResource Sites_list_Status}" Width="125" Binding="{Binding Status, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                        <DataGridHyperlinkColumn  Header="{DynamicResource Statistic_list_status}" Width="125" Binding="{Binding Status, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                                             <DataGridHyperlinkColumn.CellStyle>
                                                 <Style TargetType="DataGridCell">
                                                     <Setter Property="ToolTip" Value="{DynamicResource ToolTip_Filters_stasis_status}" />
                                                 </Style>
                                             </DataGridHyperlinkColumn.CellStyle>
                                         </DataGridHyperlinkColumn>
-                                        <DataGridHyperlinkColumn  Header="{DynamicResource Sites_list_url}" Width="300" Binding="{Binding URL, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                        <DataGridHyperlinkColumn  Header="{DynamicResource Statistic_list_url}" Width="300" Binding="{Binding URL, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                                             <DataGridHyperlinkColumn.CellStyle>
                                                 <Style TargetType="DataGridCell">
                                                     <Setter Property="ToolTip" Value="{DynamicResource ToolTip_Filters_stasis_url}" />
