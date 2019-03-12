@@ -65,7 +65,7 @@ namespace Time.Code
         {
             EventsResource.ListRequest request = service.Events.List("primary");
             request.TimeMin = new DateTime(days.Year, days.Month, days.Day, 0, 0, 0);
-            request.TimeMax = new DateTime(days.Year, days.Month, days.Day, 23, 0, 0);
+            request.TimeMax = new DateTime(days.Year, days.Month, days.Day, 23, 59, 59);
             request.ShowDeleted = false;
             request.SingleEvents = true;
             //  request.MaxResults = int.Parse(i);
@@ -167,29 +167,27 @@ namespace Time.Code
                         Location = _Location,
                         Description = _Description,
                         Start = new EventDateTime()
-                        {
-                            DateTime = DateTime.Parse(String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
-                          Start.Value.Year.ToString(),
-                          Start.Value.Month > 9 ? Start.Value.Month.ToString() : "0" + Start.Value.Month.ToString(),
-                           Start.Value.Day > 9 ? Start.Value.Day.ToString() : "0" + Start.Value.Day.ToString(),
-                          (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
-                          (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
-                          (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
-                          (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()))),
-                            TimeZone = "America/Los_Angeles",
+                        {//"2009/02/26 18:37:58"
+                            DateTime = DateTime.Parse(String.Format("{0}/{1}/{2} {3}:{4}:00",
+                   Start.Value.Year.ToString(),
+                   Start.Value.Month > 9 ? Start.Value.Month.ToString() : "0" + Start.Value.Month.ToString(),
+                    Start.Value.Day > 9 ? Start.Value.Day.ToString() : "0" + Start.Value.Day.ToString(),
+                   (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
+                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()))),
+
+
 
                         },
                         End = new EventDateTime()
                         {//"2019-03-06"
-                            DateTime = DateTime.Parse(String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
-                          End.Value.Year.ToString(),
-                          End.Value.Month > 9 ? End.Value.Month.ToString() : "0" + End.Value.Month.ToString(),
-                           End.Value.Day > 9 ? End.Value.Day.ToString() : "0" + End.Value.Day.ToString(),
-                          (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
-                          (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
-                          (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
-                          (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()))),
-                            TimeZone = "America/Los_Angeles",
+                            DateTime = DateTime.Parse(String.Format("{0}/{1}/{2} {3}:{4}:00",
+                   End.Value.Year.ToString(),
+                   End.Value.Month > 9 ? End.Value.Month.ToString() : "0" + End.Value.Month.ToString(),
+                    End.Value.Day > 9 ? End.Value.Day.ToString() : "0" + End.Value.Day.ToString(),
+
+                   (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
+                   (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()))),
+
                         },
 
                     };
@@ -257,29 +255,27 @@ namespace Time.Code
                 Location = _Location,
                 Description = _Description,
                 Start = new EventDateTime()
-                {
-                  DateTime = DateTime.Parse(String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
+                {//"2009/02/26 18:37:58"
+                    DateTime = DateTime.Parse(String.Format("{0}/{1}/{2} {3}:{4}:00",
                    Start.Value.Year.ToString(),
                    Start.Value.Month > 9 ? Start.Value.Month.ToString() : "0" + Start.Value.Month.ToString(),
                     Start.Value.Day > 9 ? Start.Value.Day.ToString() : "0" + Start.Value.Day.ToString(),
                    (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
-                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
-                   (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
-                   (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()))),
-                    TimeZone = "America/Los_Angeles",
+                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()))),
+
+
 
                 },
                 End = new EventDateTime()
                 {//"2019-03-06"
-                    DateTime = DateTime.Parse(String.Format("{0}-{1}-{2}T09:{3}:{4}-{5}:{6}",
+                    DateTime = DateTime.Parse(String.Format("{0}/{1}/{2} {3}:{4}:00",
                    End.Value.Year.ToString(),
                    End.Value.Month > 9 ? End.Value.Month.ToString() : "0" + End.Value.Month.ToString(),
                     End.Value.Day > 9 ? End.Value.Day.ToString() : "0" + End.Value.Day.ToString(),
-                   (Start.Value.Hour > 9 ? Start.Value.Hour.ToString() : "0" + Start.Value.Hour.ToString()),
-                   (Start.Value.Minute > 9 ? Start.Value.Minute.ToString() : "0" + Start.Value.Minute.ToString()),
+             
                    (End.Value.Hour > 9 ? End.Value.Hour.ToString() : "0" + End.Value.Hour.ToString()),
                    (End.Value.Minute > 9 ? End.Value.Minute.ToString() : "0" + End.Value.Minute.ToString()))),
-                    TimeZone = "America/Los_Angeles",
+                   
                 },
 
             };

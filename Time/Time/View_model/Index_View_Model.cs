@@ -305,6 +305,10 @@ namespace Time.View_model
             SaveRed();
             SaveStatisticSite();
             SaveSoundTimer();
+
+            stateTimer.Stop();
+            stateTimer.Close();
+            stateTimer.Dispose();
             MouseHook.UnInstallHook();
 
 
@@ -2052,7 +2056,8 @@ namespace Time.View_model
 
         #region Calendar event
         Events_Timer now_day = new Events_Timer();
-        System.Threading.Timer stateTimer =null;
+       
+        System.Timers.Timer stateTimer =null;
         string login = "";
         public string Logins
         {
@@ -2088,6 +2093,8 @@ namespace Time.View_model
                     my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
                     SelectedItemEvent = null;
                     Selected_date = selected_date;
+                   
+                    Start_Timer();
                 }
                 }
                 catch (Exception ex)
@@ -2138,6 +2145,8 @@ namespace Time.View_model
                     my_google.Edit_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date, selectedItemEvent.Id);
                     SelectedItemEvent = null;
                     Selected_date = selected_date;
+                
+                    Start_Timer();
                 }
 
             }
@@ -2161,32 +2170,34 @@ namespace Time.View_model
                 SelectedItemEvent = null;
                 Selected_date = selected_date;
 
+               
+                Start_Timer();
             }
         }
 
 
         private void Start_Timer()
         {
-            var autoEvent = new AutoResetEvent(false);
+       
+                
 
-            now_day._now_Date = my_google.Set_events(selected_date, out login).ToList();
+     
 
-            // Create a timer that invokes CheckStatus after one second, 
-            // and every 1/4 second thereafter.
-            Console.WriteLine("{0:h:mm:ss.fff} Creating timer.\n",
-                              DateTime.Now);
-            stateTimer = new System.Threading.Timer(now_day.CheckEvent,
-                                       autoEvent, 0, 1000);
+            now_day._now_Date = my_google.Set_events(DateTime.Now, out login).ToList();
 
-            // When autoEvent signals, change the period to every half second.
-            //autoEvent.WaitOne();
-            //stateTimer.Change(0, 500);
-            //Console.WriteLine("\nChanging period to .5 seconds.\n");
+            if (stateTimer != null)
+            {
+                stateTimer.Stop();
+                stateTimer.Close();
+                stateTimer.Dispose();
+            }
 
-            //// When autoEvent signals the second time, dispose of the timer.
-            //autoEvent.WaitOne();
-            //stateTimer.Dispose();
-            //Console.WriteLine("\nDestroying timer.");
+            stateTimer = new System.Timers.Timer(1000);
+            stateTimer.Elapsed += now_day.CheckEvent;
+            stateTimer.AutoReset = true;
+            stateTimer.Enabled = true;
+
+               
         }
         #endregion function 
 
@@ -2337,6 +2348,7 @@ private DelegateCommand _Command_sing_in;
             my_google.Login();
 
             My_list = my_google.Set_events( DateTime.Now,out login);
+            Start_Timer();
             OnPropertyChanged(nameof(Logins));
             OnPropertyChanged(nameof(My_list));
         }
