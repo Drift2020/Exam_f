@@ -61,7 +61,7 @@ namespace Time.Code
 
 
         }
-        public ObservableCollection<NowDate> Set_events(string i, DateTime days, out string Logins)
+        public ObservableCollection<NowDate> Set_events( DateTime days, out string Logins)
         {
             EventsResource.ListRequest request = service.Events.List("primary");
             request.TimeMin = new DateTime(days.Year, days.Month, days.Day, 0, 0, 0);
@@ -84,12 +84,13 @@ namespace Time.Code
 
                     bool temp = eventItem.Start.DateTime == eventItem.End.DateTime;
 
-                    
+
 
 
 
                     My_list.Add(new NowDate() { Summary = eventItem.Summary,
-
+                        TimeStart = eventItem.Start.DateTime,
+                        TimeEnd = eventItem.End.DateTime,
                         Time = eventItem.Start.DateTime == null ? null : eventItem.Start.DateTime == eventItem.End.DateTime ? String.Format("{0}:{1}",
                              (eventItem.Start.DateTime.Value.Hour > 9 ? eventItem.Start.DateTime.Value.Hour.ToString() : "0" + eventItem.Start.DateTime.Value.Hour.ToString()),
                               (eventItem.Start.DateTime.Value.Minute > 9 ? eventItem.Start.DateTime.Value.Minute.ToString() : "0" + eventItem.Start.DateTime.Value.Minute.ToString()))

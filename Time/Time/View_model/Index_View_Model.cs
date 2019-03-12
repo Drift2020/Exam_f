@@ -2051,8 +2051,8 @@ namespace Time.View_model
         #endregion Login
 
         #region Calendar event
-      
-
+        Events_Timer now_day = new Events_Timer();
+        System.Threading.Timer stateTimer =null;
         string login = "";
         public string Logins
         {
@@ -2163,6 +2163,31 @@ namespace Time.View_model
 
             }
         }
+
+
+        private void Start_Timer()
+        {
+            var autoEvent = new AutoResetEvent(false);
+
+            now_day._now_Date = my_google.Set_events(selected_date, out login).ToList();
+
+            // Create a timer that invokes CheckStatus after one second, 
+            // and every 1/4 second thereafter.
+            Console.WriteLine("{0:h:mm:ss.fff} Creating timer.\n",
+                              DateTime.Now);
+            stateTimer = new System.Threading.Timer(now_day.CheckEvent,
+                                       autoEvent, 0, 1000);
+
+            // When autoEvent signals, change the period to every half second.
+            //autoEvent.WaitOne();
+            //stateTimer.Change(0, 500);
+            //Console.WriteLine("\nChanging period to .5 seconds.\n");
+
+            //// When autoEvent signals the second time, dispose of the timer.
+            //autoEvent.WaitOne();
+            //stateTimer.Dispose();
+            //Console.WriteLine("\nDestroying timer.");
+        }
         #endregion function 
 
 
@@ -2196,7 +2221,7 @@ namespace Time.View_model
             {
                 My_list.Clear();
                 selected_date = value;           
-                My_list = my_google.Set_events(10.ToString(), selected_date, out login);
+                My_list = my_google.Set_events( selected_date, out login);
                 OnPropertyChanged(nameof(Logins));
                 OnPropertyChanged(nameof(My_list));
                 OnPropertyChanged(nameof(Selected_date));
@@ -2311,7 +2336,7 @@ private DelegateCommand _Command_sing_in;
         {
             my_google.Login();
 
-            My_list = my_google.Set_events(10.ToString(), DateTime.Now,out login);
+            My_list = my_google.Set_events( DateTime.Now,out login);
             OnPropertyChanged(nameof(Logins));
             OnPropertyChanged(nameof(My_list));
         }

@@ -171,6 +171,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Code\AlertType.cs" />
+    <Compile Include="Code\Events_Timer.cs" />
     <Compile Include="Code\GoogleAPI.cs" />
     <Compile Include="Code\MusicPath.cs" />
     <Compile Include="Code\site\Convert_Key.cs" />

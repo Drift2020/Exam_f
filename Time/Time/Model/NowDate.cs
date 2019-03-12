@@ -7,7 +7,7 @@ using Time.View_model;
 
 namespace Time.Model
 {
-    class NowDate : View_Model_Base
+    public class NowDate : View_Model_Base
     {
 
 
@@ -38,6 +38,34 @@ namespace Time.Model
             {
                 time = value;
                 OnPropertyChanged(nameof(Time));
+            }
+        }
+
+        DateTime? timestart;
+        public DateTime? TimeStart
+        {
+            get
+            {
+                return timestart;
+            }
+            set
+            {
+                timestart = value;
+                OnPropertyChanged(nameof(TimeStart));
+            }
+        }
+
+        DateTime? timeend;
+        public DateTime? TimeEnd
+        {
+            get
+            {
+                return timeend;
+            }
+            set
+            {
+                timeend = value;
+                OnPropertyChanged(nameof(TimeEnd));
             }
         }
 
