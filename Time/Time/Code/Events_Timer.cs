@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
+using System.Windows;
 using Time.Model;
 using Time.View;
 using Time.View_model;
@@ -13,7 +14,12 @@ namespace Time.Code
 {
     public class Events_Timer
     {
-        int count=0;
+       public ResourceDictionary dict { set; get; }
+        public Events_Timer(ResourceDictionary _dict)
+        {
+            dict = _dict;
+        }
+
         void ShowMessage(string info)
         {
             App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
@@ -25,7 +31,7 @@ namespace Time.Code
                 message.Activated_message_style();
                 message_model.Text_info = info;
                 message.DataContext = message_model;
-              
+                message.Show();
             });
             
         }
@@ -36,18 +42,18 @@ namespace Time.Code
            
             var elem = DateTime.Now;
             for (int i = 0; i < _now_Date.Count ; i++)
-               
-
-
-
-                {
-                    count++;
+                {                  
                     if (_now_Date[i].TimeStart!=null &&
                     elem.Hour== _now_Date[i].TimeStart.Value.Hour && 
                     elem.Minute == _now_Date[i].TimeStart.Value.Minute)
                     {
-                       
-                        ShowMessage(_now_Date[i].Summary + "|" + _now_Date[i].Location + "|" + _now_Date[i].Description);
+                   
+                        ShowMessage(String.Format("{0}: {1}\n{2}: {3}\n{4}: {5}", dict["Sites_list_Summary"].ToString(),
+                            _now_Date[i].Summary,
+                            dict["Sites_list_Location"].ToString(),
+                            _now_Date[i].Location,
+                            dict["Sites_list_Description"].ToString(), 
+                            _now_Date[i].Description));
                         _now_Date.RemoveAt(i);
                      i--;
                     }

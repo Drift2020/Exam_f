@@ -148,6 +148,21 @@ namespace Time.View
 
             Alert_button_ok1.Visibility = Visibility.Visible;
         }
+
+        public void Activated_message_style_3()
+        {
+            // Height="202.882" Width="422.395"
+            GWindow.Width = 500;
+            GWindow.Height = 500; 
+
+
+            Alert_button_next.Visibility = Visibility.Collapsed;
+            Time.Visibility = Visibility.Collapsed;
+            Alert_button_ok.Visibility = Visibility.Collapsed;
+
+            Alert_button_cancel2.Visibility = Visibility.Visible;
+            Alert_button_ok1.Visibility = Visibility.Visible;
+        }
         #endregion
 
         private void GWindow_Loaded(object sender, RoutedEventArgs e)

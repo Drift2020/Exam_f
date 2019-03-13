@@ -110,6 +110,8 @@
                                 <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Center">
                                     <TextBlock Text="{DynamicResource Events_Login_}" FontSize="14" Margin="0,0,5,0"/>
                                     <TextBlock FontSize="14" Text="{Binding Logins,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"  TextWrapping="Wrap"/>
+
+                                    <!--<Button Command="{Binding Button_click_test}" Grid.Column="1" Grid.Row="1" Margin="10" Content="test"/>-->
                                 </StackPanel>
 
 

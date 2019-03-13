@@ -96,6 +96,7 @@ namespace Time.View_model
             {
                 Time_duration_textbox = "__:__:__";
             }
+            now_day = new Events_Timer(dict);
         }
 
         public void View_model_up()
@@ -115,9 +116,11 @@ namespace Time.View_model
             {
                 case "ru-RU":
                     dict.Source = new Uri(String.Format("Resources/lang.{0}.xaml", _language), UriKind.Relative);
+                    now_day.dict = dict;
                     break;
                 default:
                     dict.Source = new Uri("Resources/lang.xaml", UriKind.Relative);
+                    now_day.dict = dict;
                     break;
             }
         }
@@ -2055,7 +2058,7 @@ namespace Time.View_model
         #endregion Login
 
         #region Calendar event
-        Events_Timer now_day = new Events_Timer();
+        Events_Timer now_day;
        
         System.Timers.Timer stateTimer =null;
         string login = "";
@@ -2325,10 +2328,43 @@ namespace Time.View_model
         }
 
         #endregion  Button_click_delete_event
+        //#region Button_click_test
 
- 
+        //private DelegateCommand _Command_test;
+        //public ICommand Button_click_test
+        //{
+        //    get
+        //    {
+        //        if (_Command_test == null)
+        //        {
+        //            _Command_test = new DelegateCommand(Execute_test, CanExecute_test);
+        //        }
+        //        return _Command_test;
+        //    }
+        //}
+        //private void Execute_test(object o)
+        //{
 
-#region _Command_sing_in
+        //    Alert message = new Alert();
+        //    message.type = Type_alert.Message;
+        //    Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
+        //    message_model.Closenig = new Action(message.Close);
+        //    message.Activated_message_style();
+        //    message_model.Text_info = String.Format("{0}: {1}\n{2}: {3}\n{4}: {5}", "Summaru",123, "Location",123, "Description",123);
+        //    message.DataContext = message_model;
+        //    message.Show();
+        //}
+        //private bool CanExecute_test(object o)
+        //{
+         
+        //        return true;
+           
+        //}
+
+        //#endregion  Button_click_test
+        
+
+        #region _Command_sing_in
 
 
 private DelegateCommand _Command_sing_in;
