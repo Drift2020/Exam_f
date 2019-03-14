@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Time.View"
         xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="{DynamicResource Events_Add_title}" Height="300.857" Width="288.287" ResizeMode="NoResize">
+        Title="{DynamicResource Events_Add_title}" Height="300.857" Width="288.287" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>

@@ -17,7 +17,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:controlzex="urn:controlzex" x:Class="Time.MainWindow"              
         mc:Ignorable="d"                    
-        Title="Time" Height="500" Width="754" Closing="MetroWindow_Closing" MinHeight="469" MinWidth="754" Activated="MetroWindow_Activated" Loaded="MetroWindow_Loaded"
+        Title="Time" Height="500" Width="754" Closing="MetroWindow_Closing" MinHeight="469" MinWidth="754" Activated="MetroWindow_Activated" Loaded="MetroWindow_Loaded" WindowStartupLocation="CenterScreen"
       >
 
     <Grid>

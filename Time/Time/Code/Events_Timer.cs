@@ -28,7 +28,7 @@ namespace Time.Code
                 message.type = Type_alert.Message;
                 Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
                 message_model.Closenig = new Action(message.Close);
-                message.Activated_message_style();
+                message.Activated_message_style_2();
                 message_model.Text_info = info;
                 message.DataContext = message_model;
                 message.Show();
