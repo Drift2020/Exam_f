@@ -24,6 +24,7 @@ namespace Time.Code
             {
                 case WMPPlayState.wmppsPlaying:
                     return true;
+                case WMPPlayState.wmppsUndefined:
                 case WMPPlayState.wmppsStopped:
                     return false;
             }

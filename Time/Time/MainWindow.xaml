@@ -17,7 +17,8 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:controlzex="urn:controlzex" x:Class="Time.MainWindow"              
         mc:Ignorable="d"                    
-        Title="Time" Height="500" Width="754" Closing="MetroWindow_Closing" MinHeight="469" MinWidth="754" Activated="MetroWindow_Activated" Loaded="MetroWindow_Loaded" WindowStartupLocation="CenterScreen"
+        Title="Time" Height="524.49" Width="782.571" Closing="MetroWindow_Closing" 
+    MinHeight="524.49" MinWidth="782.571" Activated="MetroWindow_Activated" Loaded="MetroWindow_Loaded" WindowStartupLocation="CenterScreen"
       >
 
     <Grid>
@@ -73,10 +74,10 @@
                                 <Button Margin="5,0,5,0" Grid.Column="1" Command="{Binding Button_click_edit_event}" Content="{DynamicResource Events_Edit}"/>
                                 <Button Margin="5,0,5,0" Grid.Column="0" Command="{Binding Button_click_delete_event}" Content="{DynamicResource Events_Delete}"/>
                             </Grid>
-                           
+
                         </Grid>
-                       
-                         
+
+
 
                     </GroupBox>
 
@@ -195,7 +196,7 @@
                                         <ColumnDefinition />
 
                                     </Grid.ColumnDefinitions>
-                                    
+
                                     <CheckBox ToolTip="{DynamicResource ToolTip_Timer_sound_check}" IsChecked="{Binding Is_Activ_sound,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Content="{DynamicResource Timer_chec_sounds}" Grid.Column="0"/>
                                     <Button ToolTip="{DynamicResource ToolTip_Timer_sound_path}" Content="{DynamicResource Timer_button_sounds}" Command="{Binding Button_clik_path}" Grid.Column="1"/>
                                 </Grid>
@@ -429,7 +430,7 @@
                             </Grid.ColumnDefinitions>
 
                             <GroupBox ToolTip="{DynamicResource ToolTip_Filters_sites_green}" Grid.Column="1" Margin="10" Header="{DynamicResource Filter_title_Gsite}" Grid.Row="0"
-                                      Controls:ControlsHelper.HeaderFontSize="16"> 
+                                      Controls:ControlsHelper.HeaderFontSize="16">
                                 <DataGrid  x:Name="LIST" ItemsSource="{Binding Grean, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 SelectedItem="{Binding Selected_Grean, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                 AutoGenerateColumns="False" RowEditEnding="LIST_RowEditEnding" BeginningEdit="LIST_BeginningEdit" 
@@ -511,7 +512,7 @@
                             <!--<Button Command="{Binding Button_clik_add}" Grid.Row="2" HorizontalAlignment="Right" Margin="5,5,5,5" Padding="30,5,30,5" Content="{DynamicResource Filter_button_statistic}"/>-->
                         </Grid>
                     </TabItem>
-                    <TabItem ToolTip="{DynamicResource ToolTip_Filters_stasis}" Header="{DynamicResource Filter_button_statistic}" Controls:ControlsHelper.HeaderFontSize="17">
+                    <TabItem ToolTip="{DynamicResource ToolTip_Filters_stasis}" Header="{DynamicResource Filter_button_statistic}" Controls:ControlsHelper.HeaderFontSize="17" Height="27" VerticalAlignment="Top">
 
                         <Grid>
                             <Grid.ColumnDefinitions>
@@ -567,7 +568,7 @@
                                 <DataGrid CanUserDeleteRows="False"   PreviewKeyDown="DataGrid_PreviewKeyDown"         
                                 ItemsSource="{Binding StatisticSite, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"       
                                     AutoGenerateColumns="False" >
-                                  
+
 
                                     <DataGrid.Columns>
                                         <DataGridTextColumn   Header="{DynamicResource Statistic_list_name}"  Width="150" Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
@@ -646,7 +647,7 @@
                         <Border Grid.ColumnSpan="2" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" BorderBrush="#FF210404" OpacityMask="#FF5F0E0E" BorderThickness="0,0,0,2">
                             <StackPanel Margin="5" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                                 <Controls:ToggleSwitch  FontSize="16" IsChecked="{Binding Auto_start,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Header="{DynamicResource Settings_auto}"  VerticalAlignment="Center" ToolTip="{DynamicResource ToolTip_Settings_Auto_start}" />
-                                
+
                             </StackPanel>
                         </Border>
                         <Border Grid.Column="1" Grid.RowSpan="2"
@@ -658,7 +659,7 @@
 
                             <StackPanel ToolTip="{DynamicResource ToolTip_Settings_info}">
                                 <TextBlock ToolTip="{DynamicResource ToolTip_Settings_info}" HorizontalAlignment="Center" Text="{DynamicResource Settings_info_title}" FontSize="20"/>
-                                <TextBlock ToolTip="{DynamicResource ToolTip_Settings_info}" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                <TextBlock  VerticalAlignment="Center" HorizontalAlignment="Center"
                             
                             TextWrapping="Wrap"
                             Text="{DynamicResource Settings_info}" FontSize="14"/>

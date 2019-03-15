@@ -97,6 +97,7 @@ namespace Time.View_model
                 Time_duration_textbox = "__:__:__";
             }
             now_day = new Events_Timer(dict);
+            FirstStartAutoStart();
         }
 
         public void View_model_up()
@@ -309,10 +310,12 @@ namespace Time.View_model
             SaveRed();
             SaveStatisticSite();
             SaveSoundTimer();
-
+            if (stateTimer != null)
+            {
             stateTimer.Stop();
             stateTimer.Close();
-            stateTimer.Dispose();
+            stateTimer.Dispose();                   
+            }
             MouseHook.UnInstallHook();
 
 
@@ -942,7 +945,15 @@ namespace Time.View_model
 
         #region Function
 
-
+        void Stop_main_music()
+        {
+            if (!is_play)
+            {
+                is_play = !is_play;
+                Icon_Play = "PlayCircleOutline";
+                my_music.Stop();
+            }
+        }
 
         bool Set_Timer_big(bool i)
         {
@@ -1142,7 +1153,7 @@ namespace Time.View_model
                     view_modelBig.Deactivate_CANCEL1 = new Action(viewBig.Deactivate_CANCEL_1);
                     view_modelBig.Activate_CANCEL1();
 
-
+                    view_modelBig.StopMainMusic = new Action(Stop_main_music);
 
                     view_modelBig.Activate_Info_small = new Action(viewBig.Activated_Small_info);
                     view_modelBig.Deactivate_Info_small = new Action(viewBig.Deactivated_Small_info);
@@ -1197,6 +1208,8 @@ namespace Time.View_model
                     view_modelShort.Deactivate_CANCEL = new Action(viewShort.Deactiv_CANCEL);
                     view_modelShort.Deactivate_CANCEL();
 
+                    view_modelShort.StopMainMusic = new Action(Stop_main_music);
+
                     view_modelShort.Closenig = new Action(viewShort.Close);
                     view_modelShort.Text_info = dict["Alert_message_1"].ToString();
 
@@ -1238,6 +1251,7 @@ namespace Time.View_model
                     view_modelOne.Activate_CANCEL = new Action(viewOne.Activ_CANCEL);
                     view_modelOne.Deactivate_CANCEL = new Action(viewOne.Deactiv_CANCEL);
 
+                    view_modelOne.StopMainMusic = new Action(Stop_main_music);
 
                     view_modelOne.Closenig = new Action(viewOne.Close);
                     view_modelOne.Disposes = new Action(DisposesOne);
@@ -1456,7 +1470,7 @@ namespace Time.View_model
         }
         private void Execute_Play_music(object o)
         {
-            if(is_play && !Music_Path_big.isPlay() && !Music_Path_big.isPlay() && !Music_Path_big.isPlay())
+            if(is_play && !Music_Path_big.isPlay() && !Music_Path_small.isPlay() && !Music_Path_one.isPlay())
             {
                 is_play = !is_play;
                 Icon_Play = "PlayCircle";
@@ -1468,7 +1482,7 @@ namespace Time.View_model
             }
             else if (!is_play)
             {
-                is_play = !is_play;
+                is_play = !is_play; 
                 Icon_Play = "PlayCircleOutline";
                 my_music.Stop();
             }
@@ -2053,6 +2067,19 @@ namespace Time.View_model
         #endregion filter 
 
         #region Settings
+        void FirstStartAutoStart()
+        {
+            RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
+            if (saveKey.GetValue("Time") != null)
+            {
+                saveKey.SetValue("Time", System.Windows.Forms.Application.ExecutablePath);
+                saveKey.Close();               
+                auto_start = true;
+
+                OnPropertyChanged(nameof(Auto_start));
+            }
+        }
+
 
         bool auto_start;
         public bool Auto_start
@@ -2066,8 +2093,10 @@ namespace Time.View_model
 
                 RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
 
+               
 
-                if (value || (value == false && saveKey.GetValue("Time") != null))
+
+                if (value )
                 {
 
                     saveKey.SetValue("Time", System.Windows.Forms.Application.ExecutablePath);

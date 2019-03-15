@@ -29,6 +29,8 @@ namespace Time.View_model
         public Action Deactivate_Info_small;
         public Action Deactivate_Info_big;
 
+        public Action StopMainMusic;
+
         public Action Closenig;
         public Action Disposes;
         #endregion Actions
@@ -50,15 +52,22 @@ namespace Time.View_model
         Timer big_timer;
 
         public MusicPath my_music { set; get; }
+        bool work_stop = true;
         #endregion Variables
 
         #region Function 
+
 
 
         void TickBreak(object o)
         {
             try
             {
+                if (work_stop)
+                {
+                    work_stop = !work_stop;
+                    StopMainMusic();
+                }
                 App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
                 {
 
@@ -112,6 +121,7 @@ namespace Time.View_model
 
                     if (time_s < 1)
                     {
+                        work_stop = true;
                         my_music.Stop();
                         Closenig();
                        
