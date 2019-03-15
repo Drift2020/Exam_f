@@ -2091,37 +2091,101 @@ namespace Time.View_model
             set
             {
 
-                RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-
-               
+                //  RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
 
 
-                if (value )
+
+                if (value)
                 {
-
-                    saveKey.SetValue("Time", System.Windows.Forms.Application.ExecutablePath);
-                    saveKey.Close();
-
-
-                    //RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-                    //string i = System.Windows.Forms.Application.ExecutablePath;
-                    //key.SetValue("Time", System.Windows.Forms.Application.ExecutablePath);
-                    auto_start = true;
-                }
-                else
-                {
-
-                    // var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-                    if (saveKey.GetValue("Time") != null)
+                    try
                     {
-                        saveKey.DeleteValue("Time");
-                        auto_start = value;
+                        using (RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                        {
+                            rkApp.SetValue("Time", System.Reflection.Assembly.GetExecutingAssembly().Location);
+                           
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+#if test
+                        System.Windows.MessageBox.Show(ex.Message);
+#endif
                     }
 
 
                 }
+                else
+                {
+                    try
+                    {
+                        using (RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                        {
+                            rkApp.DeleteValue("Time", false);
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+
+#if test
+                        System.Windows.MessageBox.Show(ex.Message);
+#endif
+                    }
+                    // var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
+                    //if (saveKey.GetValue("Time") != null)
+                    //{
+                    //    saveKey.DeleteValue("Time");
+                    //    auto_start = value;
+                    //}
 
 
+                }
+
+                //                if (value )
+                //                {
+                //                    try
+                //                    {
+                //                        using (var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true))
+                //                    { key.SetValue("Timer", System.Windows.Forms.Application.ExecutablePath);
+                //                            key.Close();
+                //                        }
+                //                } catch(Exception ex) {
+
+                //#if test
+                //                        System.Windows.MessageBox.Show(ex.Message);
+                //#endif
+                //                    }
+
+
+                //                }
+                //                else
+                //                {
+                //                    try {
+                //                    using (var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true))
+                //                    {
+                //                        key.DeleteValue("Timer");
+                //                            key.Close();
+                //                        }
+                //                    }
+                //                     catch (Exception ex)
+                //                    {
+
+                //#if test
+                //                        System.Windows.MessageBox.Show(ex.Message);
+                //#endif
+                //                    }
+                //                    // var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
+                //                    //if (saveKey.GetValue("Time") != null)
+                //                    //{
+                //                    //    saveKey.DeleteValue("Time");
+                //                    //    auto_start = value;
+                //                    //}
+
+
+                //                }
+
+                auto_start = value;
 
 
 
