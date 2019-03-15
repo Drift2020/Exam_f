@@ -39,7 +39,7 @@ namespace Time.View_model
 {
     class Index_View_Model : View_Model_Base
     {
-        Search_ID _search_ID;
+     
         ApplicationContext db;
         ResourceDictionary dict = new ResourceDictionary();
         My_form _my_form;
@@ -52,7 +52,7 @@ namespace Time.View_model
         {
 
 
-            _search_ID = new Search_ID();
+          
             db = temp;
             db.GreanSites.Load();
             db.RedSites.Load();
@@ -135,6 +135,7 @@ namespace Time.View_model
         }
 
 
+        #region message
         bool ShowMessage(string info)
         {
             Alert message = new Alert();
@@ -159,7 +160,7 @@ namespace Time.View_model
             message.ShowDialog();
             return message_model.Message_result;
         }
-
+        #endregion 
 
 
         #region Saves
@@ -325,7 +326,14 @@ namespace Time.View_model
 
         #region Timer
 
+
+
+        #region Variables
+
+        #region combobox
         #region type time
+
+        #region Get_minutes_type_big
         int Get_minutes_type_big(int i)
         {
             switch (i)
@@ -367,6 +375,10 @@ namespace Time.View_model
 
             return -1;
         }
+        #endregion
+
+
+        #region Get_minutes_duration_big
         int Get_minutes_duration_big(int i)
         {
             switch (i)
@@ -404,7 +416,10 @@ namespace Time.View_model
 
             return -1;
         }
+        #endregion
 
+
+        #region Get_minutes_type_short
         int Get_minutes_type_short(int i)
         {
             switch (i)
@@ -434,6 +449,9 @@ namespace Time.View_model
 
             return -1;
         }
+        #endregion
+
+        #region Get_seconds_duration_short
         int Get_seconds_duration_short(int i)
         {
             switch (i)
@@ -454,9 +472,55 @@ namespace Time.View_model
 
             return -1;
         }
+        #endregion
+
         #endregion type time
 
-        #region Variables
+        #endregion combpbpx
+
+        #region checkbox
+
+        #region is activ sound
+        public bool Is_Activ_sound
+        {
+            get
+            {
+                if (select_Index_Sound_type_timer == 0)
+                {
+                    return my_big_model[0].IsActiveSound;
+                }
+                else if (select_Index_Sound_type_timer == 1)
+                {
+                    return my_short_model[0].IsSoundActive;
+                }
+                else if (select_Index_Sound_type_timer == 2)
+                {
+                    return my_ome_model[0].IsSoundActive;
+                }
+
+
+                return false;
+            }
+            set
+            {
+                if (select_Index_Sound_type_timer == 0)
+                {
+                    my_big_model[0].IsActiveSound = value;
+                }
+                else if (select_Index_Sound_type_timer == 1)
+                {
+                    my_short_model[0].IsSoundActive = value;
+                }
+                else if (select_Index_Sound_type_timer == 2)
+                {
+                    my_ome_model[0].IsSoundActive = value;
+                }
+                OnPropertyChanged(nameof(Is_Activ_sound));
+            }
+        }
+
+        #endregion is activ sound
+
 
         #region is activ big timer
         Alert viewBig;
@@ -593,6 +657,39 @@ namespace Time.View_model
 
         #endregion is activ small timer
 
+        #region is one timer
+
+
+        public bool Is_Small
+        {
+            get
+            {
+                return my_ome_model[0].IsActiveOne;
+            }
+            set
+            {
+                try
+                {
+                    if (value)
+                        OneTimes_D();
+                    else
+
+                        OneTimes_A();
+                }
+                catch (Exception ex)
+                {
+#if test
+                    System.Windows.MessageBox.Show(ex.Message, "Ups...Is_Small");
+#endif
+                }
+
+                my_ome_model[0].IsActiveOne = Set_Timer_one(value);
+                OnPropertyChanged(nameof(Is_Small));
+            }
+        }
+
+        #endregion is one timer
+
         #region is activ strict type
 
         public bool Is_strict_type
@@ -609,7 +706,35 @@ namespace Time.View_model
         }
         #endregion is activ strict type
 
-        
+        #endregion checkbox
+
+        #region music path
+
+        #region MusicPath big
+
+        MusicPath Music_Path_big =new MusicPath();
+
+        #endregion MusicPath big
+
+        #region MusicPath small
+
+        MusicPath Music_Path_small = new MusicPath();
+
+        #endregion MusicPath bsmallig
+
+        #region MusicPath one
+
+        MusicPath Music_Path_one = new MusicPath();
+
+        #endregion MusicPath one
+
+        #region MusicPath main window
+
+        MusicPath my_music=new MusicPath();
+
+        #endregion MusicPath main window
+
+        #endregion music path
 
         #region small timer
         Alert viewOne;
@@ -718,39 +843,6 @@ namespace Time.View_model
 
         #endregion small timer
 
-        #region is one timer
-
-
-        public bool Is_Small
-        {
-            get
-            {
-                return my_ome_model[0].IsActiveOne;
-            }
-            set
-            {
-                try
-                {
-                    if (value)
-                        OneTimes_D();
-                    else
-
-                        OneTimes_A();
-                }
-                catch (Exception ex)
-                {
-#if test
-                    System.Windows.MessageBox.Show(ex.Message, "Ups...Is_Small");
-#endif
-                }
-
-                my_ome_model[0].IsActiveOne = Set_Timer_one(value);
-                OnPropertyChanged(nameof(Is_Small));
-            }
-        }
-
-        #endregion is one timer
-
         #region Select_Index_Sound_type_timer
         int select_Index_Sound_type_timer = -1;
         public int Select_Index_Sound_type_timer
@@ -771,48 +863,7 @@ namespace Time.View_model
         }
 
         #endregion Select_Index_Sound_type_timer
-
-        #region is activ sound
-        public bool Is_Activ_sound
-        {
-            get
-            {
-                if (select_Index_Sound_type_timer == 0)
-                {
-                    return my_big_model[0].IsActiveSound;
-                }
-                else if (select_Index_Sound_type_timer == 1)
-                {
-                    return my_short_model[0].IsSoundActive;
-                }
-                else if (select_Index_Sound_type_timer == 2)
-                {
-                    return my_ome_model[0].IsSoundActive;
-                }
-
-
-                return false;
-            }
-            set
-            {
-                if (select_Index_Sound_type_timer == 0)
-                {
-                    my_big_model[0].IsActiveSound = value;
-                }
-                else if (select_Index_Sound_type_timer == 1)
-                {
-                    my_short_model[0].IsSoundActive = value;
-                }
-                else if (select_Index_Sound_type_timer == 2)
-                {
-                    my_ome_model[0].IsSoundActive = value;
-                }
-                OnPropertyChanged(nameof(Is_Activ_sound));
-            }
-        }
-
-        #endregion is activ sound
-
+  
         #region Icon_Play
 
         string icon_play;
@@ -890,6 +941,8 @@ namespace Time.View_model
         #endregion Variables
 
         #region Function
+
+
 
         bool Set_Timer_big(bool i)
         {
@@ -1064,7 +1117,7 @@ namespace Time.View_model
                 if (temp.type == Type_alert.Big)
                 {
                     viewBig = new Alert();
-                    view_modelBig = new Alert_View_Model() { time_s = temp.time * 60, type = Type_alert.Big };
+                    view_modelBig = new Alert_View_Model() { time_s = temp.time * 60, type = Type_alert.Big,my_music=Music_Path_big };
 
                     viewBig.StartBreakBig = new Action(view_modelBig.ActiveteTime);
 
@@ -1113,7 +1166,7 @@ namespace Time.View_model
                     {
                         if (my_big_model[0].IsActiveSound && my_big_model[0].BigSoundId != -1)
 
-                            MusicPath.Play(List_sound.Where(x => x.Id == my_big_model[0].BigSoundId).First().Path, my_big_model[0].SoundVolume);
+                            Music_Path_big.Play(List_sound.Where(x => x.Id == my_big_model[0].BigSoundId).First().Path, my_big_model[0].SoundVolume);
                     }
                     catch (Exception ex)
                     {
@@ -1125,7 +1178,7 @@ namespace Time.View_model
                 else if (temp.type == Type_alert.Short)
                 {
                     viewShort = new Alert();
-                    view_modelShort = new Alert_View_Model() { time_s = temp.time, type = Type_alert.Short };
+                    view_modelShort = new Alert_View_Model() { time_s = temp.time, type = Type_alert.Short, my_music = Music_Path_small };
 
                     viewShort.StartBreakBig = new Action(view_modelShort.ActiveteTime);
 
@@ -1154,7 +1207,7 @@ namespace Time.View_model
                     {
                         if (my_short_model[0].IsSoundActive && my_short_model[0].ShortSoundId != -1)
 
-                            MusicPath.Play(List_sound.Where(x => x.Id == my_short_model[0].ShortSoundId).First().Path, my_short_model[0].SoundVolume);
+                            Music_Path_small.Play(List_sound.Where(x => x.Id == my_short_model[0].ShortSoundId).First().Path, my_short_model[0].SoundVolume);
                     }
                     catch (Exception ex)
                     {
@@ -1166,7 +1219,7 @@ namespace Time.View_model
                 if (temp.type == Type_alert.One)
                 {
                     viewOne = new Alert();
-                    view_modelOne = new Alert_View_Model() { time_s = temp.time, type = Type_alert.One };
+                    view_modelOne = new Alert_View_Model() { time_s = temp.time, type = Type_alert.One, my_music = Music_Path_one };
 
                     viewOne.StartBreakBig = new Action(view_modelOne.ActiveteTime);
 
@@ -1194,7 +1247,7 @@ namespace Time.View_model
                     {
                         if (my_ome_model[0].IsSoundActive && my_ome_model[0].OneSoundId != -1)
                             if (Selected_Item_sound != null)
-                                MusicPath.Play(List_sound.Where(x => x.Id == my_ome_model[0].OneSoundId).First().Path, my_ome_model[0].SoundVolume);
+                                Music_Path_one.Play(List_sound.Where(x => x.Id == my_ome_model[0].OneSoundId).First().Path, my_ome_model[0].SoundVolume);
                     }
                     catch (Exception ex)
                     {
@@ -1403,7 +1456,7 @@ namespace Time.View_model
         }
         private void Execute_Play_music(object o)
         {
-            if(is_play)
+            if(is_play && !Music_Path_big.isPlay() && !Music_Path_big.isPlay() && !Music_Path_big.isPlay())
             {
                 is_play = !is_play;
                 Icon_Play = "PlayCircle";
@@ -1411,13 +1464,13 @@ namespace Time.View_model
 
 
 
-                MusicPath.Play(Selected_Item_sound.Path, Volum);
+                my_music.Play(Selected_Item_sound.Path, Volum);
             }
-            else
+            else if (!is_play)
             {
                 is_play = !is_play;
                 Icon_Play = "PlayCircleOutline";
-                MusicPath.Stop();
+                my_music.Stop();
             }
 
 

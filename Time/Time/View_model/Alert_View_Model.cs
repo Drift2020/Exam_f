@@ -48,6 +48,8 @@ namespace Time.View_model
 
         TimerCallback big_Callback;
         Timer big_timer;
+
+        public MusicPath my_music { set; get; }
         #endregion Variables
 
         #region Function 
@@ -99,7 +101,7 @@ namespace Time.View_model
                             Times = String.Format("{0}:{1}", temp_mitutes, temp_second);
                         if (time_s < 1)
                         {
-                            MusicPath.Stop();
+                            my_music.Stop();
                             Closenig();
                             Disposes();
                             big_timer.Change(System.Threading.Timeout.Infinite, 0);
@@ -110,7 +112,7 @@ namespace Time.View_model
 
                     if (time_s < 1)
                     {
-                        MusicPath.Stop();
+                        my_music.Stop();
                         Closenig();
                        
                         big_timer.Change(System.Threading.Timeout.Infinite, 0);
@@ -121,7 +123,7 @@ namespace Time.View_model
             }
             catch (Exception ex)
             {
-                MusicPath.Stop();
+                my_music.Stop();
                 MessageBox.Show(ex.Message, "TickBreak");
             }
         }
@@ -158,7 +160,7 @@ namespace Time.View_model
         {
             if (type == Type_alert.Big || type == Type_alert.One || type == Type_alert.Short)
             {
-                MusicPath.Stop();
+                my_music.Stop();
                 Closenig();
                 if (type == Type_alert.One)
                     Disposes();

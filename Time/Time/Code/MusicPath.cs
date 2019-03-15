@@ -11,11 +11,25 @@ namespace Time.Code
 {
     class MusicPath
     {
-        static  MusicPath()
+        public MusicPath()
         {
             wmp = new WindowsMediaPlayer();
         }
-        static WindowsMediaPlayer wmp;
+        WindowsMediaPlayer wmp;
+
+        public bool isPlay()
+        {
+           
+            switch (wmp.playState)
+            {
+                case WMPPlayState.wmppsPlaying:
+                    return true;
+                case WMPPlayState.wmppsStopped:
+                    return false;
+            }
+            return true;
+        }
+
         public static List<string> Get_Paths()
         {
 
@@ -34,7 +48,7 @@ namespace Time.Code
         }
 
 
-        public static void Play(string path, int? i)
+        public  void Play(string path, int? i)
         {
             Stop();
             if (path != null)
@@ -48,7 +62,7 @@ namespace Time.Code
             
         }
 
-        public static void Volume(int? i)
+        public  void Volume(int? i)
         {
           
             
@@ -60,7 +74,7 @@ namespace Time.Code
         }
 
 
-        public static void Stop()
+        public  void Stop()
         {
         
             wmp.controls.stop();
