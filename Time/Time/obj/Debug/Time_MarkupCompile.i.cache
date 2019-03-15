@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Exam_f\Time\Time\obj\Debug\
+D:\Documents\GitHub\Exam_f\Time\Time\obj\Debug\
 Time
 none
 false
 DEBUG;TRACE
-C:\Users\Buje_jy89\Documents\Visual Studio 2017\Projects\wpf\Exam_f\Time\Time\App.xaml
+D:\Documents\GitHub\Exam_f\Time\Time\App.xaml
 8-1227137655
-67-969501609
-63795158183
-56-419270598
+69-872596056
+63460307818
+56-761467981
 MainWindow.xaml;MyControls\ImageButtonUC.xaml;Resources\Icons.xaml;Resources\IconsNonShared.xaml;Resources\lang.ru-RU.xaml;Resources\lang.xaml;View\Add_event.xaml;View\Alert.xaml;
 
 True
