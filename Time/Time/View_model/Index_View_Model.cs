@@ -39,7 +39,7 @@ namespace Time.View_model
 {
     class Index_View_Model : View_Model_Base
     {
-     
+
         ApplicationContext db;
         ResourceDictionary dict = new ResourceDictionary();
         My_form _my_form;
@@ -100,45 +100,50 @@ namespace Time.View_model
                 now_day = new Events_Timer(dict);
                 FirstStartAutoStart();
             }
-            
-            catch (Exception ex)
-            {
-                Log.Write(ex);
-            }
-}
+            catch (Exception ex) { Log.Write(ex); }
+        }
 
         public void View_model_up()
         {
-            Is_Small = Is_Small;
-            Is_small_timer = Is_small_timer;
-            Is_big_timer = Is_big_timer;
-            Auto_start = Auto_start;
-            Volum = Volum;
-            Icon_Play = "PlayCircleOutline";
+            try
+            {
+                Is_Small = Is_Small;
+                Is_small_timer = Is_small_timer;
+                Is_big_timer = Is_big_timer;
+                Auto_start = Auto_start;
+                Volum = Volum;
+                Icon_Play = "PlayCircleOutline";
+
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
         public void Set_Language(string _language)
         {
-
-            switch (_language)
+            try
             {
-                case "ru-RU":
-                    dict.Source = new Uri(String.Format("Resources/lang.{0}.xaml", _language), UriKind.Relative);
-                    now_day.dict = dict;
-                    break;
-                default:
-                    dict.Source = new Uri("Resources/lang.xaml", UriKind.Relative);
-                    now_day.dict = dict;
-                    break;
+                switch (_language)
+                {
+                    case "ru-RU":
+                        dict.Source = new Uri(String.Format("Resources/lang.{0}.xaml", _language), UriKind.Relative);
+                        now_day.dict = dict;
+                        break;
+                    default:
+                        dict.Source = new Uri("Resources/lang.xaml", UriKind.Relative);
+                        now_day.dict = dict;
+                        break;
+                }
             }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
         void MouseHook_MouseUp(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-
+            try { 
 
             Statistic_procces();
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
 
         }
 
@@ -146,6 +151,7 @@ namespace Time.View_model
         #region message
         bool ShowMessage(string info)
         {
+            try { 
             Alert message = new Alert();
             message.type = Type_alert.Message;
             Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
@@ -155,18 +161,24 @@ namespace Time.View_model
             message.DataContext = message_model;
             message.ShowDialog();
             return message_model.Message_result;
+            }
+            catch (Exception ex) { Log.Write(ex);return false; }
         }
         bool ShowMessage2(string info)
         {
-            Alert message = new Alert();
-            message.type = Type_alert.Message;
-            Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
-            message_model.Closenig = new Action(message.Close);
-            message.Activated_message_style_2();
-            message_model.Text_info = info;
-            message.DataContext = message_model;
-            message.ShowDialog();
-            return message_model.Message_result;
+            try
+            {
+                Alert message = new Alert();
+                message.type = Type_alert.Message;
+                Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
+                message_model.Closenig = new Action(message.Close);
+                message.Activated_message_style_2();
+                message_model.Text_info = info;
+                message.DataContext = message_model;
+                message.ShowDialog();
+                return message_model.Message_result;
+            }
+            catch (Exception ex) { Log.Write(ex); return false; }
         }
         #endregion 
 
@@ -175,6 +187,7 @@ namespace Time.View_model
 
         void SaveGrean()
         {
+            try { 
             Grean.ToList().ForEach(y =>
             {
                 if (y.Name == null)
@@ -209,11 +222,14 @@ namespace Time.View_model
             });
 
             db.SaveChanges();
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
         void SaveRed()
         {
+            try { 
             Red.ToList().ForEach(y =>
             {
                 if (y.Name == null)
@@ -245,37 +261,43 @@ namespace Time.View_model
             });
 
             db.SaveChanges();
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
         void SaveStatisticSite()
         {
-            StatisticSite.ToList().ForEach(y =>
+            try
             {
-                bool isAdd = true;
-                db.StatisticSites.ToList().ForEach(x =>
+                StatisticSite.ToList().ForEach(y =>
                 {
-                    try
+                    bool isAdd = true;
+                    db.StatisticSites.ToList().ForEach(x =>
                     {
-                        if (y.Id == x.Id)
+                        try
+                        {
+                            if (y.Id == x.Id)
+                            {
+                                isAdd = false;
+                            }
+                        }
+                        catch
                         {
                             isAdd = false;
                         }
-                    }
-                    catch
-                    {
-                        isAdd = false;
-                    }
+
+                    });
+
+                    if (isAdd)
+                        db.StatisticSites.Add(y);
 
                 });
 
-                if (isAdd)
-                    db.StatisticSites.Add(y);
-
-            });
-
-            db.SaveChanges();
-        }
+                db.SaveChanges();
+            }
+            catch (Exception ex) { Log.Write(ex); }
+}
         void SaveSoundTimer()
         {
             List_sound.ToList().ForEach(y =>
@@ -312,23 +334,25 @@ namespace Time.View_model
 
         public void Closing()
         {
-
-            SaveGrean();
-            SaveRed();
-            SaveStatisticSite();
-            SaveSoundTimer();
-            if (stateTimer != null)
+            try
             {
-            stateTimer.Stop();
-            stateTimer.Close();
-            stateTimer.Dispose();                   
+                SaveGrean();
+                SaveRed();
+                SaveStatisticSite();
+                SaveSoundTimer();
+                if (stateTimer != null)
+                {
+                    stateTimer.Stop();
+                    stateTimer.Close();
+                    stateTimer.Dispose();
+                }
+                MouseHook.UnInstallHook();
+
+
+
+                db.Dispose();
             }
-            MouseHook.UnInstallHook();
-
-
-
-            db.Dispose();
-
+            catch (Exception ex) { Log.Write(ex); }
         }
 
         #endregion Saves
@@ -346,6 +370,7 @@ namespace Time.View_model
         #region Get_minutes_type_big
         int Get_minutes_type_big(int i)
         {
+            try { 
             switch (i)
             {
                 case 0:
@@ -382,7 +407,8 @@ namespace Time.View_model
                     return 120;
 
             }
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
             return -1;
         }
         #endregion
@@ -391,6 +417,7 @@ namespace Time.View_model
         #region Get_minutes_duration_big
         int Get_minutes_duration_big(int i)
         {
+            try { 
             switch (i)
             {
                 case 0:
@@ -423,7 +450,8 @@ namespace Time.View_model
 
 
             }
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
             return -1;
         }
         #endregion
@@ -432,6 +460,7 @@ namespace Time.View_model
         #region Get_minutes_type_short
         int Get_minutes_type_short(int i)
         {
+            try { 
             switch (i)
             {
                 case 0:
@@ -456,7 +485,8 @@ namespace Time.View_model
                     return 30;
 
             }
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
             return -1;
         }
         #endregion
@@ -464,6 +494,7 @@ namespace Time.View_model
         #region Get_seconds_duration_short
         int Get_seconds_duration_short(int i)
         {
+            try { 
             switch (i)
             {
                 case 0:
@@ -479,7 +510,8 @@ namespace Time.View_model
 
 
             }
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
             return -1;
         }
         #endregion
@@ -722,7 +754,7 @@ namespace Time.View_model
 
         #region MusicPath big
 
-        MusicPath Music_Path_big =new MusicPath();
+        MusicPath Music_Path_big = new MusicPath();
 
         #endregion MusicPath big
 
@@ -740,7 +772,7 @@ namespace Time.View_model
 
         #region MusicPath main window
 
-        MusicPath my_music=new MusicPath();
+        MusicPath my_music = new MusicPath();
 
         #endregion MusicPath main window
 
@@ -787,6 +819,7 @@ namespace Time.View_model
 
         string Converts(string str)
         {
+            try { 
             int second = 0;
 
             int minutes = 0;
@@ -849,12 +882,16 @@ namespace Time.View_model
             var end_h = (hours >= 10 ? hours.ToString() : "_" + (hours == 0 ? "_" : hours.ToString()));
 
             return String.Format("{0}:{1}:{2}", end_h, end_m, end_s);
+
+            }
+            catch (Exception ex) { Log.Write(ex); }
+            return "00:00:00";
         }
 
         #endregion small timer
 
-        #region Select_Index_Sound_type_timer
-        int select_Index_Sound_type_timer = -1;
+            #region Select_Index_Sound_type_timer
+            int select_Index_Sound_type_timer = -1;
         public int Select_Index_Sound_type_timer
         {
             get
@@ -873,7 +910,7 @@ namespace Time.View_model
         }
 
         #endregion Select_Index_Sound_type_timer
-  
+
         #region Icon_Play
 
         string icon_play;
@@ -905,43 +942,43 @@ namespace Time.View_model
 
                 if (select_Index_Sound_type_timer == 0)
                 {
-                   my_big_model[0].SoundVolume=value;
-                  
+                    my_big_model[0].SoundVolume = value;
+
                 }
                 else if (select_Index_Sound_type_timer == 1)
                 {
-                     my_short_model[0].SoundVolume = value;
-                   
+                    my_short_model[0].SoundVolume = value;
+
                 }
                 else if (select_Index_Sound_type_timer == 2)
                 {
-                     my_ome_model[0].SoundVolume = value;
-                   
+                    my_ome_model[0].SoundVolume = value;
+
                 }
-              
+
 
                 db.SaveChanges();
-               
+
                 OnPropertyChanged(nameof(Volum));
             }
             get
             {
                 if (select_Index_Sound_type_timer == 0)
                 {
-                  
+
                     return my_big_model[0].SoundVolume;
                 }
                 else if (select_Index_Sound_type_timer == 1)
                 {
-                   
+
                     return my_short_model[0].SoundVolume;
                 }
                 else if (select_Index_Sound_type_timer == 2)
                 {
-                   
+
                     return my_ome_model[0].SoundVolume;
                 }
-               
+
                 return 0;
             }
         }
@@ -1004,8 +1041,9 @@ namespace Time.View_model
             }
             catch (Exception ex)
             {
+          Log.Write(ex); 
 #if test
-                System.Windows.MessageBox.Show(ex.Message, "Set_Timer_big");
+            System.Windows.MessageBox.Show(ex.Message, "Set_Timer_big");
 #endif
                 return false;
             }
@@ -1054,8 +1092,9 @@ namespace Time.View_model
             }
             catch (Exception ex)
             {
+             Log.Write(ex); 
 #if test
-                System.Windows.MessageBox.Show(ex.Message, "Set_Timer_short");
+            System.Windows.MessageBox.Show(ex.Message, "Set_Timer_short");
 #endif
                 return false;
             }
@@ -1110,8 +1149,9 @@ namespace Time.View_model
             }
             catch (Exception ex)
             {
+           Log.Write(ex); 
 #if test
-                System.Windows.MessageBox.Show(ex.Message, "Ups...Set_Timer_one");
+            System.Windows.MessageBox.Show(ex.Message, "Ups...Set_Timer_one");
 #endif
                 return false;
             }
@@ -1119,15 +1159,17 @@ namespace Time.View_model
 
         void DisposesOne()
         {
+            try { 
             One_timer.Dispose();
             Is_Small = false;
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
         void Alert_box(object obj)
         {
-
+            try { 
             var temp = (AlertType)obj;
 
             App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
@@ -1135,7 +1177,7 @@ namespace Time.View_model
                 if (temp.type == Type_alert.Big)
                 {
                     viewBig = new Alert();
-                    view_modelBig = new Alert_View_Model() { time_s = temp.time * 60, type = Type_alert.Big,my_music=Music_Path_big };
+                    view_modelBig = new Alert_View_Model() { time_s = temp.time * 60, type = Type_alert.Big, my_music = Music_Path_big };
 
                     viewBig.StartBreakBig = new Action(view_modelBig.ActiveteTime);
 
@@ -1286,6 +1328,8 @@ namespace Time.View_model
 
 
             });
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
@@ -1352,10 +1396,10 @@ namespace Time.View_model
 
 
                 }
-                if(List_sound.Count>0)
-                return List_sound[0];
+                if (List_sound.Count > 0)
+                    return List_sound[0];
                 return null;
-               // return new Sound();
+                // return new Sound();
             }
             set
             {
@@ -1394,6 +1438,7 @@ namespace Time.View_model
 
         void Check_Path()
         {
+            try { 
             List_sound.ToList().ForEach(
               x =>
               {
@@ -1416,6 +1461,8 @@ namespace Time.View_model
               }
               );
             db.SaveChanges();
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
         #endregion Sound list
@@ -1477,7 +1524,7 @@ namespace Time.View_model
         }
         private void Execute_Play_music(object o)
         {
-            if(is_play && !Music_Path_big.isPlay() && !Music_Path_small.isPlay() && !Music_Path_one.isPlay())
+            if (is_play && !Music_Path_big.isPlay() && !Music_Path_small.isPlay() && !Music_Path_one.isPlay())
             {
                 is_play = !is_play;
                 Icon_Play = "PlayCircle";
@@ -1489,7 +1536,7 @@ namespace Time.View_model
             }
             else if (!is_play)
             {
-                is_play = !is_play; 
+                is_play = !is_play;
                 Icon_Play = "PlayCircleOutline";
                 my_music.Stop();
             }
@@ -1498,7 +1545,7 @@ namespace Time.View_model
         }
         private bool CanExecute_Play_music(object o)
         {
-            if(Selected_Item_sound != null)
+            if (Selected_Item_sound != null)
             {
                 return true;
             }
@@ -1675,22 +1722,24 @@ namespace Time.View_model
 
         public void Update_range_date(List<DateTime> i)
         {
-            try { 
-            my_dates = i;
+            try
+            {
+                my_dates = i;
 
-            Date_statistic_title = my_dates.First() != null ?
-               (my_dates.First().ToString().Split(' ')[0] + (
-               my_dates.Count > 1 ?
-              "-" + my_dates[my_dates.Count - 1].ToString().Split(' ')[0]
-               : " "))
-               : " ";
+                Date_statistic_title = my_dates.First() != null ?
+                   (my_dates.First().ToString().Split(' ')[0] + (
+                   my_dates.Count > 1 ?
+                  "-" + my_dates[my_dates.Count - 1].ToString().Split(' ')[0]
+                   : " "))
+                   : " ";
 
-            Set_List_Statistic();
+                Set_List_Statistic();
             }
             catch (Exception ex)
             {
+            Log.Write(ex); 
 #if test
-                System.Windows.MessageBox.Show(ex.Message, "Update_range_date");
+            System.Windows.MessageBox.Show(ex.Message, "Update_range_date");
 #endif
             }
         }
@@ -1700,70 +1749,72 @@ namespace Time.View_model
             try
             {
                 var lits_temp = db.StatisticSites.ToList();
-            List<StatisticSite> list = new List<Time.StatisticSite>();
-            var start = (my_dates.First());
+                List<StatisticSite> list = new List<Time.StatisticSite>();
+                var start = (my_dates.First());
 
-            if (start != null)
-            {
-
-
-
-                var end = (my_dates[my_dates.Count - 1]);
-
-
-                if (end != start)
+                if (start != null)
                 {
 
-                    if (start > end)
-                    {
-                        var temp = DateTime.Parse(start.ToString());
-                        start = end;
-                        end = temp;
-                    }
 
-                    for (var i = 0; i < lits_temp.Count; i++)
+
+                    var end = (my_dates[my_dates.Count - 1]);
+
+
+                    if (end != start)
                     {
-                        if (DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) >= DateTime.Parse(start.ToString().Split(' ')[0])
-                            && DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) <= DateTime.Parse(end.ToString().Split(' ')[0]))
+
+                        if (start > end)
                         {
-                            list.Add(lits_temp[i]);
+                            var temp = DateTime.Parse(start.ToString());
+                            start = end;
+                            end = temp;
+                        }
+
+                        for (var i = 0; i < lits_temp.Count; i++)
+                        {
+                            if (DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) >= DateTime.Parse(start.ToString().Split(' ')[0])
+                                && DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) <= DateTime.Parse(end.ToString().Split(' ')[0]))
+                            {
+                                list.Add(lits_temp[i]);
+                            }
+                        }
+
+
+                    }
+                    else
+                    {
+                        for (var i = 0; i < lits_temp.Count; i++)
+                        {
+                            if (DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) <= DateTime.Parse(end.ToString().Split(' ')[0]))
+                            {
+                                list.Add(lits_temp[i]);
+                            }
                         }
                     }
 
+                }
+
+
+                if (list.ToList().Count > 0)
+                {
+                    list_StatisticSite = list.ToList();
+                    StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
 
                 }
                 else
                 {
-                    for (var i = 0; i < lits_temp.Count; i++)
-                    {
-                        if (DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) <= DateTime.Parse(end.ToString().Split(' ')[0]))
-                        {
-                            list.Add(lits_temp[i]);
-                        }
-                    }
+                    list_StatisticSite = new List<StatisticSite>();
+                    StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
+
                 }
-
-            }
-
-
-            if (list.ToList().Count > 0)
-            {
-                list_StatisticSite = list.ToList();
-                StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
-
-            }
-            else
-            {
-                list_StatisticSite = new List<StatisticSite>();
-                StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
-
-            }
-            OnPropertyChanged(nameof(StatisticSite));
+                OnPropertyChanged(nameof(StatisticSite));
             }
             catch (Exception ex)
             {
+            
+   Log.Write(ex); 
 #if test
-                System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic");
+            System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic");
 #endif
             }
         }
@@ -1773,10 +1824,10 @@ namespace Time.View_model
             await Task.Run(() => {
                 try
                 {
-                  
+
                     name_title = _my_form.GetActiveWindowTitle();
 
-              
+
                     _temp_url = SiteBloc.GetURL(name_title);
                     if (_temp_url != null && _last_url != _temp_url)
                     {
@@ -1786,8 +1837,9 @@ namespace Time.View_model
                 }
                 catch (Exception ex)
                 {
+                Log.Write(ex); 
 #if test_1
-                    System.Windows.MessageBox.Show(ex.Message , "Statistic_procces");
+                System.Windows.MessageBox.Show(ex.Message, "Statistic_procces");
 #endif
                 }
             });
@@ -1796,7 +1848,7 @@ namespace Time.View_model
 
         string Get_status(string url)
         {
-
+            try { 
             int len = Grean.ToList().Count;
             for (int i = 0; i < len; i++)
             {
@@ -1815,52 +1867,54 @@ namespace Time.View_model
                     return "Red";
                 }
             }
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
             return "Yellow";
         }
 
         void Add_statistic(string url)
         {
-           
+            try { 
 
 
-                var temp = new StatisticSite();
-                temp.Status = Get_status(url);
+            var temp = new StatisticSite();
+            temp.Status = Get_status(url);
 
-                temp.URL = url;
-                temp.Time = DateTime.Now.ToString();
+            temp.URL = url;
+            temp.Time = DateTime.Now.ToString();
 
-                if (temp.Status.CompareTo("Grean") == 0)
-                {
-                    App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
-                    {
-                        int numb = Grean.ToList().FindIndex(x => url.IndexOf(x.URL) != -1);
-                        temp.Name = Grean.ToList()[numb].Name;
-                    });
-                }
-                else if (temp.Status.CompareTo("Red") == 0)
-                {
-                    App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
-                    {
-                        int numb = Red.ToList().FindIndex(x => url.IndexOf(x.URL) != -1);
-
-                        Alert_Red_Site(Red.ToList()[numb].Name);
-
-                        temp.Name = Red.ToList()[numb].Name;
-                    });
-                }
-                else
-                {
-                    temp.Name = name_title;
-                }
+            if (temp.Status.CompareTo("Grean") == 0)
+            {
                 App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
                 {
-                    StatisticSite.Add(temp);
-                    Test_list.Add(new Test_Element() { Name = name_title });
-                    OnPropertyChanged(nameof(StatisticSite));
-                    SaveStatisticSite();
+                    int numb = Grean.ToList().FindIndex(x => url.IndexOf(x.URL) != -1);
+                    temp.Name = Grean.ToList()[numb].Name;
                 });
-            
+            }
+            else if (temp.Status.CompareTo("Red") == 0)
+            {
+                App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
+                {
+                    int numb = Red.ToList().FindIndex(x => url.IndexOf(x.URL) != -1);
+
+                    Alert_Red_Site(Red.ToList()[numb].Name);
+
+                    temp.Name = Red.ToList()[numb].Name;
+                });
+            }
+            else
+            {
+                temp.Name = name_title;
+            }
+            App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
+            {
+                StatisticSite.Add(temp);
+                Test_list.Add(new Test_Element() { Name = name_title });
+                OnPropertyChanged(nameof(StatisticSite));
+                SaveStatisticSite();
+            });
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
@@ -1905,7 +1959,7 @@ namespace Time.View_model
         }
         private void Execute_print(object o)
         {
-
+            try { 
             System.Windows.Controls.PrintDialog printDialog = new System.Windows.Controls.PrintDialog();
             if (printDialog.ShowDialog() == true)
             {
@@ -1919,6 +1973,8 @@ namespace Time.View_model
 
                 printDialog.PrintDocument(paginator, "Печать с помощью классов визуального уровня");
             }
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
         private bool CanExecute_print(object o)
         {
@@ -1933,11 +1989,13 @@ namespace Time.View_model
         {
             //    db.StatisticSites.ToList().ForEach(x => db.StatisticSites.Remove(x));
 
-
+            try { 
             if (ShowMessage(dict["Alert_message_delete"].ToString()))
             {
                 Delete_elements_statistic(element);
             }
+            }
+            catch (Exception ex) { Log.Write(ex); }
 
         }
 
@@ -1960,17 +2018,20 @@ namespace Time.View_model
         {
             //    db.StatisticSites.ToList().ForEach(x => db.StatisticSites.Remove(x));
 
-
+            try { 
             if (ShowMessage(dict["Alert_message_delete"].ToString()))
             {
                 Delete_elements_sound(element);
             }
+            }
+            catch (Exception ex) { Log.Write(ex); }
 
         }
 
 
         void Delete_elements_sound(List<Sound> element)
         {
+            try { 
             element.ForEach(x =>
             {
                 try
@@ -1985,6 +2046,8 @@ namespace Time.View_model
                 OnPropertyChanged(nameof(List_sound));
             });
             db.SaveChanges();
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
         #endregion Delete_Sound
 
@@ -1994,17 +2057,20 @@ namespace Time.View_model
         {
             //    db.StatisticSites.ToList().ForEach(x => db.StatisticSites.Remove(x));
 
-
+            try { 
             if (ShowMessage(dict["Alert_message_delete"].ToString()))
             {
                 Delete_elements_grean(element);
             }
+            }
+            catch (Exception ex) { Log.Write(ex); }
 
         }
 
 
         void Delete_elements_grean(List<GreanSite> element)
         {
+            try { 
             element.ForEach(x =>
             {
                 Grean.Remove(x);
@@ -2012,6 +2078,8 @@ namespace Time.View_model
                 OnPropertyChanged(nameof(Grean));
             });
             db.SaveChanges();
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
         #endregion Delete_Grean
 
@@ -2021,19 +2089,21 @@ namespace Time.View_model
         {
             //    db.StatisticSites.ToList().ForEach(x => db.StatisticSites.Remove(x));
 
-
+            try { 
 
             if (ShowMessage(dict["Alert_message_delete"].ToString()))
             {
                 Delete_elements_red(element);
             }
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
-       
+
         void Delete_elements_red(List<RedSite> element)
         {
+            try { 
             element.ForEach(x =>
             {
                 Red.Remove(x);
@@ -2041,6 +2111,8 @@ namespace Time.View_model
                 OnPropertyChanged(nameof(Grean));
             });
             db.SaveChanges();
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
         #endregion Delete_Red
 
@@ -2049,20 +2121,25 @@ namespace Time.View_model
 
         public void Add_Grean()
         {
+            try
+            {
 
 
+                Add_elements_Grean();
 
-            Add_elements_Grean();
-
-
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
         void Add_elements_Grean()
         {
+            try { 
             var i = Grean;
 
             SaveGrean();
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
         #endregion Add_Grean
 
@@ -2076,15 +2153,18 @@ namespace Time.View_model
         #region Settings
         void FirstStartAutoStart()
         {
+            try { 
             RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
             if (saveKey.GetValue("Time") != null)
             {
                 saveKey.SetValue("Time", System.Windows.Forms.Application.ExecutablePath);
-                saveKey.Close();               
+                saveKey.Close();
                 auto_start = true;
 
                 OnPropertyChanged(nameof(Auto_start));
             }
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
@@ -2109,14 +2189,15 @@ namespace Time.View_model
                         using (RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
                         {
                             rkApp.SetValue("Time", System.Reflection.Assembly.GetExecutingAssembly().Location);
-                           
+
                         }
                     }
                     catch (Exception ex)
                     {
+                   Log.Write(ex); 
 
 #if test
-                        System.Windows.MessageBox.Show(ex.Message);
+                    System.Windows.MessageBox.Show(ex.Message);
 #endif
                     }
 
@@ -2134,9 +2215,9 @@ namespace Time.View_model
                     }
                     catch (Exception ex)
                     {
-
+                   Log.Write(ex); 
 #if test
-                        System.Windows.MessageBox.Show(ex.Message);
+                    System.Windows.MessageBox.Show(ex.Message);
 #endif
                     }
                     // var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
@@ -2207,13 +2288,13 @@ namespace Time.View_model
 
 
         #region Login
-        GoogleAPI my_google=new GoogleAPI();
+        GoogleAPI my_google = new GoogleAPI();
         #endregion Login
 
         #region Calendar event
         Events_Timer now_day;
-       
-        System.Timers.Timer stateTimer =null;
+
+        System.Timers.Timer stateTimer = null;
         string login = "";
         public string Logins
         {
@@ -2226,40 +2307,42 @@ namespace Time.View_model
 
         private void Open_window_add_event()
         {
-          
-                try
-                {
-                   
-                        Add_event view_add = new Add_event();
 
-                        Add_Event_View_Model view_model = new Add_Event_View_Model();
-                        view_add.EditWindow(Add_Event_View_Model_type.Create);
-                        view_add.DataContext = view_model;
+            try
+            {
 
-                        view_model.close = new Action(view_add.Close);
-                        view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
-                        view_model.dict = dict;
+                Add_event view_add = new Add_event();
+
+                Add_Event_View_Model view_model = new Add_Event_View_Model();
+                view_add.EditWindow(Add_Event_View_Model_type.Create);
+                view_add.DataContext = view_model;
+
+                view_model.close = new Action(view_add.Close);
+                view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
+                view_model.dict = dict;
 
 
 
-                        view_add.ShowDialog();
+                view_add.ShowDialog();
 
                 if (!view_model.is_close)
                 {
                     my_google.Add_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date);
                     SelectedItemEvent = null;
                     Selected_date = selected_date;
-                   
+
                     Start_Timer();
                 }
-                }
-                catch (Exception ex)
-                {
+            }
+            catch (Exception ex)
+            {
+            
+            Log.Write(ex); 
 #if test
-                    System.Windows.MessageBox.Show(ex.Message , "Open_window_add_event");
+            System.Windows.MessageBox.Show(ex.Message, "Open_window_add_event");
 #endif
-                }
-           
+            }
+
 
         }
 
@@ -2272,12 +2355,12 @@ namespace Time.View_model
 
                 Add_event view_add = new Add_event();
 
-               Edit_Event_View_Model view_model = new Edit_Event_View_Model();
+                Edit_Event_View_Model view_model = new Edit_Event_View_Model();
 
                 view_add.EditWindow(Add_Event_View_Model_type.Edit);
-             
 
-               
+
+
 
                 view_model.close = new Action(view_add.Close);
                 view_model.Date_select += new Interface._Date_select(view_add.SelectDate);
@@ -2301,15 +2384,17 @@ namespace Time.View_model
                     my_google.Edit_event(view_model.All_day, view_model.Summary, view_model.Location, view_model.Description, view_model.Start_date, view_model.End_date, selectedItemEvent.Id);
                     SelectedItemEvent = null;
                     Selected_date = selected_date;
-                
+
                     Start_Timer();
                 }
 
             }
             catch (Exception ex)
             {
+
+            Log.Write(ex); 
 #if test
-                System.Windows.MessageBox.Show(ex.Message, "Open_window_add_event");
+            System.Windows.MessageBox.Show(ex.Message, "Open_window_add_event");
 #endif
             }
 
@@ -2319,25 +2404,27 @@ namespace Time.View_model
 
         private void Delete_event()
         {
-
+            try { 
             if (ShowMessage2(dict["Events_Delete_message"].ToString()))
             {
                 my_google.Delete_event(selectedItemEvent.Id);
                 SelectedItemEvent = null;
                 Selected_date = selected_date;
 
-               
+
                 Start_Timer();
             }
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
 
 
         private void Start_Timer()
         {
-       
-                
 
-     
+
+            try { 
+
 
             now_day._now_Date = my_google.Set_events(DateTime.Now, out login).ToList();
 
@@ -2353,7 +2440,8 @@ namespace Time.View_model
             stateTimer.AutoReset = true;
             stateTimer.Enabled = true;
 
-               
+            }
+            catch (Exception ex) { Log.Write(ex); }
         }
         #endregion function 
 
@@ -2387,8 +2475,8 @@ namespace Time.View_model
             set
             {
                 My_list.Clear();
-                selected_date = value;           
-                My_list = my_google.Set_events( selected_date, out login);
+                selected_date = value;
+                My_list = my_google.Set_events(selected_date, out login);
                 OnPropertyChanged(nameof(Logins));
                 OnPropertyChanged(nameof(My_list));
                 OnPropertyChanged(nameof(Selected_date));
@@ -2418,8 +2506,8 @@ namespace Time.View_model
         }
         private bool CanExecute_add_event(object o)
         {
-            if(my_google.service!=null)
-            return true;
+            if (my_google.service != null)
+                return true;
             return false;
         }
 
@@ -2446,7 +2534,7 @@ namespace Time.View_model
         }
         private bool CanExecute_edit_event(object o)
         {
-            if (my_google.service != null&& selectedItemEvent!=null)
+            if (my_google.service != null && selectedItemEvent != null)
                 return true;
             return false;
         }
@@ -2509,18 +2597,18 @@ namespace Time.View_model
         //}
         //private bool CanExecute_test(object o)
         //{
-         
+
         //        return true;
-           
+
         //}
 
         //#endregion  Button_click_test
-        
+
 
         #region _Command_sing_in
 
 
-private DelegateCommand _Command_sing_in;
+        private DelegateCommand _Command_sing_in;
         public ICommand Button_clik_sing_in
         {
             get
@@ -2536,7 +2624,7 @@ private DelegateCommand _Command_sing_in;
         {
             my_google.Login();
 
-            My_list = my_google.Set_events( DateTime.Now,out login);
+            My_list = my_google.Set_events(DateTime.Now, out login);
             Start_Timer();
             OnPropertyChanged(nameof(Logins));
             OnPropertyChanged(nameof(My_list));

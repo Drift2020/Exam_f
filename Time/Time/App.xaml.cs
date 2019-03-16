@@ -136,7 +136,7 @@ namespace Time
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-                        Thread.Sleep(10000);
+                        
 
             try
             {

@@ -165,3 +165,10 @@ D:\Documents\GitHub\Exam_f\Time\Time\obj\Release\Time.exe
 D:\Documents\GitHub\Exam_f\Time\Time\obj\Release\Time.pdb
 D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\app.manifest
 D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\credentials.json
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.Security.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.Security.OAuth.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Owin.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.xml
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.Security.xml
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.Security.OAuth.xml

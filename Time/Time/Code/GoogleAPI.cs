@@ -21,16 +21,35 @@ namespace Time.Code
 
 
         public CalendarService service=null;
+      
+        //public void Login2()
+        //{
+
+
+        //    GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        //.requestEmail()
+        //.build();
+
+        //    // Build a GoogleSignInClient with the options specified by gso.
+        //    mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+
+
+        //    // Check for existing Google Sign In account, if the user is already signed in
+        //    // the GoogleSignInAccount will be non-null.
+        //    GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
+        //    updateUI(account);
+        //}
+
+    UserCredential credential;
         public void Login()
         {
-
+           
 
 
             string[] Scopes = { CalendarService.Scope.Calendar };
             string ApplicationName = "Google Calendar API .NET Quickstart";
 
 
-            UserCredential credential;
 
             using (var stream =
                 new FileStream("credentials.json", FileMode.Open, FileAccess.Read))
