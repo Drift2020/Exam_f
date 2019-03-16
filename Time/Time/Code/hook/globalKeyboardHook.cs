@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define test
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -116,7 +117,7 @@ namespace Time.Code
             if (code >= 0)
             {
 
-
+                try { 
                 Keys key = (Keys)lParam.vkCode;
                 if (!HookedKeys.Contains(key) && key != Keys.Enter && key != Keys.Back)
                 {
@@ -175,11 +176,18 @@ namespace Time.Code
 
 
 
+                }
+                catch (Exception ex)
+                {
+#if test
 
+                    System.Windows.MessageBox.Show(ex.Message);
+#endif 
+                }
             }
             return CallNextHookEx(hhook, code, wParam, ref lParam);
         }
-        #endregion keyboar
+#endregion keyboar
 
 
         [DllImport("user32.dll")]

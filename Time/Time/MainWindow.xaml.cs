@@ -22,6 +22,7 @@ using Time.View_model;
 using System.Data;
 using System.Collections;
 using Time.ModelSQLite;
+using Time.Code;
 
 namespace Time
 {
@@ -51,6 +52,7 @@ namespace Time
 
         public MainWindow()
         {
+            try { 
             InitializeComponent();
 
             // initialise code here
@@ -77,7 +79,11 @@ namespace Time
                 menuLanguage.Items.Add(menuLang);
             }
 
-
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
 
         }
 
@@ -86,6 +92,7 @@ namespace Time
         private WindowState m_storedWindowState = WindowState.Normal;
         void OnStateChanged(object sender, EventArgs args)
         {
+            try { 
             if (WindowState == WindowState.Minimized)
             {
                 Hide();
@@ -94,26 +101,56 @@ namespace Time
             }
             else
                 m_storedWindowState = WindowState;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
         void OnIsVisibleChanged(object sender, DependencyPropertyChangedEventArgs args)
         {
+            try
+            { 
             CheckTrayIcon();
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         void m_notifyIcon_Click(object sender, EventArgs e)
         {
+            try { 
             Show();
             WindowState = m_storedWindowState;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
         void CheckTrayIcon()
         {
+            try { 
             ShowTrayIcon(!IsVisible);
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         void ShowTrayIcon(bool show)
         {
+            try { 
             if (m_notifyIcon != null)
                 m_notifyIcon.Visible = show;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
         #endregion
 
@@ -121,7 +158,7 @@ namespace Time
         #region Language
         private void LanguageChanged(Object sender, EventArgs e)
         {
-
+            try { 
             CultureInfo currLang = App.Language;
 
             //Отмечаем нужный пункт смены языка как выбранный язык
@@ -130,10 +167,16 @@ namespace Time
                 CultureInfo ci = i.Tag as CultureInfo;
                 i.IsChecked = ci != null && ci.Equals(currLang);
             }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         private void ChangeLanguageClick(Object sender, EventArgs e)
         {
+            try { 
             MenuItem mi = sender as MenuItem;
             if (mi != null)
             {
@@ -143,16 +186,26 @@ namespace Time
                     App.Language = lang;
                 }
             }
-
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
         #endregion Language
 
         private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            try { 
             m_notifyIcon.Dispose();
             m_notifyIcon = null;
 
             closing();
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
 
@@ -160,10 +213,15 @@ namespace Time
         private void LIST_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
 
-
-            Is_enter_hootkey.Invoke(false);
-            Grean_add.Invoke();
-
+            try
+            {
+                Is_enter_hootkey.Invoke(false);
+                Grean_add.Invoke();
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         private void LIST_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)

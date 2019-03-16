@@ -176,6 +176,7 @@
     <Compile Include="Code\AlertType.cs" />
     <Compile Include="Code\Events_Timer.cs" />
     <Compile Include="Code\GoogleAPI.cs" />
+    <Compile Include="Code\Log.cs" />
     <Compile Include="Code\MusicPath.cs" />
     <Compile Include="Code\site\Convert_Key.cs" />
     <Compile Include="Code\hook\HookMouse.cs" />
@@ -292,6 +293,7 @@
     </EmbeddedResource>
     <None Include="app.manifest">
       <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="bin\Debug\Time.exe.config" />
     <None Include="bin\Release\System.Data.SQLite.dll.config" />
@@ -303,7 +305,9 @@
     <None Include="Content\mdl-v1.1.2\material.min.css.map" />
     <None Include="Content\mdl-v1.1.2\material.min.js.map" />
     <None Include="Content\mdl-v1.1.2\package.json" />
-    <None Include="credentials.json" />
+    <None Include="credentials.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Scripts\jquery-3.3.1.min.map" />
     <None Include="Scripts\jquery-3.3.1.slim.min.map" />
     <None Include="time.db">
@@ -405,9 +409,15 @@
     <Content Include="Content\mdl-v1.1.2\material.js" />
     <Content Include="Content\mdl-v1.1.2\material.min.css" />
     <Content Include="Content\mdl-v1.1.2\material.min.js" />
-    <Resource Include="selftimer_23693.ico" />
-    <Resource Include="NDde.xml" />
-    <Resource Include="ic_timer_128_28821.ico" />
+    <Resource Include="selftimer_23693.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="NDde.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="ic_timer_128_28821.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
