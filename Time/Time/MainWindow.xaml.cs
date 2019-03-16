@@ -226,8 +226,13 @@ namespace Time
 
         private void LIST_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
         {
-
+            try { 
             Is_enter_hootkey.Invoke(true);
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         private void LIST_CurrentCellChanged(object sender, EventArgs e)
@@ -236,18 +241,28 @@ namespace Time
             {
                 index_cell.Invoke(LIST.CurrentCell.Column.DisplayIndex);
             }
-            catch
+           
+            
+            catch (Exception ex)
             {
-
+                Log.Write(ex);
             }
+        
         }
         #endregion List grean
 
         #region List red
         private void LIST_R_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
-            red_site_add_or_edit.Invoke(true);
-        }
+            try
+            {
+                red_site_add_or_edit.Invoke(true);
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
+}
         #endregion  List red
 
         #region Date
@@ -272,7 +287,12 @@ namespace Time
             {
                 Update_select_dates.Invoke(DropCalendar.SelectedDates.ToList());
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message, "Ups...DropCalendar_SelectedDatesChanged"); }
+            catch (Exception ex) { 
+            
+            
+                Log.Write(ex);
+            
+            MessageBox.Show(ex.Message, "Ups...DropCalendar_SelectedDatesChanged"); }
         }
 
 
@@ -380,6 +400,7 @@ namespace Time
 
         private void DataGrid_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            try { 
             if (e.Key == Key.Delete)
             {
                 DataGrid dg = sender as DataGrid;
@@ -396,32 +417,45 @@ namespace Time
                 statistic_site_edit_add_delete.Invoke(my_stat);
 
             }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
 
         }
 
         private void DataGrid_Sound_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Delete)
+            try
             {
-                DataGrid dg = sender as DataGrid;
-                List<Sound> my_stat = new List<Sound>();
-
-                IList rows = dg.SelectedItems;
-
-                for (int i = 0; i < dg.SelectedItems.Count; i++)
+                if (e.Key == Key.Delete)
                 {
-                    my_stat.Add((dg.SelectedItems[i]) as Sound);
+                    DataGrid dg = sender as DataGrid;
+                    List<Sound> my_stat = new List<Sound>();
+
+                    IList rows = dg.SelectedItems;
+
+                    for (int i = 0; i < dg.SelectedItems.Count; i++)
+                    {
+                        my_stat.Add((dg.SelectedItems[i]) as Sound);
+                    }
+
+
+                    sound_edit_add_delete.Invoke(my_stat);
+
                 }
-
-
-                sound_edit_add_delete.Invoke(my_stat);
-
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
             }
         }
 
 
         private void DataGrid_Grean_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            try { 
             if (e.Key == Key.Delete)
             {
                 DataGrid dg = sender as DataGrid;
@@ -438,10 +472,16 @@ namespace Time
                 greanSite_edit_add_delete.Invoke(my_stat);
 
             }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         private void DataGrid_Red_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            try { 
             if (e.Key == Key.Delete)
             {
                 DataGrid dg = sender as DataGrid;
@@ -457,6 +497,11 @@ namespace Time
 
                 red_site_delete.Invoke(my_stat);
 
+            }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
             }
         }
         bool is_check = true;

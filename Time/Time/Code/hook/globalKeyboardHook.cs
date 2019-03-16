@@ -89,27 +89,40 @@ namespace Time.Code
 
         public void hook()
         {
-            if (callbackDelegate != null) throw new InvalidOperationException("Can't hook more than once");
-            IntPtr hInstance = LoadLibrary("User32");
+            try
+            {
+                if (callbackDelegate != null) throw new InvalidOperationException("Can't hook more than once");
+                IntPtr hInstance = LoadLibrary("User32");
 
 
-            callbackDelegate = new keyboardHookProc(hookProc);
-            hhook = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
+                callbackDelegate = new keyboardHookProc(hookProc);
+                hhook = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
 
-            hhook_site = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
+                hhook_site = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
 
 
-            if (hhook == IntPtr.Zero)
-                throw new Win32Exception();
+                if (hhook == IntPtr.Zero)
+                    throw new Win32Exception();
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         public void unhook()
         {
-            if (callbackDelegate == null) return;
-            bool ok = UnhookWindowsHookEx(hhook);
-            if (!ok)
-                throw new Win32Exception();
-            callbackDelegate = null;
+            try
+            {
+                if (callbackDelegate == null) return;
+                bool ok = UnhookWindowsHookEx(hhook);
+                if (!ok)
+                    throw new Win32Exception();
+                callbackDelegate = null;
+            }catch(Exception ex)
+            {
+                Log.Write(ex);
+            }
         }
 
         public int hookProc(int code, int wParam, ref keyboardHookStruct lParam)
@@ -180,7 +193,7 @@ namespace Time.Code
                 catch (Exception ex)
                 {
 #if test
-
+                    Log.Write(ex);
                     System.Windows.MessageBox.Show(ex.Message);
 #endif 
                 }

@@ -51,54 +51,61 @@ namespace Time.View_model
         public Index_View_Model(ApplicationContext temp)
         {
 
-
-          
-            db = temp;
-            db.GreanSites.Load();
-            db.RedSites.Load();
-            db.StatisticSites.Load();
-            db.OneTimeBreakModels.Load();
-            db.ShortBreakModels.Load();
-            db.BigBreakModels.Load();
-            db.Sounds.Load();
-
-            //list_GSite = db.GreanSites.ToList();
-            // list_RSite = db.RedSites.ToList();
-            list_StatisticSite = db.StatisticSites.ToList();
-            // list_sounds = db.Sounds.ToList();
-
-
-            list_Test_list = new List<Test_Element>();
-
-            _my_form = new My_form();
-            my_big_model = new ObservableCollection<BigBreakModel>(db.BigBreakModels.ToList());
-            my_short_model = new ObservableCollection<ShortBreakModel>(db.ShortBreakModels.ToList());
-            my_ome_model = new ObservableCollection<OneTimeBreakModel>(db.OneTimeBreakModels.ToList());
-            List_sound = new ObservableCollection<Sound>(db.Sounds.ToList());
-            Test_list = new ObservableCollection<Test_Element>(list_Test_list);
-            Grean = new ObservableCollection<GreanSite>(db.GreanSites.ToList());
-            Red = new ObservableCollection<RedSite>(db.RedSites.ToList());
-            StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
-            My_list = new ObservableCollection<NowDate>();
-            Select_Index_Sound_type_timer = -1;
-            //   MouseHook.MouseDown += new System.Windows.Forms.MouseEventHandler(MouseHook_MouseDown);
-            MouseHook.MouseUp += new System.Windows.Forms.MouseEventHandler(MouseHook_MouseUp);
-
-            MouseHook.InstallHook();
-            Check_Path();
-
-
-            if (Time_timer_textbox == "0")
+            try
             {
-                Time_timer_textbox = "__:__:__";
+
+                db = temp;
+                db.GreanSites.Load();
+                db.RedSites.Load();
+                db.StatisticSites.Load();
+                db.OneTimeBreakModels.Load();
+                db.ShortBreakModels.Load();
+                db.BigBreakModels.Load();
+                db.Sounds.Load();
+
+                //list_GSite = db.GreanSites.ToList();
+                // list_RSite = db.RedSites.ToList();
+                list_StatisticSite = db.StatisticSites.ToList();
+                // list_sounds = db.Sounds.ToList();
+
+
+                list_Test_list = new List<Test_Element>();
+
+                _my_form = new My_form();
+                my_big_model = new ObservableCollection<BigBreakModel>(db.BigBreakModels.ToList());
+                my_short_model = new ObservableCollection<ShortBreakModel>(db.ShortBreakModels.ToList());
+                my_ome_model = new ObservableCollection<OneTimeBreakModel>(db.OneTimeBreakModels.ToList());
+                List_sound = new ObservableCollection<Sound>(db.Sounds.ToList());
+                Test_list = new ObservableCollection<Test_Element>(list_Test_list);
+                Grean = new ObservableCollection<GreanSite>(db.GreanSites.ToList());
+                Red = new ObservableCollection<RedSite>(db.RedSites.ToList());
+                StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
+                My_list = new ObservableCollection<NowDate>();
+                Select_Index_Sound_type_timer = -1;
+                //   MouseHook.MouseDown += new System.Windows.Forms.MouseEventHandler(MouseHook_MouseDown);
+                MouseHook.MouseUp += new System.Windows.Forms.MouseEventHandler(MouseHook_MouseUp);
+
+                MouseHook.InstallHook();
+                Check_Path();
+
+
+                if (Time_timer_textbox == "0")
+                {
+                    Time_timer_textbox = "__:__:__";
+                }
+                if (Time_duration_textbox == "0")
+                {
+                    Time_duration_textbox = "__:__:__";
+                }
+                now_day = new Events_Timer(dict);
+                FirstStartAutoStart();
             }
-            if (Time_duration_textbox == "0")
+            
+            catch (Exception ex)
             {
-                Time_duration_textbox = "__:__:__";
+                Log.Write(ex);
             }
-            now_day = new Events_Timer(dict);
-            FirstStartAutoStart();
-        }
+}
 
         public void View_model_up()
         {
