@@ -1748,7 +1748,7 @@ namespace Time.View_model
 
         private void Set_List_Statistic()
         {
-            int i = 0;
+            //int i = 0;
             try
             {
             
