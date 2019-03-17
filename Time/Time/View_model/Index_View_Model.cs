@@ -1726,12 +1726,14 @@ namespace Time.View_model
             {
                 my_dates = i;
 
-                Date_statistic_title = my_dates.First() != null ?
-                   (my_dates.First().ToString().Split(' ')[0] + (
-                   my_dates.Count > 1 ?
-                  "-" + my_dates[my_dates.Count - 1].ToString().Split(' ')[0]
-                   : " "))
-                   : " ";
+                if (my_dates != null && my_dates.Count > 0)
+                    Date_statistic_title = my_dates.First() != null ?
+                       (my_dates.First().ToString().Split(' ')[0] +
+                       (my_dates.Count > 1 ? "-" + my_dates[my_dates.Count - 1].ToString().Split(' ')[0]
+                       : " "))
+                       : " ";
+                else
+                    Date_statistic_title = DateTime.Now.ToString();
 
                 Set_List_Statistic();
             }
@@ -1746,8 +1748,10 @@ namespace Time.View_model
 
         private void Set_List_Statistic()
         {
+            int i = 0;
             try
             {
+            
                 var lits_temp = db.StatisticSites.ToList();
                 List<StatisticSite> list = new List<Time.StatisticSite>();
                 var start = (my_dates.First());

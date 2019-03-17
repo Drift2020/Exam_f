@@ -783,3 +783,12 @@ D:\Documents\GitHub\Exam_f\Time\Time\obj\Debug\Time.csproj.CopyComplete
 D:\Documents\GitHub\Exam_f\Time\Time\obj\Debug\Time.exe
 D:\Documents\GitHub\Exam_f\Time\Time\obj\Debug\Time.pdb
 D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Newtonsoft.Json.pdb
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\app.manifest
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\credentials.json
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Microsoft.Owin.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Microsoft.Owin.Security.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Owin.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Microsoft.Owin.xml
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Microsoft.Owin.Security.xml
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Debug\Microsoft.Owin.Security.OAuth.xml

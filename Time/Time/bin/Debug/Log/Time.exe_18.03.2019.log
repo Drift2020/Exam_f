@@ -1,0 +1,34 @@
+[18.03.2019 00:09:30.267] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 00:09:32.825] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 00:09:32.836] [Time.View_model.Index_View_Model.Set_Language()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 00:09:33.585] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 00:09:33.798] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 00:09:34.035] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 00:21:37.960] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 00:21:37.960] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 00:21:37.960] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 00:21:37.960] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 00:31:18.247] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 00:31:20.462] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 00:31:20.473] [Time.View_model.Index_View_Model.Set_Language()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 00:31:21.051] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 00:31:21.167] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 00:31:21.316] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 01:39:51.119] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 01:39:51.122] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 01:39:51.124] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 01:39:51.126] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[18.03.2019 01:41:15.906] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 01:41:21.525] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 01:41:21.533] [Time.View_model.Index_View_Model.Set_Language()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 01:41:22.564] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 01:41:22.816] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 01:41:23.243] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
