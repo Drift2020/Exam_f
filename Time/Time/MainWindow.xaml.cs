@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define test
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ using System.Data;
 using System.Collections;
 using Time.ModelSQLite;
 using Time.Code;
+using System.Drawing;
 
 namespace Time
 {
@@ -50,34 +52,58 @@ namespace Time
         public event _GreanSite_edit_add_delete greanSite_edit_add_delete;
         public event _RedSite_delete red_site_delete;
 
+        
+      
+        private System.Windows.Forms.ContextMenu contextMenu1;//это само контекстное меню
+        private System.Windows.Forms.MenuItem menuItem1;//это строки в контекстном меню
+
+
         public MainWindow()
         {
-            try { 
-            InitializeComponent();
-
-            // initialise code here
-            m_notifyIcon = new System.Windows.Forms.NotifyIcon();
-            m_notifyIcon.BalloonTipText = "The app has been minimised. Click the tray icon to show.";
-            m_notifyIcon.BalloonTipTitle = "The App";
-            m_notifyIcon.Text = "The App";
-            m_notifyIcon.Icon = new System.Drawing.Icon("ic_timer_128_28821.ico");
-            m_notifyIcon.Click += new EventHandler(m_notifyIcon_Click);
-
-            App.LanguageChanged += LanguageChanged;
-
-            CultureInfo currLang = App.Languages[0];
-
-            //Заполняем меню смены языка:
-            menuLanguage.Items.Clear();
-            foreach (var lang in App.Languages)
+            try
             {
-                MenuItem menuLang = new MenuItem();
-                menuLang.Header = lang.DisplayName;
-                menuLang.Tag = lang;
-                menuLang.IsChecked = lang.Equals(currLang);
-                menuLang.Click += ChangeLanguageClick;
-                menuLanguage.Items.Add(menuLang);
-            }
+                InitializeComponent();
+
+                // initialise code here
+                m_notifyIcon = new System.Windows.Forms.NotifyIcon();
+                m_notifyIcon.BalloonTipText = "The app has been minimised. Click the tray icon to show.";
+                m_notifyIcon.BalloonTipTitle = "The App";
+                m_notifyIcon.Text = "The App";
+                m_notifyIcon.Icon = new System.Drawing.Icon("ic_timer_128_28821.ico");
+                m_notifyIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(m_notifyIcon_Click);
+
+       
+
+
+                contextMenu1 = new System.Windows.Forms.ContextMenu();
+                menuItem1 = new System.Windows.Forms.MenuItem();
+                
+                //инициируем контекстное меню
+                contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { menuItem1 });
+               
+                menuItem1.Index = 0;
+                menuItem1.Text = сюда нужно из ловаря надпись;
+                menuItem1.Click += new EventHandler(menuItem1_Click);
+      
+
+
+                m_notifyIcon.ContextMenu = contextMenu1; //
+                
+                App.LanguageChanged += LanguageChanged;
+
+                CultureInfo currLang = App.Languages[0];
+
+                //Заполняем меню смены языка:
+                menuLanguage.Items.Clear();
+                foreach (var lang in App.Languages)
+                {
+                    MenuItem menuLang = new MenuItem();
+                    menuLang.Header = lang.DisplayName;
+                    menuLang.Tag = lang;
+                    menuLang.IsChecked = lang.Equals(currLang);
+                    menuLang.Click += ChangeLanguageClick;
+                    menuLanguage.Items.Add(menuLang);
+                }
 
             }
             catch (Exception ex)
@@ -88,19 +114,29 @@ namespace Time
         }
 
 
+
+
+        private void menuItem1_Click(object Sender, EventArgs e)
+        {
+            // закрываем форму
+            Close();
+        }
+        
+
         #region trey
         private WindowState m_storedWindowState = WindowState.Normal;
         void OnStateChanged(object sender, EventArgs args)
         {
-            try { 
-            if (WindowState == WindowState.Minimized)
+            try
             {
-                Hide();
-                if (m_notifyIcon != null)
-                    m_notifyIcon.ShowBalloonTip(2000);
-            }
-            else
-                m_storedWindowState = WindowState;
+                if (WindowState == WindowState.Minimized)
+                {
+                    Hide();
+                    if (m_notifyIcon != null)
+                        m_notifyIcon.ShowBalloonTip(2000);
+                }
+                else if (WindowState == WindowState.Maximized)
+                    m_storedWindowState = WindowState;
             }
             catch (Exception ex)
             {
@@ -110,8 +146,8 @@ namespace Time
         void OnIsVisibleChanged(object sender, DependencyPropertyChangedEventArgs args)
         {
             try
-            { 
-            CheckTrayIcon();
+            {
+                CheckTrayIcon();
             }
             catch (Exception ex)
             {
@@ -119,11 +155,15 @@ namespace Time
             }
         }
 
-        void m_notifyIcon_Click(object sender, EventArgs e)
+        void m_notifyIcon_Click(object sender, System.Windows.Forms.MouseEventArgs e)
         {
-            try { 
-            Show();
-            WindowState = m_storedWindowState;
+            try
+            {
+                if (e.Button == System.Windows.Forms.MouseButtons.Left)
+                {
+                    Show();
+                    WindowState = m_storedWindowState;
+                }
             }
             catch (Exception ex)
             {
@@ -132,8 +172,9 @@ namespace Time
         }
         void CheckTrayIcon()
         {
-            try { 
-            ShowTrayIcon(!IsVisible);
+            try
+            {
+                ShowTrayIcon(!IsVisible);
             }
             catch (Exception ex)
             {
@@ -143,9 +184,10 @@ namespace Time
 
         void ShowTrayIcon(bool show)
         {
-            try { 
-            if (m_notifyIcon != null)
-                m_notifyIcon.Visible = show;
+            try
+            {
+                if (m_notifyIcon != null)
+                    m_notifyIcon.Visible = show;
             }
             catch (Exception ex)
             {
@@ -158,15 +200,16 @@ namespace Time
         #region Language
         private void LanguageChanged(Object sender, EventArgs e)
         {
-            try { 
-            CultureInfo currLang = App.Language;
-
-            //Отмечаем нужный пункт смены языка как выбранный язык
-            foreach (MenuItem i in menuLanguage.Items)
+            try
             {
-                CultureInfo ci = i.Tag as CultureInfo;
-                i.IsChecked = ci != null && ci.Equals(currLang);
-            }
+                CultureInfo currLang = App.Language;
+
+                //Отмечаем нужный пункт смены языка как выбранный язык
+                foreach (MenuItem i in menuLanguage.Items)
+                {
+                    CultureInfo ci = i.Tag as CultureInfo;
+                    i.IsChecked = ci != null && ci.Equals(currLang);
+                }
             }
             catch (Exception ex)
             {
@@ -176,16 +219,17 @@ namespace Time
 
         private void ChangeLanguageClick(Object sender, EventArgs e)
         {
-            try { 
-            MenuItem mi = sender as MenuItem;
-            if (mi != null)
+            try
             {
-                CultureInfo lang = mi.Tag as CultureInfo;
-                if (lang != null)
+                MenuItem mi = sender as MenuItem;
+                if (mi != null)
                 {
-                    App.Language = lang;
+                    CultureInfo lang = mi.Tag as CultureInfo;
+                    if (lang != null)
+                    {
+                        App.Language = lang;
+                    }
                 }
-            }
             }
             catch (Exception ex)
             {
@@ -196,11 +240,12 @@ namespace Time
 
         private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            try { 
-            m_notifyIcon.Dispose();
-            m_notifyIcon = null;
+            try
+            {
+                m_notifyIcon.Dispose();
+                m_notifyIcon = null;
 
-            closing();
+                closing();
             }
             catch (Exception ex)
             {
@@ -226,8 +271,9 @@ namespace Time
 
         private void LIST_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
         {
-            try { 
-            Is_enter_hootkey.Invoke(true);
+            try
+            {
+                Is_enter_hootkey.Invoke(true);
             }
             catch (Exception ex)
             {
@@ -241,13 +287,13 @@ namespace Time
             {
                 index_cell.Invoke(LIST.CurrentCell.Column.DisplayIndex);
             }
-           
-            
+
+
             catch (Exception ex)
             {
                 Log.Write(ex);
             }
-        
+
         }
         #endregion List grean
 
@@ -262,7 +308,7 @@ namespace Time
             {
                 Log.Write(ex);
             }
-}
+        }
         #endregion  List red
 
         #region Date
@@ -287,18 +333,21 @@ namespace Time
             {
                 Update_select_dates.Invoke(DropCalendar.SelectedDates.ToList());
             }
-            catch (Exception ex) { 
-            
-            
+            catch (Exception ex)
+            {
+
+
                 Log.Write(ex);
-            
-            MessageBox.Show(ex.Message, "Ups...DropCalendar_SelectedDatesChanged"); }
+#if test
+                MessageBox.Show(ex.Message, "Ups...DropCalendar_SelectedDatesChanged");
+#endif
+            }
         }
 
 
-        #endregion Date
+#endregion Date
 
-        #region delegete
+#region delegete
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
@@ -391,7 +440,7 @@ namespace Time
             BreeakD.IsEnabled = false;
             strictmode.IsEnabled = false;
         }
-        #endregion
+#endregion
 
         private void DataGrid_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
@@ -400,23 +449,24 @@ namespace Time
 
         private void DataGrid_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            try { 
-            if (e.Key == Key.Delete)
+            try
             {
-                DataGrid dg = sender as DataGrid;
-                List<StatisticSite> my_stat = new List<StatisticSite>();
-
-                IList rows = dg.SelectedItems;
-
-                for (int i = 0; i < dg.SelectedItems.Count; i++)
+                if (e.Key == Key.Delete)
                 {
-                    my_stat.Add((dg.SelectedItems[i]) as StatisticSite);
+                    DataGrid dg = sender as DataGrid;
+                    List<StatisticSite> my_stat = new List<StatisticSite>();
+
+                    IList rows = dg.SelectedItems;
+
+                    for (int i = 0; i < dg.SelectedItems.Count; i++)
+                    {
+                        my_stat.Add((dg.SelectedItems[i]) as StatisticSite);
+                    }
+
+
+                    statistic_site_edit_add_delete.Invoke(my_stat);
+
                 }
-
-
-                statistic_site_edit_add_delete.Invoke(my_stat);
-
-            }
             }
             catch (Exception ex)
             {
@@ -455,23 +505,24 @@ namespace Time
 
         private void DataGrid_Grean_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            try { 
-            if (e.Key == Key.Delete)
+            try
             {
-                DataGrid dg = sender as DataGrid;
-                List<GreanSite> my_stat = new List<GreanSite>();
-
-                IList rows = dg.SelectedItems;
-
-                for (int i = 0; i < dg.SelectedItems.Count; i++)
+                if (e.Key == Key.Delete)
                 {
-                    my_stat.Add((dg.SelectedItems[i]) as GreanSite);
+                    DataGrid dg = sender as DataGrid;
+                    List<GreanSite> my_stat = new List<GreanSite>();
+
+                    IList rows = dg.SelectedItems;
+
+                    for (int i = 0; i < dg.SelectedItems.Count; i++)
+                    {
+                        my_stat.Add((dg.SelectedItems[i]) as GreanSite);
+                    }
+
+
+                    greanSite_edit_add_delete.Invoke(my_stat);
+
                 }
-
-
-                greanSite_edit_add_delete.Invoke(my_stat);
-
-            }
             }
             catch (Exception ex)
             {
@@ -481,23 +532,24 @@ namespace Time
 
         private void DataGrid_Red_PreviewKeyDown(object sender, KeyEventArgs e)
         {
-            try { 
-            if (e.Key == Key.Delete)
+            try
             {
-                DataGrid dg = sender as DataGrid;
-                List<RedSite> my_stat = new List<RedSite>();
-
-                IList rows = dg.SelectedItems;
-
-                for (int i = 0; i < dg.SelectedItems.Count; i++)
+                if (e.Key == Key.Delete)
                 {
-                    my_stat.Add((dg.SelectedItems[i]) as RedSite);
+                    DataGrid dg = sender as DataGrid;
+                    List<RedSite> my_stat = new List<RedSite>();
+
+                    IList rows = dg.SelectedItems;
+
+                    for (int i = 0; i < dg.SelectedItems.Count; i++)
+                    {
+                        my_stat.Add((dg.SelectedItems[i]) as RedSite);
+                    }
+
+
+                    red_site_delete.Invoke(my_stat);
+
                 }
-
-
-                red_site_delete.Invoke(my_stat);
-
-            }
             }
             catch (Exception ex)
             {

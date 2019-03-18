@@ -39,3 +39,51 @@
 [18.03.2019 11:54:30.584] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
 [18.03.2019 11:54:30.696] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
 [18.03.2019 11:54:30.863] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 18:35:59.813] [System.IO.__Error.WinIOError()] Файл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 18:36:04.428] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 18:36:04.440] [Time.View_model.Index_View_Model.Set_Language()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 18:36:05.464] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 18:36:05.672] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 18:36:06.048] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 18:55:38.448] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 18:55:38.503] [System.IO.__Error.WinIOError()] Не удалось найти часть пути "D:\Documents\GitHub\Exam_f\Time\Time\Resources\ico\Iconsmind-Outline-Pen-5.ico".
+[18.03.2019 18:56:13.669] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 18:56:23.809] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 18:56:30.318] [Time.MainWindow.LIST_CurrentCellChanged()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 18:57:30.933] [Time.MainWindow.LIST_CurrentCellChanged()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 19:53:23.942] [System.IO.__Error.WinIOError()] Файл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 19:53:25.338] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 19:53:25.346] [Time.View_model.Index_View_Model.Set_Language()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 19:53:25.942] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 19:53:26.070] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 19:53:26.236] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 20:06:04.307] [System.Windows.Forms.Menu+MenuItemCollection.Add()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 20:06:05.577] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 20:12:57.178] [System.Windows.Forms.Menu+MenuItemCollection.Add()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 20:12:58.156] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 21:17:27.972] [System.IO.__Error.WinIOError()] Файл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 21:17:29.341] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 21:17:29.355] [Time.View_model.Index_View_Model.Set_Language()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 21:17:29.778] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 21:17:29.864] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 21:17:30.008] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[18.03.2019 21:34:54.528] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 21:35:52.917] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 21:57:24.780] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:04:26.298] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:20:20.860] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:21:58.469] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:22:16.471] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:22:24.828] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:23:10.109] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:10.110] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:10.111] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:21.516] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:23:37.154] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:37.155] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:37.157] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:37.157] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:37.160] [System.Windows.Window.VerifyCanShow()] Нельзя задать Visibility или вызвать Show, ShowDialog или WindowInteropHelper.EnsureHandle после закрытия окна.
+[18.03.2019 22:23:48.907] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:24:06.563] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
+[18.03.2019 22:24:57.313] [System.DateTimeParse.Parse()] Строка не распознана как действительное значение DateTime.
