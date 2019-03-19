@@ -58,6 +58,7 @@ namespace Time
         private System.Windows.Forms.MenuItem menuItem2;
         private System.Windows.Forms.MenuItem menuItem3;
         private System.Windows.Forms.MenuItem menuItem4;
+        System.Windows.Forms.ToolStripSeparator separ;
 
         public void Set_text_menu(ResourceDictionary disk)
         {
@@ -65,6 +66,10 @@ namespace Time
             menuItem2.Text = disk["Tree_menu_start_now_big"].ToString();
             menuItem3.Text = disk["Tree_menu_start_now_short"].ToString();
             menuItem4.Text = disk["Tree_menu_start_now_one_break"].ToString();
+
+            m_notifyIcon.BalloonTipText = disk["Tree_menu_BalloonTipText"].ToString(); 
+                  m_notifyIcon.BalloonTipTitle = disk["Tree_menu_BalloonTipTitle"].ToString();
+            m_notifyIcon.Text = disk["Tree_menu_Text"].ToString();
         }
 
         public MainWindow()
@@ -75,9 +80,7 @@ namespace Time
 
                 // initialise code here
                 m_notifyIcon = new System.Windows.Forms.NotifyIcon();
-                m_notifyIcon.BalloonTipText = "The app has been minimised. Click the tray icon to show.";// New text
-                m_notifyIcon.BalloonTipTitle = "The App";// New text
-                m_notifyIcon.Text = "The App";// New text
+            
                 m_notifyIcon.Icon = new System.Drawing.Icon("ic_timer_128_28821.ico");
                 m_notifyIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(m_notifyIcon_Click);
 
@@ -89,14 +92,16 @@ namespace Time
                 menuItem2 = new System.Windows.Forms.MenuItem();
                 menuItem3 = new System.Windows.Forms.MenuItem();
                 menuItem4 = new System.Windows.Forms.MenuItem();
-
+                separ = new System.Windows.Forms.ToolStripSeparator();
                 //инициируем контекстное меню
-                contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { menuItem1, menuItem2, menuItem3, menuItem4 });
+                contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { menuItem1,menuItem2, menuItem3, menuItem4 });
+                contextMenu1.MenuItems.Add(3, new System.Windows.Forms.MenuItem() { Text="-"});
                
-                menuItem1.Index = 0;
-                menuItem2.Index = 1;
-                menuItem3.Index = 2;
-                menuItem4.Index = 3;
+
+                menuItem2.Index = 0;
+                menuItem3.Index = 1;
+                menuItem4.Index = 2;
+                menuItem1.Index = 4;
 
                 menuItem1.Click += new EventHandler(menuItem1_Click);
                 menuItem2.Click += new EventHandler(menuItem2_Click);

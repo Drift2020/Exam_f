@@ -34,10 +34,11 @@ using Google.Apis.Util.Store;
 using Google.Apis.Calendar.v3.Data;
 using Time.Model;
 using Microsoft.Win32;
+using Time.Interface;
 
 namespace Time.View_model
 {
-    class Index_View_Model : View_Model_Base
+    class Index_View_Model : View_Model_Base, ISet_names_menu
     {
 
         ApplicationContext db;
@@ -127,12 +128,18 @@ namespace Time.View_model
                     case "ru-RU":
                         dict.Source = new Uri(String.Format("Resources/lang.{0}.xaml", _language), UriKind.Relative);
                         now_day.dict = dict;
+                      
+
                         break;
                     default:
                         dict.Source = new Uri("Resources/lang.xaml", UriKind.Relative);
                         now_day.dict = dict;
+
+
                         break;
                 }
+
+                set_names_menu.Invoke(dict);
             }
             catch (Exception ex) { Log.Write(ex); }
         }
@@ -2613,6 +2620,9 @@ namespace Time.View_model
 
 
         private DelegateCommand _Command_sing_in;
+
+        public event Set_names_menu set_names_menu;
+
         public ICommand Button_clik_sing_in
         {
             get

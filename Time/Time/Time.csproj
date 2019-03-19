@@ -209,6 +209,7 @@
     <Compile Include="Interface\IRedSite_delete.cs" />
     <Compile Include="Interface\IRed_site_add_or_edit.cs" />
     <Compile Include="Interface\ISet_Language.cs" />
+    <Compile Include="Interface\ISet_names_menu.cs" />
     <Compile Include="Interface\ISound_edit_add_delete.cs" />
     <Compile Include="Interface\Is_enter_hootkey.cs" />
     <Compile Include="Interface\ITime_select.cs" />

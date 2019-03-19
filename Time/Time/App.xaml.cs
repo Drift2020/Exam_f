@@ -153,7 +153,7 @@ namespace Time
 
                 KListener = new globalKeyboardHook();
 
-
+                viewModel.set_names_menu += new Set_names_menu(view.Set_text_menu);
                 view.Is_enter_hootkey += new Is_Enter_hootkey(KListener.Is_edit_Cell);
 
                 view.Update_select_dates += new Interface.Update_Select_Dates(viewModel.Update_range_date);
@@ -173,6 +173,9 @@ namespace Time
                 KListener.hoot_Keys += new Hoot_Keys(viewModel.Hoot_keys);
                 KListener._Modifine_string += new Modifine_String(viewModel.Modefine_string);
 
+                view.start_big = new Action();
+                view.start_short = new Action();
+                view.start_one = new Action();
 
                 viewModel.BigT_A = new Action(view.BigT_A);
                 viewModel.BigT_D = new Action(view.BigT_D);
