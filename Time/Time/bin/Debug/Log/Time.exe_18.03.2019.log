@@ -87,3 +87,15 @@
 [18.03.2019 22:23:48.907] [System.DateTimeParse.Parse()] —трока не распознана как действительное значение DateTime.
 [18.03.2019 22:24:06.563] [System.DateTimeParse.Parse()] —трока не распознана как действительное значение DateTime.
 [18.03.2019 22:24:57.313] [System.DateTimeParse.Parse()] —трока не распознана как действительное значение DateTime.
+[18.03.2019 22:30:19.163] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 22:30:22.962] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 22:30:23.122] [Time.View_model.Index_View_Model.Set_Language()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 22:30:24.670] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 22:30:24.894] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 22:30:25.418] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 22:53:15.993] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[18.03.2019 22:53:17.472] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 22:53:17.482] [Time.View_model.Index_View_Model.Set_Language()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 22:53:18.032] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[18.03.2019 22:53:18.137] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[18.03.2019 22:53:18.259] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.

@@ -1,0 +1,6 @@
+[19.03.2019 12:12:06.152] [System.IO.__Error.WinIOError()] Файл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[19.03.2019 12:12:07.368] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[19.03.2019 12:12:07.382] [Time.View_model.Index_View_Model.Set_Language()] Ссылка на объект не указывает на экземпляр объекта.
+[19.03.2019 12:12:07.852] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[19.03.2019 12:12:07.929] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[19.03.2019 12:12:08.049] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.

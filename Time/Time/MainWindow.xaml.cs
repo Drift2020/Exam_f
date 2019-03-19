@@ -52,11 +52,20 @@ namespace Time
         public event _GreanSite_edit_add_delete greanSite_edit_add_delete;
         public event _RedSite_delete red_site_delete;
 
-        
       
         private System.Windows.Forms.ContextMenu contextMenu1;//это само контекстное меню
         private System.Windows.Forms.MenuItem menuItem1;//это строки в контекстном меню
+        private System.Windows.Forms.MenuItem menuItem2;
+        private System.Windows.Forms.MenuItem menuItem3;
+        private System.Windows.Forms.MenuItem menuItem4;
 
+        public void Set_text_menu(ResourceDictionary disk)
+        {
+            menuItem1.Text = disk["Tree_menu_exit"].ToString();
+            menuItem1.Text = disk["Tree_menu_start_now_big"].ToString();
+            menuItem1.Text = disk["Tree_menu_start_now_short"].ToString();
+            menuItem1.Text = disk["Tree_menu_start_now_one_break"].ToString();
+        }
 
         public MainWindow()
         {
@@ -66,9 +75,9 @@ namespace Time
 
                 // initialise code here
                 m_notifyIcon = new System.Windows.Forms.NotifyIcon();
-                m_notifyIcon.BalloonTipText = "The app has been minimised. Click the tray icon to show.";
-                m_notifyIcon.BalloonTipTitle = "The App";
-                m_notifyIcon.Text = "The App";
+                m_notifyIcon.BalloonTipText = "The app has been minimised. Click the tray icon to show.";// New text
+                m_notifyIcon.BalloonTipTitle = "The App";// New text
+                m_notifyIcon.Text = "The App";// New text
                 m_notifyIcon.Icon = new System.Drawing.Icon("ic_timer_128_28821.ico");
                 m_notifyIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(m_notifyIcon_Click);
 
@@ -77,12 +86,15 @@ namespace Time
 
                 contextMenu1 = new System.Windows.Forms.ContextMenu();
                 menuItem1 = new System.Windows.Forms.MenuItem();
-                
+                menuItem2 = new System.Windows.Forms.MenuItem();
+                menuItem3 = new System.Windows.Forms.MenuItem();
+                menuItem4 = new System.Windows.Forms.MenuItem();
+
                 //инициируем контекстное меню
-                contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { menuItem1 });
+                contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { menuItem1, menuItem2, menuItem3, menuItem4 });
                
                 menuItem1.Index = 0;
-                menuItem1.Text = сюда нужно из ловаря надпись;
+               
                 menuItem1.Click += new EventHandler(menuItem1_Click);
       
 
