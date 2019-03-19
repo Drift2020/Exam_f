@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Time.Code
 {
-    public class globalKeyboardHook : Modifine_string, HootKeys
+    public class globalKeyboardHook : Modifine_string, IHootKeys
     {
         public delegate int keyboardHookProc(int code, int wParam, ref keyboardHookStruct lParam);
 

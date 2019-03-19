@@ -224,11 +224,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="Time.HootKeys" Collapsed="true">
+  <Interface Name="Time.IHootKeys" Collapsed="true">
     <Position X="25.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interface\HootKeys.cs</FileName>
+      <FileName>Interface\IHootKeys.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Time.Index_cell" Collapsed="true">
@@ -245,11 +245,11 @@
       <FileName>Interface\Is_enter_hootkey.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="Time.Modifine_string" Collapsed="true">
+  <Interface Name="Time.IIModifine_string" Collapsed="true">
     <Position X="29" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interface\Modifine_string.cs</FileName>
+      <FileName>Interface\IIModifine_string.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="Time.Interface.IBig_c" Collapsed="true">
@@ -333,7 +333,7 @@
     <Position X="29" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interface\HootKeys.cs</FileName>
+      <FileName>Interface\IHootKeys.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Time.Index_Cell" Collapsed="true">
@@ -350,11 +350,11 @@
       <FileName>Interface\Is_enter_hootkey.cs</FileName>
     </TypeIdentifier>
   </Delegate>
-  <Delegate Name="Time.Modifine_String" Collapsed="true">
+  <Delegate Name="Time.IIModifine_string" Collapsed="true">
     <Position X="25.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Interface\Modifine_string.cs</FileName>
+      <FileName>Interface\IIModifine_string.cs</FileName>
     </TypeIdentifier>
   </Delegate>
   <Delegate Name="Time.Code.WinEventDelegate" Collapsed="true">

@@ -62,9 +62,9 @@ namespace Time
         public void Set_text_menu(ResourceDictionary disk)
         {
             menuItem1.Text = disk["Tree_menu_exit"].ToString();
-            menuItem1.Text = disk["Tree_menu_start_now_big"].ToString();
-            menuItem1.Text = disk["Tree_menu_start_now_short"].ToString();
-            menuItem1.Text = disk["Tree_menu_start_now_one_break"].ToString();
+            menuItem2.Text = disk["Tree_menu_start_now_big"].ToString();
+            menuItem3.Text = disk["Tree_menu_start_now_short"].ToString();
+            menuItem4.Text = disk["Tree_menu_start_now_one_break"].ToString();
         }
 
         public MainWindow()
@@ -94,9 +94,14 @@ namespace Time
                 contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { menuItem1, menuItem2, menuItem3, menuItem4 });
                
                 menuItem1.Index = 0;
-               
+                menuItem2.Index = 1;
+                menuItem3.Index = 2;
+                menuItem4.Index = 3;
+
                 menuItem1.Click += new EventHandler(menuItem1_Click);
-      
+                menuItem2.Click += new EventHandler(menuItem2_Click);
+                menuItem3.Click += new EventHandler(menuItem3_Click);
+                menuItem4.Click += new EventHandler(menuItem4_Click);
 
 
                 m_notifyIcon.ContextMenu = contextMenu1; //
@@ -127,13 +132,40 @@ namespace Time
 
 
 
+        #region menu
 
+        #region action
+
+        public Action start_big;
+        public Action start_short;
+        public Action start_one;
+
+        #endregion
+
+        #region click
         private void menuItem1_Click(object Sender, EventArgs e)
         {
             // закрываем форму
             Close();
         }
-        
+
+        private void menuItem2_Click(object Sender, EventArgs e)
+        {
+            start_big();
+        }
+        private void menuItem3_Click(object Sender, EventArgs e)
+        {
+
+            start_short();
+        }
+        private void menuItem4_Click(object Sender, EventArgs e)
+        {
+
+            start_one();
+        }
+        #endregion
+
+        #endregion
 
         #region trey
         private WindowState m_storedWindowState = WindowState.Normal;

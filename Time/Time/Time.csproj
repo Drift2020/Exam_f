@@ -200,7 +200,7 @@
     <Compile Include="Code\hook\globalKeyboardHook.cs" />
     <Compile Include="Code\Test_Element.cs" />
     <Compile Include="Code\TopWindow.cs" />
-    <Compile Include="Interface\HootKeys.cs" />
+    <Compile Include="Interface\IHootKeys.cs" />
     <Compile Include="Interface\IBig_c.cs" />
     <Compile Include="Interface\IDate_select.cs" />
     <Compile Include="Interface\IGreanSite_edit_add_delete.cs" />
