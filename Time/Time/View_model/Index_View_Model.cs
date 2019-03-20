@@ -38,7 +38,7 @@ using Time.Interface;
 
 namespace Time.View_model
 {
-    class Index_View_Model : View_Model_Base, ISet_names_menu
+    class Index_View_Model : View_Model_Base, ISet_names_menu, IGet_worc_alert
     {
 
         ApplicationContext db;
@@ -1304,6 +1304,8 @@ namespace Time.View_model
 
                     view_modelBig.StopMainMusic = new Action(Stop_main_music);
 
+                    get_worc_alert += new Get_worc_alert(view_modelBig.Get_Work);
+                    dssdsdsd//продолжить выполнение функции, создать 2 отдельных делигата и проверку для блокирования объектов
                     view_modelBig.Activate_Info_small = new Action(viewBig.Activated_Small_info);
                     view_modelBig.Deactivate_Info_small = new Action(viewBig.Deactivated_Small_info);
                     view_modelBig.Text_info = dict["Alert_message_1_big"].ToString();
@@ -2781,6 +2783,7 @@ namespace Time.View_model
         private DelegateCommand _Command_sing_in;
 
         public event Set_names_menu set_names_menu;
+        public event Get_worc_alert get_worc_alert;
 
         public ICommand Button_clik_sing_in
         {

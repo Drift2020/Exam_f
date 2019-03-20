@@ -12,6 +12,7 @@ using Time.Command;
 
 namespace Time.View_model
 {
+   
     class Alert_View_Model : View_Model_Base
     {
         #region Actions
@@ -57,7 +58,7 @@ namespace Time.View_model
 
         public bool Get_Work()
         {
-            return work_stop;
+                return work_stop;
         }
         #endregion Variables
 

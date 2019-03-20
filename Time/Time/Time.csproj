@@ -200,6 +200,7 @@
     <Compile Include="Code\hook\globalKeyboardHook.cs" />
     <Compile Include="Code\Test_Element.cs" />
     <Compile Include="Code\TopWindow.cs" />
+    <Compile Include="Interface\IGet_worc_alert.cs" />
     <Compile Include="Interface\IHootKeys.cs" />
     <Compile Include="Interface\IBig_c.cs" />
     <Compile Include="Interface\IDate_select.cs" />
