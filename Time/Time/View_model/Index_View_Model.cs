@@ -897,7 +897,7 @@ namespace Time.View_model
 
         #endregion small timer
 
-            #region Select_Index_Sound_type_timer
+        #region Select_Index_Sound_type_timer
             int select_Index_Sound_type_timer = -1;
         public int Select_Index_Sound_type_timer
         {
@@ -996,6 +996,8 @@ namespace Time.View_model
 
         #region Function
 
+
+        #region start timers
         void Stop_main_music()
         {
             if (!is_play)
@@ -1163,16 +1165,107 @@ namespace Time.View_model
                 return false;
             }
         }
+        #endregion 
 
+
+        #region popap memu
+
+
+
+        public void Start_short_break()
+        {
+            try
+            {
+                if (Index_time_short != -1 && Index_duration_short != -1)
+                {
+                    memory_timer = Type_alert.Short;
+                    if (short_timer != null)
+                        short_timer.Dispose();
+
+                    int mitute_time = Get_minutes_type_short(Index_time_short);
+                    int seconde_duration = Get_seconds_duration_short(Index_duration_short);
+
+
+                    long mil = mitute_time * 60000;
+
+                    AlertType my_alert = new AlertType() { time = seconde_duration, type = Type_alert.ShortOne };
+
+
+                    short_Callback = new TimerCallback(Alert_box);
+
+                    // создаем таймер
+
+
+                    short_timer = new System.Threading.Timer(short_Callback, my_alert, 0, mil);
+
+                   
+
+                }
+                else
+                {
+                    if (short_timer != null)
+                        short_timer.Dispose();
+                  
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+#if test
+                System.Windows.MessageBox.Show(ex.Message, "Start_short_break");
+#endif
+               
+            }
+        }
+
+        #endregion
+
+        #region disposes
         void DisposesOne()
         {
             try { 
             One_timer.Dispose();
             Is_Small = false;
             }
-            catch (Exception ex) { Log.Write(ex); }
+            catch (Exception ex) {
+#if test
+                System.Windows.MessageBox.Show(ex.Message, "DisposesOne");
+#endif
+
+                Log.Write(ex); }
         }
 
+        void DisposesShort()
+        {
+            try
+            {
+                
+                short_timer.Dispose();
+             
+            }
+            catch (Exception ex) {
+#if test
+                System.Windows.MessageBox.Show(ex.Message, "DisposesShort");
+#endif
+
+                Log.Write(ex); }
+        }
+
+        void DisposesBig()
+        {
+            try
+            {
+
+                big_timer.Dispose();
+
+            }
+            catch (Exception ex) {
+#if test
+                System.Windows.MessageBox.Show(ex.Message, "DisposesBig");
+#endif
+                Log.Write(ex); }
+        }
+        #endregion
 
         void Alert_box(object obj)
         {
@@ -1281,10 +1374,59 @@ namespace Time.View_model
                     catch (Exception ex)
                     {
 #if test
-                        System.Windows.MessageBox.Show(ex.Message, "Alert_box - my_big_model");
+                        System.Windows.MessageBox.Show(ex.Message, "Alert_box - Short");
 #endif
                     }
                 }
+
+
+                if(temp.type == Type_alert.ShortOne)
+                {
+                    viewShort = new Alert();
+                    view_modelShort = new Alert_View_Model() { time_s = temp.time, type = Type_alert.ShortOne, my_music = Music_Path_small };
+
+                    viewShort.StartBreakBig = new Action(view_modelShort.ActiveteTime);
+
+                    viewShort.Deactiv_Style();
+                    viewShort.Center();
+
+                    view_modelShort.Activate_OK = new Action(viewShort.Activ_OK);
+                    view_modelShort.Deactivate_OK = new Action(viewShort.Deactiv_OK);
+                    view_modelShort.Deactivate_OK();
+
+                    view_modelShort.Activate_NEXT = new Action(viewShort.Activ_NEXT);
+                    view_modelShort.Deactivate_NEXT = new Action(viewShort.Deactiv_NEXT);
+                    view_modelShort.Deactivate_NEXT();
+
+                    view_modelShort.Activate_CANCEL = new Action(viewShort.Activ_CANCEL);
+                    view_modelShort.Deactivate_CANCEL = new Action(viewShort.Deactiv_CANCEL);
+                    view_modelShort.Deactivate_CANCEL();
+
+                    view_modelShort.StopMainMusic = new Action(Stop_main_music);
+
+                    view_modelShort.StartMemberTimer = new Action(StartMemberTimer);
+                    view_modelShort.Disposes = new Action(DisposesShort);
+                    view_modelShort.Closenig = new Action(viewShort.Close);
+                    view_modelShort.Text_info = dict["Alert_message_1"].ToString();
+
+                    viewShort.DataContext = view_modelShort;
+                    viewShort.Show();
+
+                    try
+                    {
+                        if (my_short_model[0].IsSoundActive && my_short_model[0].ShortSoundId != -1)
+
+                            Music_Path_small.Play(List_sound.Where(x => x.Id == my_short_model[0].ShortSoundId).First().Path, my_short_model[0].SoundVolume);
+                    }
+                    catch (Exception ex)
+                    {
+#if test
+                        System.Windows.MessageBox.Show(ex.Message, "Alert_box - ShortOne");
+#endif
+                    }
+                }
+
+
                 if (temp.type == Type_alert.One)
                 {
                     viewOne = new Alert();
@@ -1341,6 +1483,23 @@ namespace Time.View_model
 
 
 
+        Type_alert memory_timer;
+        public void StartMemberTimer()
+        {
+            switch (memory_timer)
+            {
+                case Type_alert.Big:
+                    Set_Timer_big(Is_big_timer);
+                    break;
+                case Type_alert.Short:
+                    Set_Timer_short(Is_small_timer);
+                    break;
+            }
+              
+           
+
+            memory_timer = Type_alert.NONE;
+        }
 
         #endregion Function
 
@@ -2314,7 +2473,7 @@ namespace Time.View_model
         }
         #endregion Calendar event
 
-        #region function
+        #region Event function
 
         private void Open_window_add_event()
         {

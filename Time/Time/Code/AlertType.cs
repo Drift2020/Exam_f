@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Time.Code
 {
-   public enum Type_alert { Big,Short,One,Message}
+   public enum Type_alert { Big,Short,One,Message,BigOne,ShortOne,NONE}
     public class AlertType
     {
 

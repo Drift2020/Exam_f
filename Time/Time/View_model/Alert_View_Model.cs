@@ -31,6 +31,7 @@ namespace Time.View_model
 
         public Action StopMainMusic;
 
+        public Action StartMemberTimer;
         public Action Closenig;
         public Action Disposes;
         #endregion Actions
@@ -53,6 +54,11 @@ namespace Time.View_model
 
         public MusicPath my_music { set; get; }
         bool work_stop = true;
+
+        public bool Get_Work()
+        {
+            return work_stop;
+        }
         #endregion Variables
 
         #region Function 
@@ -89,16 +95,23 @@ namespace Time.View_model
 
                     temp_second = temp_my_s;
 
-                    if (type == Type_alert.Big)
+                    if (type == Type_alert.Big || type == Type_alert.BigOne)
                     {
-                        if(temp_second<10)
-                            Times = String.Format("{0}:{1}{2}", temp_mitutes,0, temp_second);
+                        if (temp_second < 10)
+                            Times = String.Format("{0}:{1}{2}", temp_mitutes, 0, temp_second);
                         else
-                        Times = String.Format("{0}:{1}", temp_mitutes, temp_second);
+                            Times = String.Format("{0}:{1}", temp_mitutes, temp_second);
+
+
+                    
                     }
-                       
-                    else if (type == Type_alert.Short)
+
+                    else if (type == Type_alert.Short || type == Type_alert.ShortOne)
+                    {
                         Times = String.Format("{0}", temp_second);
+
+                    }
+
                     else if (type == Type_alert.One)
                     {
 
@@ -110,21 +123,29 @@ namespace Time.View_model
                             Times = String.Format("{0}:{1}", temp_mitutes, temp_second);
                         if (time_s < 1)
                         {
+                            work_stop = true;
                             my_music.Stop();
                             Closenig();
                             Disposes();
                             big_timer.Change(System.Threading.Timeout.Infinite, 0);
                         }
-                       
+
                     }
 
+             
 
                     if (time_s < 1)
                     {
                         work_stop = true;
                         my_music.Stop();
                         Closenig();
-                       
+
+                        if (type == Type_alert.BigOne || type == Type_alert.ShortOne)
+                        {
+                            Disposes();
+                            StartMemberTimer();
+                        }
+
                         big_timer.Change(System.Threading.Timeout.Infinite, 0);
                        
                     }

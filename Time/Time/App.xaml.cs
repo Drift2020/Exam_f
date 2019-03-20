@@ -173,9 +173,9 @@ namespace Time
                 KListener.hoot_Keys += new Hoot_Keys(viewModel.Hoot_keys);
                 KListener._Modifine_string += new Modifine_String(viewModel.Modefine_string);
 
-                view.start_big = new Action();
-                view.start_short = new Action();
-                view.start_one = new Action();
+             //   view.start_big = new Action();
+                view.start_short = new Action(viewModel.Start_short_break);
+              //  view.start_one = new Action();
 
                 viewModel.BigT_A = new Action(view.BigT_A);
                 viewModel.BigT_D = new Action(view.BigT_D);
