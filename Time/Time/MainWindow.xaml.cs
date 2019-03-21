@@ -37,7 +37,8 @@ namespace Time
 
     public partial class MainWindow : MetroWindow, Index_cell, Is_enter_hootkey,
         IUpdate_Select_Dates, IRed_site_add_or_edit, IStatistic_site_edit_add_delete,
-        ISound_edit_add_delete, IGrean_add, IGreanSite_edit_add_delete, IRedSite_delete
+        ISound_edit_add_delete, IGrean_add, IGreanSite_edit_add_delete, IRedSite_delete,
+        IPopup_menu
     {
         public Action closing;
         private System.Windows.Forms.NotifyIcon m_notifyIcon;
@@ -52,7 +53,9 @@ namespace Time
         public event _GreanSite_edit_add_delete greanSite_edit_add_delete;
         public event _RedSite_delete red_site_delete;
 
-      
+        public event Popup_menu popup_menu;
+    
+
         private System.Windows.Forms.ContextMenu contextMenu1;//это само контекстное меню
         private System.Windows.Forms.MenuItem menuItem1;//это строки в контекстном меню
         private System.Windows.Forms.MenuItem menuItem2;
@@ -83,8 +86,9 @@ namespace Time
             
                 m_notifyIcon.Icon = new System.Drawing.Icon("ic_timer_128_28821.ico");
                 m_notifyIcon.MouseUp += new System.Windows.Forms.MouseEventHandler(m_notifyIcon_Click);
+              //  sadsad//как запретить меню 
+                
 
-       
 
 
                 contextMenu1 = new System.Windows.Forms.ContextMenu();
@@ -94,6 +98,8 @@ namespace Time
                 menuItem4 = new System.Windows.Forms.MenuItem();
                 separ = new System.Windows.Forms.ToolStripSeparator();
                 //инициируем контекстное меню
+                contextMenu1.Popup += new EventHandler(Popup_Menu);
+
                 contextMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] { menuItem1,menuItem2, menuItem3, menuItem4 });
                 contextMenu1.MenuItems.Add(3, new System.Windows.Forms.MenuItem() { Text="-"});
                
@@ -134,7 +140,24 @@ namespace Time
             }
 
         }
+        private void Popup_Menu(object sender, EventArgs e)
+        {
+           bool is_active =  popup_menu.Invoke();
+            if(!is_active)
+            {
+                menuItem2.Enabled=false;
+                menuItem3.Enabled = false;
+                menuItem4.Enabled = false;
 
+            }
+          else
+            {
+                menuItem2.Enabled = true;
+                menuItem3.Enabled = true;
+                menuItem4.Enabled = true;
+
+            }
+        }
 
 
         #region menu
@@ -156,16 +179,17 @@ namespace Time
 
         private void menuItem2_Click(object Sender, EventArgs e)
         {
-            start_big();
+            if (start_big != null)
+                start_big();
         }
         private void menuItem3_Click(object Sender, EventArgs e)
         {
-
-            start_short();
+            if (start_short != null)
+                start_short();
         }
         private void menuItem4_Click(object Sender, EventArgs e)
         {
-
+            if (start_one!=null)
             start_one();
         }
         #endregion

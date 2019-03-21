@@ -1,6 +1,6 @@
 ﻿#define test
 #define test_1
-//#define test_relise_1
+////#define test_relise_1
 //#define test_relise
 //#define relise
 using System;
@@ -39,6 +39,7 @@ using Time.Interface;
 namespace Time.View_model
 {
     class Index_View_Model : View_Model_Base, ISet_names_menu, IGet_worc_alert
+       
     {
 
         ApplicationContext db;
@@ -1165,18 +1166,26 @@ namespace Time.View_model
                 return false;
             }
         }
-        #endregion 
+        #endregion
 
 
         #region popap memu
+        public bool Get_Enable()
+        {
+            if ((view_modelOne == null ? true : view_modelOne.Get_Work()) &&
+               ( view_modelBig == null ? true : view_modelBig.Get_Work()) &&
+             ( view_modelShort == null ? true : view_modelShort.Get_Work()))
+                return true;
+            return false;
+        }
 
-
-
+     
         public void Start_short_break()
         {
             try
             {
-                if (Index_time_short != -1 && Index_duration_short != -1)
+                if ((get_worc_alert_short!=null? get_worc_alert_short.Invoke():false)
+                    && Index_time_short != -1 && Index_duration_short != -1)
                 {
                     memory_timer = Type_alert.Short;
                     if (short_timer != null)
@@ -1201,12 +1210,7 @@ namespace Time.View_model
                    
 
                 }
-                else
-                {
-                    if (short_timer != null)
-                        short_timer.Dispose();
-                  
-                }
+            
             }
             catch (Exception ex)
             {
@@ -1217,6 +1221,49 @@ namespace Time.View_model
                
             }
         }
+
+        public void Start_big_break()
+        {
+            try
+            {
+                if ((get_worc_alert_short != null ? get_worc_alert_short.Invoke() : false)&&
+                    Index_time_big != -1 && Index_duration_big != -1 )
+                {
+                    memory_timer = Type_alert.Big;
+                    if (big_timer != null)
+                        big_timer.Change(System.Threading.Timeout.Infinite, 0);
+
+                    int mitute_time = Get_minutes_type_big(Index_time_big);
+                    int mitute_duration = Get_minutes_duration_big(Index_duration_big);
+
+
+                    long mil = mitute_time * 60000;
+
+                    AlertType my_alert = new AlertType() { time = mitute_duration, type = Type_alert.BigOne };
+
+
+                    big_Callback = new TimerCallback(Alert_box);
+
+
+
+                    big_timer = new System.Threading.Timer(big_Callback, my_alert, 0, mil);
+
+                  
+
+                }
+            
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+#if test
+                System.Windows.MessageBox.Show(ex.Message, "Set_Timer_big");
+#endif
+              
+            }
+
+        }
+
 
         #endregion
 
@@ -1274,10 +1321,24 @@ namespace Time.View_model
 
             App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
             {
-                if (temp.type == Type_alert.Big)
+                if (temp.type == Type_alert.Big || temp.type == Type_alert.BigOne)
                 {
                     viewBig = new Alert();
-                    view_modelBig = new Alert_View_Model() { time_s = temp.time * 60, type = Type_alert.Big, my_music = Music_Path_big };
+
+                    switch(temp.type)
+                    {
+                        case Type_alert.Big:
+                            {
+                                view_modelBig = new Alert_View_Model() { time_s = temp.time * 60, type = Type_alert.Big, my_music = Music_Path_big };
+                            }
+                            break;
+                        case Type_alert.BigOne:
+                            {
+                                view_modelBig = new Alert_View_Model() { time_s = temp.time * 60, type = Type_alert.BigOne, my_music = Music_Path_big };
+                            }
+                            break;
+                    }
+                
 
                     viewBig.StartBreakBig = new Action(view_modelBig.ActiveteTime);
 
@@ -1298,16 +1359,21 @@ namespace Time.View_model
                     view_modelBig.Deactivate_CANCEL = new Action(viewBig.Deactiv_CANCEL);
                     view_modelBig.Deactivate_CANCEL();
 
+
+
+
                     view_modelBig.Activate_CANCEL1 = new Action(viewBig.Activate_CANCEL_1);
                     view_modelBig.Deactivate_CANCEL1 = new Action(viewBig.Deactivate_CANCEL_1);
                     view_modelBig.Activate_CANCEL1();
 
                     view_modelBig.StopMainMusic = new Action(Stop_main_music);
 
-                    get_worc_alert += new Get_worc_alert(view_modelBig.Get_Work);
-                    dssdsdsd//продолжить выполнение функции, создать 2 отдельных делигата и проверку для блокирования объектов
+                    get_worc_alert_big += new Get_worc_alert(view_modelBig.Get_Work);
+                  
                     view_modelBig.Activate_Info_small = new Action(viewBig.Activated_Small_info);
+
                     view_modelBig.Deactivate_Info_small = new Action(viewBig.Deactivated_Small_info);
+
                     view_modelBig.Text_info = dict["Alert_message_1_big"].ToString();
 
 
@@ -1318,6 +1384,16 @@ namespace Time.View_model
 
 
                     view_modelBig.Closenig = new Action(viewBig.Close);
+
+                    switch (temp.type)
+                    {
+                
+                        case Type_alert.BigOne:
+                            {
+                                view_modelBig.Disposes = new Action(DisposesBig);
+                            }
+                            break;
+                    }
 
                     viewBig.DataContext = view_modelBig;
 
@@ -1358,6 +1434,8 @@ namespace Time.View_model
                     view_modelShort.Activate_CANCEL = new Action(viewShort.Activ_CANCEL);
                     view_modelShort.Deactivate_CANCEL = new Action(viewShort.Deactiv_CANCEL);
                     view_modelShort.Deactivate_CANCEL();
+
+                    get_worc_alert_short += new Get_worc_alert(view_modelShort.Get_Work);
 
                     view_modelShort.StopMainMusic = new Action(Stop_main_music);
 
@@ -1737,6 +1815,14 @@ namespace Time.View_model
 
 
         #endregion Action
+
+        #region Event
+
+        public event Get_worc_alert get_worc_alert_short;
+        public event Get_worc_alert get_worc_alert_big;
+        public event Get_worc_alert get_worc_alert_one;
+
+        #endregion
 
         #endregion Timer
 
@@ -2485,7 +2571,7 @@ namespace Time.View_model
 
                 Add_event view_add = new Add_event();
 
-                Add_Event_View_Model view_model = new Add_Event_View_Model();
+                Add_Event_View_Model view_model = new Add_Event_View_Model() { Title = dict["Events_Add_title"].ToString()};
                 view_add.EditWindow(Add_Event_View_Model_type.Create);
                 view_add.DataContext = view_model;
 
@@ -2527,7 +2613,7 @@ namespace Time.View_model
 
                 Add_event view_add = new Add_event();
 
-                Edit_Event_View_Model view_model = new Edit_Event_View_Model();
+                Edit_Event_View_Model view_model = new Edit_Event_View_Model() { Title = dict["Events_Edit_title"].ToString() };
 
                 view_add.EditWindow(Add_Event_View_Model_type.Edit);
 
@@ -2783,7 +2869,9 @@ namespace Time.View_model
         private DelegateCommand _Command_sing_in;
 
         public event Set_names_menu set_names_menu;
-        public event Get_worc_alert get_worc_alert;
+
+        public event Popup_menu popup_menu=null;
+      
 
         public ICommand Button_clik_sing_in
         {

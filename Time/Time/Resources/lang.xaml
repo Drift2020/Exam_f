@@ -105,6 +105,7 @@
     <v:String x:Key="Events_Add_Select_a_date_start">Select a date start</v:String>
     <v:String x:Key="Events_Add_Select_a_date_end">Select a date end</v:String>
     <v:String x:Key="Events_Add_title">Event creation</v:String>
+    <v:String x:Key="Events_Edit_title">Event editor</v:String>
 
     <v:String x:Key="Events_Delete_message">Do you want delete this event?</v:String>
     <v:String x:Key="Events_Delete_title">Delete event</v:String>

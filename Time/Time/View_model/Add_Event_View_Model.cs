@@ -165,6 +165,22 @@ namespace Time.View_model
         public bool is_close=true;
         #endregion IsClose
 
+
+        string title;
+
+        public string Title
+        {
+            get
+            {
+                return title;
+            }
+            set
+            {
+                title = value;
+                OnPropertyChanged(nameof(Title));
+            }
+        }
+
         #endregion Variables
 
         #region Command

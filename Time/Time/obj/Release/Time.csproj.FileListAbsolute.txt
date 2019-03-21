@@ -172,3 +172,6 @@ D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Owin.dll
 D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.xml
 D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.Security.xml
 D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Microsoft.Owin.Security.OAuth.xml
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Google.Apis.Gmail.v1.dll
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Google.Apis.Gmail.v1.pdb
+D:\Documents\GitHub\Exam_f\Time\Time\bin\Release\Google.Apis.Gmail.v1.xml

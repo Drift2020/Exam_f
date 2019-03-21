@@ -11,6 +11,8 @@ namespace Time.Interface
     public delegate bool Get_worc_alert();
     interface IGet_worc_alert
     {
-        event Get_worc_alert get_worc_alert;
+        event Get_worc_alert get_worc_alert_big;
+        event Get_worc_alert get_worc_alert_short;
+        event Get_worc_alert get_worc_alert_one;
     }
 }

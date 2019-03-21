@@ -39,6 +39,9 @@ namespace Time.View_model
 
         #region Variables
 
+      
+
+
         string text_info;
         public string Text_info { get { return text_info; } set { text_info = value; OnPropertyChanged(nameof(Text_info)); } }
 
@@ -72,7 +75,7 @@ namespace Time.View_model
             {
                 if (work_stop)
                 {
-                    work_stop = !work_stop;
+                    work_stop = false;
                     StopMainMusic();
                 }
                 App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
@@ -190,8 +193,10 @@ namespace Time.View_model
         }
         private void Execute_button_cancel(object o)
         {
-            if (type == Type_alert.Big || type == Type_alert.One || type == Type_alert.Short)
+            if (type == Type_alert.Big || type == Type_alert.One || type == Type_alert.Short ||
+                type == Type_alert.ShortOne || type == Type_alert.BigOne || type == Type_alert.OneOne)
             {
+                work_stop = true;
                 my_music.Stop();
                 Closenig();
                 if (type == Type_alert.One)

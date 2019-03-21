@@ -666,7 +666,7 @@
                                     <RowDefinition/>
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0" ToolTip="{DynamicResource ToolTip_Settings_info}" HorizontalAlignment="Center" Text="{DynamicResource Settings_info_title}" FontSize="20"/>
-                                <TextBlock Height="130" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Center"
+                                <TextBlock Height="150" Grid.Row="1"  VerticalAlignment="Center" HorizontalAlignment="Center"
                             
                             TextWrapping="Wrap"
                             Text="{DynamicResource Settings_info}" FontSize="14" Width="374"/>
