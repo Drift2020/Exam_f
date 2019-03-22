@@ -1,8 +1,8 @@
-﻿#define test
-#define test_1
+﻿//#define test
+//#define test_1
 ////#define test_relise_1
 //#define test_relise
-//#define relise
+#define relise
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -1184,7 +1184,7 @@ namespace Time.View_model
         {
             try
             {
-                if ((get_worc_alert_short!=null? get_worc_alert_short.Invoke():false)
+                if ((get_worc_alert_short!=null? get_worc_alert_short.Invoke():true)
                     && Index_time_short != -1 && Index_duration_short != -1)
                 {
                     memory_timer = Type_alert.Short;
@@ -1226,7 +1226,7 @@ namespace Time.View_model
         {
             try
             {
-                if ((get_worc_alert_short != null ? get_worc_alert_short.Invoke() : false)&&
+                if ((get_worc_alert_big != null ? get_worc_alert_big.Invoke() : true)&&
                     Index_time_big != -1 && Index_duration_big != -1 )
                 {
                     memory_timer = Type_alert.Big;
@@ -1264,6 +1264,47 @@ namespace Time.View_model
 
         }
 
+        public void Start_one_break()
+        {
+            try
+            {
+                var times = DateTime.Parse(Time_timer_textbox.Replace('_', '0')).TimeOfDay;
+                var duration = DateTime.Parse(Time_duration_textbox.Replace('_', '0')).TimeOfDay;
+
+                if ((get_worc_alert_one != null ? get_worc_alert_one.Invoke() : true)&&
+                    (duration.Hours > 0 || duration.Minutes > 0 || duration.Seconds > 0))
+                {
+                    memory_timer = Type_alert.NONE;
+                    if (One_timer != null)
+                        One_timer.Dispose();
+
+
+                    int seconde_duration = duration.Hours * 60 * 60 + duration.Minutes * 60 + duration.Seconds;
+
+
+                    long mil = times.Hours * 60 * 60000 + times.Minutes * 60000 + times.Seconds * 1000;
+
+                    AlertType my_alert = new AlertType() { time = seconde_duration, type = Type_alert.One };
+
+
+                    One_Callback = new TimerCallback(Alert_box);
+
+                    // создаем таймер
+                    One_timer = new System.Threading.Timer(One_Callback, my_alert, 0, mil);
+                   
+
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+#if test
+                System.Windows.MessageBox.Show(ex.Message, "Ups...Start_one_break");
+#endif
+                
+            }
+        }
 
         #endregion
 

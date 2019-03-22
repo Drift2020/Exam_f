@@ -184,7 +184,7 @@ namespace Time
                 view.start_short = new Action(viewModel.Start_short_break);
                 
 
-              //  view.start_one = new Action();
+                view.start_one = new Action(viewModel.Start_one_break);
 
                 viewModel.BigT_A = new Action(view.BigT_A);
                 viewModel.BigT_D = new Action(view.BigT_D);

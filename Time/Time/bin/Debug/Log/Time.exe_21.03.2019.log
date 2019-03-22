@@ -18,3 +18,31 @@
 [21.03.2019 15:11:39.785] [Google.Apis.Auth.OAuth2.Requests.TokenRequestExtenstions+<ExecuteAsync>d__0.MoveNext()] Error:"deleted_client", Description:"The OAuth client was deleted.", Uri:""
 [21.03.2019 15:15:16.212] [Google.Apis.Auth.OAuth2.Requests.TokenRequestExtenstions+<ExecuteAsync>d__0.MoveNext()] Error:"deleted_client", Description:"The OAuth client was deleted.", Uri:""
 [21.03.2019 15:19:23.931] [Google.Apis.Auth.OAuth2.Requests.TokenRequestExtenstions+<ExecuteAsync>d__0.MoveNext()] Error:"deleted_client", Description:"The OAuth client was deleted.", Uri:""
+[21.03.2019 18:51:39.802] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[21.03.2019 18:51:41.238] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[21.03.2019 18:51:41.250] [Time.View_model.Index_View_Model.Set_Language()] —сылка на объект не указывает на экземпл€р объекта.
+[21.03.2019 18:51:41.730] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[21.03.2019 18:51:41.830] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[21.03.2019 18:51:41.973] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[21.03.2019 19:09:40.471] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[21.03.2019 19:09:40.471] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[21.03.2019 19:09:40.471] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[21.03.2019 19:09:40.471] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[21.03.2019 21:53:02.266] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[21.03.2019 21:53:03.558] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[21.03.2019 21:53:03.570] [Time.View_model.Index_View_Model.Set_Language()] —сылка на объект не указывает на экземпл€р объекта.
+[21.03.2019 21:53:04.079] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[21.03.2019 21:53:04.175] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[21.03.2019 21:53:04.300] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] —сылка на объект не указывает на экземпл€р объекта.
+[21.03.2019 21:56:00.747] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[21.03.2019 21:56:00.747] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[21.03.2019 21:56:00.747] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
+[21.03.2019 21:56:00.747] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source
