@@ -1,0 +1,88 @@
+[23.03.2019 17:31:41.724] [System.IO.__Error.WinIOError()] Файл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.
+[23.03.2019 17:31:43.614] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.
+[23.03.2019 17:31:43.639] [Time.View_model.Index_View_Model.Set_Language()] Ссылка на объект не указывает на экземпляр объекта.
+[23.03.2019 17:31:44.523] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[23.03.2019 17:31:44.861] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.
+[23.03.2019 17:44:51.460] [Time.MainWindow..ctor()] Ссылка на объект не указывает на экземпляр объекта.
+[23.03.2019 17:49:29.017] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
+[23.03.2019 17:49:29.068] [Time.View_model.Index_View_Model.Set_Language()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.Set_Language(String _language) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 139
+[23.03.2019 17:49:31.443] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.get_Selected_Item_sound() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1690
+   в Time.View_model.Index_View_Model.CanExecute_Play_music(Object o) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1839
+   в Time.Command.DelegateCommand.CanExecute(Object parameter) в D:\Documents\GitHub\Exam_f\Time\Time\Command\DelegateCommand.cs:строка 20
+   в MS.Internal.Commands.CommandHelpers.CanExecuteCommandSource(ICommandSource commandSource)
+   в System.Windows.Controls.Primitives.ButtonBase.UpdateCanExecute()
+   в System.Windows.Controls.Primitives.ButtonBase.HookCommand(ICommand command)
+   в System.Windows.Controls.Primitives.ButtonBase.OnCommandChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+   в System.Windows.DependencyObject.OnPropertyChanged(DependencyPropertyChangedEventArgs e)
+   в System.Windows.FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)
+   в System.Windows.DependencyObject.NotifyPropertyChange(DependencyPropertyChangedEventArgs args)
+   в System.Windows.DependencyObject.UpdateEffectiveValue(EntryIndex entryIndex, DependencyProperty dp, PropertyMetadata metadata, EffectiveValueEntry oldEntry, EffectiveValueEntry& newEntry, Boolean coerceWithDeferredReference, Boolean coerceWithCurrentValue, OperationType operationType)
+   в System.Windows.DependencyObject.InvalidateProperty(DependencyProperty dp, Boolean preserveCurrentValue)
+   в System.Windows.Data.BindingExpressionBase.Invalidate(Boolean isASubPropertyChange)
+   в System.Windows.Data.BindingExpression.TransferValue(Object newValue, Boolean isASubPropertyChange)
+   в System.Windows.Data.BindingExpression.Activate(Object item)
+   в System.Windows.Data.BindingExpression.AttachToContext(AttachAttempt attempt)
+   в System.Windows.Data.BindingExpression.MS.Internal.Data.IDataBindEngineClient.AttachToContext(Boolean lastChance)
+   в MS.Internal.Data.DataBindEngine.Task.Run(Boolean lastChance)
+   в MS.Internal.Data.DataBindEngine.Run(Object arg)
+   в MS.Internal.Data.DataBindEngine.OnLayoutUpdated(Object sender, EventArgs e)
+   в System.Windows.ContextLayoutManager.fireLayoutUpdateEvent()
+   в System.Windows.ContextLayoutManager.UpdateLayout()
+   в System.Windows.UIElement.UpdateLayout()
+   в System.Windows.Interop.HwndSource.SetLayoutSize()
+   в System.Windows.Interop.HwndSource.set_RootVisualInternal(Visual value)
+   в System.Windows.Interop.HwndSource.set_RootVisual(Visual value)
+   в System.Windows.Window.SetRootVisual()
+   в System.Windows.Window.SetRootVisualAndUpdateSTC()
+   в System.Windows.Window.SetupInitialState(Double requestedTop, Double requestedLeft, Double requestedWidth, Double requestedHeight)
+   в System.Windows.Window.CreateSourceWindow(Boolean duringShow)
+   в System.Windows.Window.CreateSourceWindowDuringShow()
+   в System.Windows.Window.SafeCreateWindowDuringShow()
+   в System.Windows.Window.ShowHelper(Object booleanBox)
+   в System.Windows.Window.Show()
+   в System.Windows.Window.ShowDialog()
+   в Time.App.Application_Startup(Object sender, StartupEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\App.xaml.cs:строка 202
+[23.03.2019 17:49:33.005] [Time.View_model.Index_View_Model.get_Selected_Item_sound()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.get_Selected_Item_sound() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1690
+   в Time.View_model.Index_View_Model.CanExecute_Play_music(Object o) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1839
+   в Time.Command.DelegateCommand.CanExecute(Object parameter) в D:\Documents\GitHub\Exam_f\Time\Time\Command\DelegateCommand.cs:строка 20
+   в MS.Internal.Commands.CommandHelpers.CanExecuteCommandSource(ICommandSource commandSource)
+   в System.Windows.Controls.Primitives.ButtonBase.UpdateCanExecute()
+   в System.Windows.Controls.Primitives.ButtonBase.OnCanExecuteChanged(Object sender, EventArgs e)
+   в System.Windows.Input.CanExecuteChangedEventManager.HandlerSink.OnCanExecuteChanged(Object sender, EventArgs e)
+   в System.Windows.WeakEventManager.ListenerList.DeliverEvent(Listener& listener, Object sender, EventArgs args, Type managerType)
+   в System.Windows.WeakEventManager.ListenerList.DeliverEvent(Object sender, EventArgs args, Type managerType)
+   в System.Windows.WeakEventManager.DeliverEvent(Object sender, EventArgs args)
+   в System.Windows.Input.CommandManager.RequerySuggestedEventManager.OnRequerySuggested(Object sender, EventArgs args)
+   в System.Windows.Input.CommandManager.RaiseRequerySuggested(Object obj)
+   в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   в System.Windows.Threading.DispatcherOperation.InvokeImpl()
+   в System.Windows.Threading.DispatcherOperation.InvokeInSecurityContext(Object state)
+   в MS.Internal.CulturePreservingExecutionContext.CallbackWrapper(Object obj)
+   в System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   в System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   в MS.Internal.CulturePreservingExecutionContext.Run(CulturePreservingExecutionContext executionContext, ContextCallback callback, Object state)
+   в System.Windows.Threading.DispatcherOperation.Invoke()
+   в System.Windows.Threading.Dispatcher.ProcessQueue()
+   в System.Windows.Threading.Dispatcher.WndProcHook(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   в MS.Win32.UnsafeNativeMethods.MessageBox(HandleRef hWnd, String text, String caption, Int32 type)
+   в System.Windows.MessageBox.ShowCore(IntPtr owner, String messageBoxText, String caption, MessageBoxButton button, MessageBoxImage icon, MessageBoxResult defaultResult, MessageBoxOptions options)
+   в System.Windows.MessageBox.Show(String messageBoxText)
+   в Time.View_model.Index_View_Model.Update_range_date(List`1 i) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2026

@@ -1,8 +1,8 @@
-﻿//#define test
-//#define test_1
-////#define test_relise_1
+﻿#define test
+#define test_1
+//#define test_relise_1
 //#define test_relise
-#define relise
+//#define relise
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -72,7 +72,7 @@ namespace Time.View_model
 
 
                 list_Test_list = new List<Test_Element>();
-
+                my_dates = new List<DateTime>();
                 _my_form = new My_form();
                 my_big_model = new ObservableCollection<BigBreakModel>(db.BigBreakModels.ToList());
                 my_short_model = new ObservableCollection<ShortBreakModel>(db.ShortBreakModels.ToList());
@@ -101,6 +101,8 @@ namespace Time.View_model
                 }
                 now_day = new Events_Timer(dict);
                 FirstStartAutoStart();
+
+              
             }
             catch (Exception ex) { Log.Write(ex); }
         }
@@ -1274,6 +1276,8 @@ namespace Time.View_model
                 if ((get_worc_alert_one != null ? get_worc_alert_one.Invoke() : true)&&
                     (duration.Hours > 0 || duration.Minutes > 0 || duration.Seconds > 0))
                 {
+
+                    Is_Small = false;
                     memory_timer = Type_alert.NONE;
                     if (One_timer != null)
                         One_timer.Dispose();
@@ -1685,8 +1689,8 @@ namespace Time.View_model
                 }
                 if (List_sound.Count > 0)
                     return List_sound[0];
-                return null;
-                // return new Sound();
+                //return null;
+                return new Sound();
             }
             set
             {
@@ -1941,7 +1945,7 @@ namespace Time.View_model
 
         #region Date
 
-        List<DateTime> my_dates = new List<DateTime>();
+        List<DateTime> my_dates ;
 
         string date_statistic_title = "";
         public string Date_statistic_title
@@ -2019,24 +2023,44 @@ namespace Time.View_model
         {
             try
             {
+               var r = System.Windows.MessageBox.Show("Update_range_date 1");
                 my_dates = i;
+                r = System.Windows.MessageBox.Show("Update_range_date 2");
 
                 if (my_dates != null && my_dates.Count > 0)
+                {
+                    r = System.Windows.MessageBox.Show("Update_range_date 3");
                     Date_statistic_title = my_dates.First() != null ?
-                       (my_dates.First().ToString().Split(' ')[0] +
-                       (my_dates.Count > 1 ? "-" + my_dates[my_dates.Count - 1].ToString().Split(' ')[0]
+                       (String.Format("{0}.{1}.{2}", (my_dates.First().Day > 9 ? my_dates.First().Day.ToString() : "0" + my_dates.First().Day.ToString()),
+                       (my_dates.First().Month > 9 ? my_dates.First().Month.ToString() : "0" + my_dates.First().Month.ToString()),
+                        (my_dates.First().Year > 9 ? my_dates.First().Year.ToString() : "0" + my_dates.First().Year.ToString())
+                       ) +
+                       (my_dates.Count > 1 ? "-" + String.Format("{0}.{1}.{2}", (my_dates[my_dates.Count - 1].Day > 9 ? my_dates[my_dates.Count - 1].Day.ToString() : "0" + my_dates[my_dates.Count - 1].Day.ToString()),
+                       (my_dates[my_dates.Count - 1].Month > 9 ? my_dates[my_dates.Count - 1].Month.ToString() : "0" + my_dates[my_dates.Count - 1].Month.ToString()),
+                       (my_dates[my_dates.Count - 1].Year > 9 ? my_dates[my_dates.Count - 1].Year.ToString() : "0" + my_dates[my_dates.Count - 1].Year.ToString()))
+
+
+
+
                        : " "))
                        : " ";
+                    r = System.Windows.MessageBox.Show("Update_range_date 4");
+                }
                 else
+                {
+                    r = System.Windows.MessageBox.Show("Update_range_date 5");
                     Date_statistic_title = DateTime.Now.ToString();
-
+                    r = System.Windows.MessageBox.Show("Update_range_date 5.1");
+                }
+                r = System.Windows.MessageBox.Show("Update_range_date 6");
                 Set_List_Statistic();
+                r = System.Windows.MessageBox.Show("Update_range_date 7");
             }
             catch (Exception ex)
             {
             Log.Write(ex); 
 #if test
-            System.Windows.MessageBox.Show(ex.Message, "Update_range_date");
+            System.Windows.MessageBox.Show(ex.Message, "Update_range_date end");
 #endif
             }
         }
@@ -2046,74 +2070,89 @@ namespace Time.View_model
             //int i = 0;
             try
             {
-            
-                var lits_temp = db.StatisticSites.ToList();
-                List<StatisticSite> list = new List<Time.StatisticSite>();
-                var start = (my_dates.First());
-
-                if (start != null)
+                var r = System.Windows.MessageBox.Show("Set_List_Statistic 1");
+                if (db != null&& db.StatisticSites!=null)
                 {
+                    r = System.Windows.MessageBox.Show("Set_List_Statistic 2");
+                    var lits_temp = db.StatisticSites.ToList();
+                    r = System.Windows.MessageBox.Show("Set_List_Statistic 3");
+                    List<StatisticSite> list = new List<Time.StatisticSite>();
+                    r = System.Windows.MessageBox.Show("Set_List_Statistic 4");
+                    var start = (my_dates.First());
+                    r = System.Windows.MessageBox.Show("Set_List_Statistic 5");
 
-
-
-                    var end = (my_dates[my_dates.Count - 1]);
-
-
-                    if (end != start)
+                    if (start != null)
                     {
 
-                        if (start > end)
-                        {
-                            var temp = DateTime.Parse(start.ToString());
-                            start = end;
-                            end = temp;
-                        }
 
-                        for (var i = 0; i < lits_temp.Count; i++)
+
+                        var end = (my_dates[my_dates.Count - 1]);
+                        r = System.Windows.MessageBox.Show("Set_List_Statistic 6");
+
+                        if (end != start)
                         {
-                            if (DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) >= DateTime.Parse(start.ToString().Split(' ')[0])
-                                && DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) <= DateTime.Parse(end.ToString().Split(' ')[0]))
+
+
+                            if (start > end)
                             {
-                                list.Add(lits_temp[i]);
+                                var temp = DateTime.Parse(start.ToString());
+                                start = end;
+                                end = temp;
+                            }
+
+                            for (var i = 0; i < lits_temp.Count; i++)
+                            {
+                                if (DateTime.Parse(lits_temp[i].Time) >= DateTime.Parse(String.Format("{0}.{1}.{2} 00:00:00", start.Day, start.Month, start.Year))
+
+
+
+
+                                    && DateTime.Parse(lits_temp[i].Time) <= DateTime.Parse(String.Format("{0}.{1}.{2} 00:00:00", end.Day, end.Month, end.Year)))
+                                {
+                                    list.Add(lits_temp[i]);
+                                }
+                            }
+
+
+                        }
+                        else
+                        {
+                            for (var i = 0; i < lits_temp.Count; i++)
+                            {
+                                var i1 = DateTime.Parse(lits_temp[i].Time);
+                                if (DateTime.Parse(lits_temp[i].Time).Year <= end.Year)
+                                    if (DateTime.Parse(lits_temp[i].Time).Month <= end.Month)
+                                        if (DateTime.Parse(lits_temp[i].Time).Day <= end.Day)
+                                        {
+                                            list.Add(lits_temp[i]);
+                                        }
                             }
                         }
 
+                    }
+
+
+                    if (list.ToList().Count > 0)
+                    {
+                        list_StatisticSite = list.ToList();
+                        StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
 
                     }
                     else
                     {
-                        for (var i = 0; i < lits_temp.Count; i++)
-                        {
-                            if (DateTime.Parse(lits_temp[i].Time.Split(' ')[0]) <= DateTime.Parse(end.ToString().Split(' ')[0]))
-                            {
-                                list.Add(lits_temp[i]);
-                            }
-                        }
+                        list_StatisticSite = new List<StatisticSite>();
+                        StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
+
                     }
-
+                    OnPropertyChanged(nameof(StatisticSite));
                 }
-
-
-                if (list.ToList().Count > 0)
-                {
-                    list_StatisticSite = list.ToList();
-                    StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
-
-                }
-                else
-                {
-                    list_StatisticSite = new List<StatisticSite>();
-                    StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
-
-                }
-                OnPropertyChanged(nameof(StatisticSite));
             }
             catch (Exception ex)
             {
             
    Log.Write(ex); 
 #if test
-            System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic");
+            System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic end");
 #endif
             }
         }

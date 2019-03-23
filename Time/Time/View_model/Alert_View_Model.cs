@@ -1,4 +1,5 @@
-﻿using System;
+﻿#define test
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -159,7 +160,10 @@ namespace Time.View_model
             catch (Exception ex)
             {
                 my_music.Stop();
+
+#if test
                 MessageBox.Show(ex.Message, "TickBreak");
+#endif
             }
         }
         public void  ActiveteTime()
@@ -174,11 +178,11 @@ namespace Time.View_model
 
         }
 
-        #endregion Function 
+#endregion Function 
 
-        #region Command
+#region Command
 
-        #region cancel
+#region cancel
         private DelegateCommand _Command_button_cancel;
         public ICommand Button_clik_button_cancel
         {
@@ -214,9 +218,9 @@ namespace Time.View_model
         {
             return true;
         }
-        #endregion cancel
+#endregion cancel
 
-        #region OK
+#region OK
 
         private DelegateCommand _Command_button_ok;
         public ICommand Button_clik_button_ok1
@@ -241,9 +245,9 @@ namespace Time.View_model
         {
             return true;
         }
-        #endregion OK
+#endregion OK
 
-        #region next
+#region next
 
         private DelegateCommand _Command_button_next;
         public ICommand Button_clik_button_next
@@ -267,11 +271,11 @@ namespace Time.View_model
         {
             return true;
         }
-        #endregion next
+#endregion next
 
      
 
 
-        #endregion Command
+#endregion Command
     }
 }

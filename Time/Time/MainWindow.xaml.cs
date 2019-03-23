@@ -132,7 +132,7 @@ namespace Time
                     menuLang.Click += ChangeLanguageClick;
                     menuLanguage.Items.Add(menuLang);
                 }
-
+             
             }
             catch (Exception ex)
             {
@@ -358,12 +358,14 @@ namespace Time
         {
             try
             {
+                if(LIST!=null&&LIST.CurrentCell!=null&&LIST.CurrentCell.Column!=null)
                 index_cell.Invoke(LIST.CurrentCell.Column.DisplayIndex);
             }
 
 
             catch (Exception ex)
             {
+              
                 Log.Write(ex);
             }
 
