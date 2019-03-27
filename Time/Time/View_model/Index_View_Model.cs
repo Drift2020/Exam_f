@@ -55,7 +55,7 @@ namespace Time.View_model
 
             try
             {
-
+            
                 db = temp;
                 db.GreanSites.Load();
                 db.RedSites.Load();
@@ -104,7 +104,13 @@ namespace Time.View_model
 
               
             }
-            catch (Exception ex) { Log.Write(ex); }
+            catch (Exception ex) {
+
+                Log.Write(ex);
+#if test
+                System.Windows.MessageBox.Show(ex.Message + "\n\n" + ex.StackTrace + "\n\n" + ex.TargetSite);
+#endif 
+            }
         }
 
         public void View_model_up()
@@ -130,14 +136,26 @@ namespace Time.View_model
                 {
                     case "ru-RU":
                         dict.Source = new Uri(String.Format("Resources/lang.{0}.xaml", _language), UriKind.Relative);
-                        now_day.dict = dict;
-                      
+                        if (now_day == null)
+                        {
+                            now_day = new Events_Timer(dict);
+                        }
+                        else
+                        {
+                            now_day.dict = dict;
+                        }
 
                         break;
                     default:
                         dict.Source = new Uri("Resources/lang.xaml", UriKind.Relative);
-                        now_day.dict = dict;
-
+                        if (now_day == null)
+                        {
+                            now_day = new Events_Timer(dict);
+                        }
+                        else
+                        {
+                            now_day.dict = dict;
+                        }
 
                         break;
                 }
@@ -716,7 +734,9 @@ namespace Time.View_model
         {
             get
             {
+                if (my_ome_model!=null && my_ome_model[0]!=null)
                 return my_ome_model[0].IsActiveOne;
+                return false;
             }
             set
             {
@@ -1687,7 +1707,7 @@ namespace Time.View_model
 
 
                 }
-                if (List_sound.Count > 0)
+                if (List_sound!=null&&List_sound.Count > 0)
                     return List_sound[0];
                 //return null;
                 return new Sound();
@@ -2023,13 +2043,11 @@ namespace Time.View_model
         {
             try
             {
-               var r = System.Windows.MessageBox.Show("Update_range_date 1");
+              
                 my_dates = i;
-                r = System.Windows.MessageBox.Show("Update_range_date 2");
-
+            
                 if (my_dates != null && my_dates.Count > 0)
                 {
-                    r = System.Windows.MessageBox.Show("Update_range_date 3");
                     Date_statistic_title = my_dates.First() != null ?
                        (String.Format("{0}.{1}.{2}", (my_dates.First().Day > 9 ? my_dates.First().Day.ToString() : "0" + my_dates.First().Day.ToString()),
                        (my_dates.First().Month > 9 ? my_dates.First().Month.ToString() : "0" + my_dates.First().Month.ToString()),
@@ -2044,17 +2062,12 @@ namespace Time.View_model
 
                        : " "))
                        : " ";
-                    r = System.Windows.MessageBox.Show("Update_range_date 4");
                 }
                 else
                 {
-                    r = System.Windows.MessageBox.Show("Update_range_date 5");
                     Date_statistic_title = DateTime.Now.ToString();
-                    r = System.Windows.MessageBox.Show("Update_range_date 5.1");
                 }
-                r = System.Windows.MessageBox.Show("Update_range_date 6");
                 Set_List_Statistic();
-                r = System.Windows.MessageBox.Show("Update_range_date 7");
             }
             catch (Exception ex)
             {
@@ -2070,16 +2083,11 @@ namespace Time.View_model
             //int i = 0;
             try
             {
-                var r = System.Windows.MessageBox.Show("Set_List_Statistic 1");
                 if (db != null&& db.StatisticSites!=null)
                 {
-                    r = System.Windows.MessageBox.Show("Set_List_Statistic 2");
                     var lits_temp = db.StatisticSites.ToList();
-                    r = System.Windows.MessageBox.Show("Set_List_Statistic 3");
                     List<StatisticSite> list = new List<Time.StatisticSite>();
-                    r = System.Windows.MessageBox.Show("Set_List_Statistic 4");
                     var start = (my_dates.First());
-                    r = System.Windows.MessageBox.Show("Set_List_Statistic 5");
 
                     if (start != null)
                     {
@@ -2087,7 +2095,6 @@ namespace Time.View_model
 
 
                         var end = (my_dates[my_dates.Count - 1]);
-                        r = System.Windows.MessageBox.Show("Set_List_Statistic 6");
 
                         if (end != start)
                         {

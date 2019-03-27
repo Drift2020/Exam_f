@@ -1,0 +1,211 @@
+[26.03.2019 14:05:04.443] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
+[26.03.2019 14:05:05.566] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2082
+[26.03.2019 14:07:06.003] [Time.View_model.Index_View_Model.set_Is_Small()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 752
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 114
+[26.03.2019 14:07:23.390] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 213
+[26.03.2019 14:07:23.390] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 255
+[26.03.2019 14:07:23.390] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 295
+[26.03.2019 14:07:23.390] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 325
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 364
+[26.03.2019 14:21:38.005] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
+[26.03.2019 14:21:39.381] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2082
+[26.03.2019 14:21:48.890] [Time.View_model.Index_View_Model.set_Is_Small()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 752
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 114
+[26.03.2019 14:21:52.321] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 213
+[26.03.2019 14:21:52.323] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 255
+[26.03.2019 14:21:52.324] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 295
+[26.03.2019 14:21:52.325] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 325
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 364
+[26.03.2019 14:26:25.158] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
+[26.03.2019 14:35:25.082] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] Ссылка на объект не указывает на экземпляр объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 409
+[26.03.2019 14:35:29.597] [Time.View_model.Index_View_Model.set_Is_Small()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 758
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 120
+[26.03.2019 14:35:37.364] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 219
+[26.03.2019 14:35:37.367] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 261
+[26.03.2019 14:35:37.367] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 301
+[26.03.2019 14:35:37.368] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 331
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 370
+[26.03.2019 14:38:39.939] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
+[26.03.2019 14:38:59.132] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] Ссылка на объект не указывает на экземпляр объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 409
+[26.03.2019 14:39:01.583] [Time.View_model.Index_View_Model.set_Is_Small()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 758
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 120
+[26.03.2019 14:40:12.498] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 219
+[26.03.2019 14:40:12.501] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 261
+[26.03.2019 14:40:12.503] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 301
+[26.03.2019 14:40:12.503] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 331
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 370
+[26.03.2019 14:47:14.467] [Google.Apis.Requests.ClientServiceRequest`1+<ParseResponse>d__34[TResponse].MoveNext()] Google.Apis.Requests.RequestError
+Resource has been deleted [410]
+Errors [
+	Message[Resource has been deleted] Location[ - ] Reason[deleted] Domain[global]
+]
+    в Google.Apis.Requests.ClientServiceRequest`1.<ParseResponse>d__34.MoveNext()
+--- Конец трассировка стека из предыдущего расположения, где возникло исключение ---
+   в System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   в Google.Apis.Requests.ClientServiceRequest`1.Execute()
+   в Time.Code.GoogleAPI.Delete_event(String eventId) в D:\Documents\GitHub\Exam_f\Time\Time\Code\GoogleAPI.cs:строка 141
+   в Time.View_model.Index_View_Model.Delete_event() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2755
+[26.03.2019 15:18:38.474] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
+[26.03.2019 15:19:04.597] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] Ссылка на объект не указывает на экземпляр объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 409
+[26.03.2019 15:19:06.548] [Time.View_model.Index_View_Model.set_Is_Small()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 758
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 120
+[26.03.2019 15:21:12.591] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 219
+[26.03.2019 15:21:12.591] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 261
+[26.03.2019 15:21:12.591] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 301
+[26.03.2019 15:21:12.591] [System.Linq.Enumerable.ToList()] Значение не может быть неопределенным.
+Имя параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 331
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 370
+[26.03.2019 20:22:37.231] [System.IO.__Error.WinIOError()] Файл 'C:\Windows\SysWOW64\credentials.json' не найден.    в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   в System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access)
+   в Time.Code.GoogleAPI.Login() в D:\Documents\GitHub\Exam_f\Time\Time\Code\GoogleAPI.cs:строка 54
+   в Time.View_model.Index_View_Model.Execute_sing_in(Object o) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2976
+   в Time.Command.DelegateCommand.Execute(Object parameter) в D:\Documents\GitHub\Exam_f\Time\Time\Command\DelegateCommand.cs:строка 25
+   в MS.Internal.Commands.CommandHelpers.CriticalExecuteCommandSource(ICommandSource commandSource, Boolean userInitiated)
+   в System.Windows.Controls.Primitives.ButtonBase.OnClick()
+   в System.Windows.Controls.Button.OnClick()
+   в System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(MouseButtonEventArgs e)
+   в System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)
+   в System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   в System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   в System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   в System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   в System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)
+   в System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)
+   в System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   в System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   в System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   в System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   в System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   в System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   в System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)
+   в System.Windows.Input.InputManager.ProcessStagingArea()
+   в System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   в System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)
+   в System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)
+   в System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, WindowMessage msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   в MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   в System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   в System.Windows.Threading.Dispatcher.PushFrame(DispatcherFrame frame)
+   в System.Windows.Window.ShowHelper(Object booleanBox)
+   в System.Windows.Window.Show()
+   в System.Windows.Window.ShowDialog()
+   в Time.App.Application_Startup(Object sender, StartupEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\App.xaml.cs:строка 202

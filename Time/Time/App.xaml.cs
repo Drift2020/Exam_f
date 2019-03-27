@@ -25,7 +25,7 @@ namespace Time
     public partial class App : Application, ISet_Language
     {
         static App my_this;
-
+        ApplicationContext myLite;
         private static List<CultureInfo> m_Languages = new List<CultureInfo>();
         public event Set_Language set_Language_;
         public static List<CultureInfo> Languages
@@ -40,9 +40,9 @@ namespace Time
         {
             try
             {
+                 myLite = new ApplicationContext();
 
-          
-            my_this = this;
+                my_this = this;
             PresentationTraceSources.DataBindingSource.Listeners.Add(new BindingErrorTraceListener());
             PresentationTraceSources.DataBindingSource.Switch.Level = SourceLevels.Error;
 
@@ -141,7 +141,7 @@ namespace Time
             try
             {
                 MainWindow view = new MainWindow();
-                ApplicationContext myLite = new ApplicationContext();
+                
 
                 Index_View_Model viewModel = new Index_View_Model(myLite);
 
