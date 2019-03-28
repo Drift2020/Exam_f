@@ -115,3 +115,5 @@
 [28.03.2019 13:46:43.078] [Time.View_model.Alert_View_Model.Closing()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 212
 [28.03.2019 13:47:29.352] [Time.View_model.Alert_View_Model.Closing()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 212
 [28.03.2019 13:48:30.371] [Time.View_model.Alert_View_Model.Closing()] Ссылка на объект не указывает на экземпляр объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 212
+[28.03.2019 15:44:31.123] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2096
