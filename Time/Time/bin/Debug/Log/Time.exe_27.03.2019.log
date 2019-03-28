@@ -106,3 +106,20 @@
    в System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
    в System.Data.Entity.DbContext.SaveChanges()
    в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 325
+[27.03.2019 17:20:54.472] [System.Data.Entity.Internal.InternalContext.SaveChanges()] An error occurred while updating the entries. See the inner exception for details.    в System.Data.Entity.Internal.InternalContext.SaveChanges()
+   в System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   в System.Data.Entity.DbContext.SaveChanges()
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 252
+[27.03.2019 17:20:54.472] [System.Data.Entity.Internal.InternalContext.SaveChanges()] An error occurred while updating the entries. See the inner exception for details.    в System.Data.Entity.Internal.InternalContext.SaveChanges()
+   в System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   в System.Data.Entity.DbContext.SaveChanges()
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 291
+[27.03.2019 17:20:54.778] [System.Data.Entity.Internal.InternalContext.SaveChanges()] An error occurred while updating the entries. See the inner exception for details.    в System.Data.Entity.Internal.InternalContext.SaveChanges()
+   в System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   в System.Data.Entity.DbContext.SaveChanges()
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 325
+[27.03.2019 17:20:54.788] [System.Data.Entity.Internal.InternalContext.SaveChanges()] An error occurred while updating the entries. See the inner exception for details.    в System.Data.Entity.Internal.InternalContext.SaveChanges()
+   в System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   в System.Data.Entity.DbContext.SaveChanges()
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 355
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 370
