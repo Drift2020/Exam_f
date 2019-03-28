@@ -40,8 +40,8 @@ namespace Time.View_model
 
         #region Variables
 
-      
 
+        bool is_closing = true;
 
         string text_info;
         public string Text_info { get { return text_info; } set { text_info = value; OnPropertyChanged(nameof(Text_info)); } }
@@ -130,6 +130,7 @@ namespace Time.View_model
                         {
                             work_stop = true;
                             my_music.Stop();
+                            is_closing = false;
                             Closenig();
                             Disposes();
                             big_timer.Change(System.Threading.Timeout.Infinite, 0);
@@ -143,6 +144,7 @@ namespace Time.View_model
                     {
                         work_stop = true;
                         my_music.Stop();
+                        is_closing = false;
                         Closenig();
 
                         if (type == Type_alert.BigOne || type == Type_alert.ShortOne)
@@ -178,11 +180,38 @@ namespace Time.View_model
 
         }
 
-#endregion Function 
 
-#region Command
+        public void Closing(object sender,System.ComponentModel.CancelEventArgs elem)
+        {
+            work_stop = true;
+            my_music.Stop();
+            if (is_closing)
+            {
 
-#region cancel
+               
+              
+
+
+                if (type == Type_alert.BigOne || type == Type_alert.ShortOne)
+                {
+                    Disposes();
+                    StartMemberTimer();
+                }
+                else if (type == Type_alert.One || type == Type_alert.OneOne)
+                {
+                    Disposes();
+                }
+
+                    
+            }
+            big_timer.Change(System.Threading.Timeout.Infinite, 0);
+        }
+
+        #endregion Function 
+
+        #region Command
+
+        #region cancel
         private DelegateCommand _Command_button_cancel;
         public ICommand Button_clik_button_cancel
         {
@@ -202,6 +231,7 @@ namespace Time.View_model
             {
                 work_stop = true;
                 my_music.Stop();
+                is_closing = false;
                 Closenig();
                 if (type == Type_alert.One)
                     Disposes();
@@ -211,6 +241,7 @@ namespace Time.View_model
             else
             {
                 Message_result = false;
+                is_closing = false;
                 Closenig();
             }
         }
@@ -220,60 +251,61 @@ namespace Time.View_model
         }
 #endregion cancel
 
-#region OK
+        #region OK
 
-        private DelegateCommand _Command_button_ok;
-        public ICommand Button_clik_button_ok1
-        {
-            get
-            {
-                if (_Command_button_ok == null)
+                private DelegateCommand _Command_button_ok;
+                public ICommand Button_clik_button_ok1
                 {
-                    _Command_button_ok = new DelegateCommand(Execute_button_ok, CanExecute_button_ok);
+                    get
+                    {
+                        if (_Command_button_ok == null)
+                        {
+                            _Command_button_ok = new DelegateCommand(Execute_button_ok, CanExecute_button_ok);
+                        }
+                        return _Command_button_ok;
+                    }
                 }
-                return _Command_button_ok;
-            }
-        }
-        private void Execute_button_ok(object o)
-        {
-
-            Message_result = true;
-            Closenig();
-
-        }
-        private bool CanExecute_button_ok(object o)
-        {
-            return true;
-        }
-#endregion OK
-
-#region next
-
-        private DelegateCommand _Command_button_next;
-        public ICommand Button_clik_button_next
-        {
-            get
-            {
-                if (_Command_button_next == null)
+                private void Execute_button_ok(object o)
                 {
-                    _Command_button_next = new DelegateCommand(Execute_button_next, CanExecute_button_next);
+
+                    Message_result = true;
+                    is_closing = false;
+                    Closenig();
+
                 }
-                return _Command_button_next;
-            }
-        }
-        private void Execute_button_next(object o)
-        {
+                private bool CanExecute_button_ok(object o)
+                {
+                    return true;
+                }
+        #endregion OK
+
+        #region next
+
+                private DelegateCommand _Command_button_next;
+                public ICommand Button_clik_button_next
+                {
+                    get
+                    {
+                        if (_Command_button_next == null)
+                        {
+                            _Command_button_next = new DelegateCommand(Execute_button_next, CanExecute_button_next);
+                        }
+                        return _Command_button_next;
+                    }
+                }
+                private void Execute_button_next(object o)
+                {
 
 
-            var i = 0;
-        }
-        private bool CanExecute_button_next(object o)
-        {
-            return true;
-        }
-#endregion next
+                    var i = 0;
+                }
+                private bool CanExecute_button_next(object o)
+                {
+                    return true;
+                }
+        #endregion next
 
-     
+    
 
 
 #endregion Command

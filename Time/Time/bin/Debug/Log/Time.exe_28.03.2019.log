@@ -1,70 +1,117 @@
-[28.03.2019 13:03:23.856] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.    в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   в System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   в System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   в System.Drawing.Icon..ctor(String fileName, Int32 width, Int32 height)
-   в System.Drawing.Icon..ctor(String fileName)
-   в Time.MainWindow..ctor() в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 87
-[28.03.2019 13:03:25.386] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
-   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
-   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
-   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
-   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
-   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
-   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
-[28.03.2019 13:05:53.276] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 409
-[28.03.2019 13:05:55.259] [Time.MainWindow.Set_text_menu()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.Set_text_menu(ResourceDictionary disk) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 68
-   в Time.View_model.Index_View_Model.Set_Language(String _language) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 163
-[28.03.2019 13:05:55.542] [Time.View_model.Index_View_Model.set_Is_Small()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 758
-   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 120
-[28.03.2019 13:05:56.715] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 219
-[28.03.2019 13:05:56.718] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 261
-[28.03.2019 13:05:56.719] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 301
-[28.03.2019 13:05:56.719] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 331
-   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 370
-[28.03.2019 13:12:23.312] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.    в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
-   в System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
-   в System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
-   в System.Drawing.Icon..ctor(String fileName, Int32 width, Int32 height)
-   в System.Drawing.Icon..ctor(String fileName)
-   в Time.MainWindow..ctor() в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 87
-[28.03.2019 13:12:26.334] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
-   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
-   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
-   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
-   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
-   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
-   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
-   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
-[28.03.2019 13:12:33.630] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 409
-[28.03.2019 13:12:35.107] [Time.MainWindow.Set_text_menu()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.Set_text_menu(ResourceDictionary disk) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 68
-   в Time.View_model.Index_View_Model.Set_Language(String _language) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 163
-[28.03.2019 13:12:39.205] [Time.View_model.Index_View_Model.set_Is_Small()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 758
-   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 120
-[28.03.2019 13:12:42.654] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 219
-[28.03.2019 13:12:42.658] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 261
-[28.03.2019 13:12:42.659] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 301
-[28.03.2019 13:12:42.661] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
-»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
-   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 331
-   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 370
+[28.03.2019 13:31:24.222] [System.Windows.Window.VerifyNotClosing()] ¬о врем€ закрыти€ окна нельз€ установить дл€ Visibility значение Visible или вызвать Show, ShowDialog, Close или WindowInteropHelper.EnsureHandle.    в System.Windows.Window.VerifyNotClosing()
+   в System.Windows.Window.InternalClose(Boolean shutdown, Boolean ignoreCancel)
+   в System.Windows.Window.Close()
+   в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 188
+   в System.Windows.Window.OnClosing(CancelEventArgs e)
+   в System.Windows.Window.WmClose()
+   в System.Windows.Window.WindowFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в System.Windows.Interop.HwndSource.PublicHooksFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   в MS.Win32.UnsafeNativeMethods.UnsafeSendMessage(IntPtr hWnd, WindowMessage msg, IntPtr wParam, IntPtr lParam)
+   в System.Windows.Window.InternalClose(Boolean shutdown, Boolean ignoreCancel)
+   в System.Windows.Window.Close()
+   в Time.View_model.Alert_View_Model.Execute_button_cancel(Object o) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 226
+   в Time.Command.DelegateCommand.Execute(Object parameter) в D:\Documents\GitHub\Exam_f\Time\Time\Command\DelegateCommand.cs:строка 25
+   в MS.Internal.Commands.CommandHelpers.CriticalExecuteCommandSource(ICommandSource commandSource, Boolean userInitiated)
+   в System.Windows.Controls.Primitives.ButtonBase.OnClick()
+   в System.Windows.Controls.Button.OnClick()
+   в System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(MouseButtonEventArgs e)
+   в System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)
+   в System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   в System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   в System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   в System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   в System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)
+   в System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)
+   в System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   в System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   в System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   в System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   в System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   в System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   в System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)
+   в System.Windows.Input.InputManager.ProcessStagingArea()
+   в System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   в System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)
+   в System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)
+   в System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, WindowMessage msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   в MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   в System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   в System.Windows.Threading.Dispatcher.PushFrame(DispatcherFrame frame)
+   в System.Windows.Window.ShowHelper(Object booleanBox)
+   в System.Windows.Window.Show()
+   в System.Windows.Window.ShowDialog()
+   в Time.App.Application_Startup(Object sender, StartupEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\App.xaml.cs:строка 202
+[28.03.2019 13:35:20.651] [System.Windows.Window.VerifyNotClosing()] ¬о врем€ закрыти€ окна нельз€ установить дл€ Visibility значение Visible или вызвать Show, ShowDialog, Close или WindowInteropHelper.EnsureHandle.    в System.Windows.Window.VerifyNotClosing()
+   в System.Windows.Window.InternalClose(Boolean shutdown, Boolean ignoreCancel)
+   в System.Windows.Window.Close()
+   в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 188
+   в System.Windows.Window.OnClosing(CancelEventArgs e)
+   в System.Windows.Window.WmClose()
+   в System.Windows.Window.WindowFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в System.Windows.Interop.HwndSource.PublicHooksFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   в MS.Win32.UnsafeNativeMethods.UnsafeSendMessage(IntPtr hWnd, WindowMessage msg, IntPtr wParam, IntPtr lParam)
+   в System.Windows.Window.InternalClose(Boolean shutdown, Boolean ignoreCancel)
+   в System.Windows.Window.Close()
+   в Time.View_model.Alert_View_Model.Execute_button_cancel(Object o) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 229
+   в Time.Command.DelegateCommand.Execute(Object parameter) в D:\Documents\GitHub\Exam_f\Time\Time\Command\DelegateCommand.cs:строка 25
+   в MS.Internal.Commands.CommandHelpers.CriticalExecuteCommandSource(ICommandSource commandSource, Boolean userInitiated)
+   в System.Windows.Controls.Primitives.ButtonBase.OnClick()
+   в System.Windows.Controls.Button.OnClick()
+   в System.Windows.Controls.Primitives.ButtonBase.OnMouseLeftButtonUp(MouseButtonEventArgs e)
+   в System.Windows.UIElement.OnMouseLeftButtonUpThunk(Object sender, MouseButtonEventArgs e)
+   в System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   в System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   в System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   в System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   в System.Windows.UIElement.ReRaiseEventAs(DependencyObject sender, RoutedEventArgs args, RoutedEvent newEvent)
+   в System.Windows.UIElement.OnMouseUpThunk(Object sender, MouseButtonEventArgs e)
+   в System.Windows.Input.MouseButtonEventArgs.InvokeEventHandler(Delegate genericHandler, Object genericTarget)
+   в System.Windows.RoutedEventArgs.InvokeHandler(Delegate handler, Object target)
+   в System.Windows.RoutedEventHandlerInfo.InvokeHandler(Object target, RoutedEventArgs routedEventArgs)
+   в System.Windows.EventRoute.InvokeHandlersImpl(Object source, RoutedEventArgs args, Boolean reRaised)
+   в System.Windows.UIElement.RaiseEventImpl(DependencyObject sender, RoutedEventArgs args)
+   в System.Windows.UIElement.RaiseTrustedEvent(RoutedEventArgs args)
+   в System.Windows.UIElement.RaiseEvent(RoutedEventArgs args, Boolean trusted)
+   в System.Windows.Input.InputManager.ProcessStagingArea()
+   в System.Windows.Input.InputManager.ProcessInput(InputEventArgs input)
+   в System.Windows.Input.InputProviderSite.ReportInput(InputReport inputReport)
+   в System.Windows.Interop.HwndMouseInputProvider.ReportInput(IntPtr hwnd, InputMode mode, Int32 timestamp, RawMouseActions actions, Int32 x, Int32 y, Int32 wheel)
+   в System.Windows.Interop.HwndMouseInputProvider.FilterMessage(IntPtr hwnd, WindowMessage msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в System.Windows.Interop.HwndSource.InputFilterMessage(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndWrapper.WndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam, Boolean& handled)
+   в MS.Win32.HwndSubclass.DispatcherCallbackOperation(Object o)
+   в System.Windows.Threading.ExceptionWrapper.InternalRealCall(Delegate callback, Object args, Int32 numArgs)
+   в System.Windows.Threading.ExceptionWrapper.TryCatchWhen(Object source, Delegate callback, Object args, Int32 numArgs, Delegate catchHandler)
+   в System.Windows.Threading.Dispatcher.LegacyInvokeImpl(DispatcherPriority priority, TimeSpan timeout, Delegate method, Object args, Int32 numArgs)
+   в MS.Win32.HwndSubclass.SubclassWndProc(IntPtr hwnd, Int32 msg, IntPtr wParam, IntPtr lParam)
+   в MS.Win32.UnsafeNativeMethods.DispatchMessage(MSG& msg)
+   в System.Windows.Threading.Dispatcher.PushFrameImpl(DispatcherFrame frame)
+   в System.Windows.Threading.Dispatcher.PushFrame(DispatcherFrame frame)
+   в System.Windows.Window.ShowHelper(Object booleanBox)
+   в System.Windows.Window.Show()
+   в System.Windows.Window.ShowDialog()
+   в Time.App.Application_Startup(Object sender, StartupEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\App.xaml.cs:строка 202
+[28.03.2019 13:39:50.765] [Time.View_model.Alert_View_Model.Closing()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 198
+[28.03.2019 13:45:35.329] [Time.View_model.Alert_View_Model.Closing()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 208
+[28.03.2019 13:46:43.078] [Time.View_model.Alert_View_Model.Closing()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 212
+[28.03.2019 13:47:29.352] [Time.View_model.Alert_View_Model.Closing()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 212
+[28.03.2019 13:48:30.371] [Time.View_model.Alert_View_Model.Closing()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Alert_View_Model.Closing(Object sender, CancelEventArgs elem) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Alert_View_Model.cs:строка 212

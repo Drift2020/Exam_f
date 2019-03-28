@@ -619,6 +619,7 @@ namespace Time.View_model
                 }
                 catch (Exception ex)
                 {
+                      Log.Write(ex); 
 #if test
                     System.Windows.MessageBox.Show(ex.Message, "Ups...Is_Small");
 #endif
@@ -1441,6 +1442,7 @@ namespace Time.View_model
 
                     view_modelBig.Text_info = dict["Alert_message_1_big"].ToString();
 
+                    viewBig.Closing += new System.ComponentModel.CancelEventHandler(view_modelBig.Closing);
 
                     if (Is_strict_type)
                     {
@@ -1473,6 +1475,7 @@ namespace Time.View_model
                     }
                     catch (Exception ex)
                     {
+                        Log.Write(ex);
 #if test
                         System.Windows.MessageBox.Show(ex.Message, "Alert_box - my_big_model");
 #endif
@@ -1518,6 +1521,7 @@ namespace Time.View_model
                     }
                     catch (Exception ex)
                     {
+                        Log.Write(ex);
 #if test
                         System.Windows.MessageBox.Show(ex.Message, "Alert_box - Short");
 #endif
@@ -1565,6 +1569,7 @@ namespace Time.View_model
                     }
                     catch (Exception ex)
                     {
+                        Log.Write(ex);
 #if test
                         System.Windows.MessageBox.Show(ex.Message, "Alert_box - ShortOne");
 #endif
@@ -1608,6 +1613,7 @@ namespace Time.View_model
                     }
                     catch (Exception ex)
                     {
+                        Log.Write(ex);
 #if test
                         System.Windows.MessageBox.Show(ex.Message, "Alert_box - my_big_model");
 #endif
