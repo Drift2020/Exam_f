@@ -1032,7 +1032,7 @@ namespace Time.View_model
             {
                 is_play = !is_play;
                 Icon_Play = "PlayCircleOutline";
-                my_music.Stop();
+                my_music.Stop(false);
             }
         }
 
@@ -1393,6 +1393,7 @@ namespace Time.View_model
             {
                 if (temp.type == Type_alert.Big || temp.type == Type_alert.BigOne)
                 {
+
                     viewBig = new Alert();
 
                     switch(temp.type)
@@ -1811,7 +1812,11 @@ namespace Time.View_model
 
             var list_sound_temp = MusicPath.Get_Paths();
             if (list_sound_temp != null && list_sound_temp.Count > 0)
-                list_sound_temp.ForEach(x => List_sound.Add(new Sound() { Path = x, Name = Path.GetFileName(x) }));
+                list_sound_temp.ForEach(x => {
+
+                    if(List_sound.Where(y=>y.Path==x).Count()==0)
+                    List_sound.Add(new Sound() { Path = x, Name = Path.GetFileName(x) });
+                });
 
             SaveSoundTimer();
         }
@@ -1859,7 +1864,7 @@ namespace Time.View_model
             {
                 is_play = !is_play;
                 Icon_Play = "PlayCircleOutline";
-                my_music.Stop();
+                my_music.Stop(false);
             }
 
 

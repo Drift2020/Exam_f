@@ -14,9 +14,30 @@ namespace Time.Code
         public MusicPath()
         {
             wmp = new WindowsMediaPlayer();
+            wmp.PlayStateChange += Wmp_PlayStateChange;
         }
-        WindowsMediaPlayer wmp;
 
+        //события запуска звука заново
+        private void Wmp_PlayStateChange(int NewState)
+        {
+          
+            if (NewState != 8&& go)
+            {
+
+                wmp.controls.play();
+
+            }
+           
+        }
+
+        #region varibels
+        WindowsMediaPlayer wmp;
+  
+        bool go=true;
+        #endregion varibels
+
+     
+        //метод который говорит работает ли музыка
         public bool isPlay()
         {
            
@@ -31,6 +52,7 @@ namespace Time.Code
             return true;
         }
 
+        //возврат всей музыке по указонаму пути
         public static List<string> Get_Paths()
         {
 
@@ -51,7 +73,8 @@ namespace Time.Code
 
         public  void Play(string path, int? i)
         {
-            Stop();
+            go = true;
+            wmp.controls.stop();
             if (path != null)
             {
 
@@ -75,9 +98,9 @@ namespace Time.Code
         }
 
 
-        public  void Stop()
+        public  void Stop(bool i)
         {
-        
+            go = i;
             wmp.controls.stop();
 
         }

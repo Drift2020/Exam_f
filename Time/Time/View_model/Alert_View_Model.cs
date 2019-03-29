@@ -129,7 +129,7 @@ namespace Time.View_model
                         if (time_s < 1)
                         {
                             work_stop = true;
-                            my_music.Stop();
+                            my_music.Stop(false);
                             is_closing = false;
                             Closenig();
                             Disposes();
@@ -143,7 +143,7 @@ namespace Time.View_model
                     if (time_s < 1)
                     {
                         work_stop = true;
-                        my_music.Stop();
+                        my_music.Stop(false);
                         is_closing = false;
                         Closenig();
 
@@ -161,7 +161,7 @@ namespace Time.View_model
             }
             catch (Exception ex)
             {
-                my_music.Stop();
+                my_music.Stop(false);
 
 #if test
                 MessageBox.Show(ex.Message, "TickBreak");
@@ -184,7 +184,7 @@ namespace Time.View_model
         public void Closing(object sender,System.ComponentModel.CancelEventArgs elem)
         {
             work_stop = true;
-            my_music.Stop();
+            my_music.Stop(false);
             if (is_closing)
             {
 
@@ -230,7 +230,7 @@ namespace Time.View_model
                 type == Type_alert.ShortOne || type == Type_alert.BigOne || type == Type_alert.OneOne)
             {
                 work_stop = true;
-                my_music.Stop();
+                my_music.Stop(false);
                 is_closing = false;
                 Closenig();
                 if (type == Type_alert.One)
