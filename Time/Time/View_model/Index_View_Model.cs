@@ -987,6 +987,10 @@ namespace Time.View_model
 
                 }
 
+                if (my_music != null)
+                {
+                    my_music.Volume(value);
+                }
 
                 db.SaveChanges();
 
