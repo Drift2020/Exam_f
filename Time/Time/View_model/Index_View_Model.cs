@@ -187,7 +187,10 @@ namespace Time.View_model
             message.Activated_message_style();
             message_model.Text_info = info;
             message.DataContext = message_model;
-            message.ShowDialog();
+
+            message.key_Enter_Up += new Interface.Alert.Key_Up(message_model.Ok_key);
+                message.key_Esc_Up += new Interface.Alert.Key_Up(message_model.Esc_key);
+                message.ShowDialog();
             return message_model.Message_result;
             }
             catch (Exception ex) { Log.Write(ex);return false; }
@@ -203,6 +206,8 @@ namespace Time.View_model
                 message.Activated_message_style_2();
                 message_model.Text_info = info;
                 message.DataContext = message_model;
+                message.key_Enter_Up += new Interface.Alert.Key_Up(message_model.Ok_key);
+                message.key_Esc_Up += new Interface.Alert.Key_Up(message_model.Esc_key);
                 message.ShowDialog();
                 return message_model.Message_result;
             }
@@ -2401,7 +2406,10 @@ namespace Time.View_model
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
+#if test
                     System.Windows.MessageBox.Show(ex.Message, "Delete_elements_sound");
+#endif 
                 }
                 OnPropertyChanged(nameof(List_sound));
             });

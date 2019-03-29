@@ -13,7 +13,7 @@
         xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         mc:Ignorable="d"
         Title="Alert" Height="202.882" Width="422.395" Activated="MetroWindow_Activated"
-                      x:Name="GWindow" ResizeMode="NoResize" Topmost="True" Loaded="GWindow_Loaded" WindowStartupLocation="CenterScreen">
+                      x:Name="GWindow" ResizeMode="NoResize" Topmost="True" Loaded="GWindow_Loaded" WindowStartupLocation="CenterScreen" KeyUp="GWindow_KeyUp_1">
     <Grid>
 
      

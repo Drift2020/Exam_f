@@ -13,13 +13,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Time.Code;
+using Time.Interface.Alert;
 
 namespace Time.View
 {
     /// <summary>
     /// Interaction logic for Alert.xaml
     /// </summary>
-    public partial class Alert : Window
+    public partial class Alert : Window, IKey_Enter_Up
     {
         TopWindow _top_windows = new TopWindow();
         public Alert()
@@ -29,6 +30,9 @@ namespace Time.View
 
       public  Action StartBreakBig;
         public Type_alert type;
+
+        public event Key_Up key_Enter_Up;
+        public event Key_Up key_Esc_Up;
         private void MetroWindow_Activated(object sender, EventArgs e)
         {
          
@@ -172,6 +176,25 @@ namespace Time.View
                 _top_windows.Top_Window("Alert");
                 _top_windows.Top_All_Window("Alert");
                 StartBreakBig();
+            }
+           
+        }
+
+        private void GWindow_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+        }
+
+        private void GWindow_KeyUp_1(object sender, KeyEventArgs e)
+        {
+            switch (e.Key )
+            {
+                case Key.Enter:
+                    key_Enter_Up.Invoke();
+                    break;
+                case Key.Escape:
+                    key_Esc_Up.Invoke();
+                    break;
             }
            
         }

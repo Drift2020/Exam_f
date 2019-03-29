@@ -139,13 +139,17 @@
                     <Grid Grid.Column="1">
                         <GroupBox ToolTip="{DynamicResource ToolTip_Timer_sound}" Margin="5" HeaderStringFormat="30px" Header="{DynamicResource Timer_combo_sound}" Controls:ControlsHelper.HeaderFontSize="16" >
                             <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="156*"/>
+                                    <ColumnDefinition Width="203*"/>
+                                </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="1*"/>
                                     <RowDefinition Height="Auto"/>
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
-                                <Grid Margin="5,5,5,5" Grid.Row="0">
+                                <Grid Margin="5,5,5,5" Grid.Row="0" Grid.ColumnSpan="2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
                                         <ColumnDefinition />
@@ -166,7 +170,7 @@
                                 ItemsSource="{Binding List_sound, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                              SelectedItem="{Binding Selected_Item_sound,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                               
-                                    AutoGenerateColumns="False" >
+                                    AutoGenerateColumns="False" Grid.ColumnSpan="2" >
 
                                     <DataGrid.Columns>
                                         <DataGridTextColumn IsReadOnly="True"  Header="{DynamicResource Timer_sound_name}"  Width="150" Binding="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
@@ -179,7 +183,7 @@
 
 
                                 </DataGrid>
-                                <Grid Margin="5,5,5,5" Grid.Row="2">
+                                <Grid Margin="5,5,5,5" Grid.Row="2" Grid.ColumnSpan="2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="auto"/>
                                         <ColumnDefinition />
@@ -193,7 +197,7 @@
                                         <iconPacks:PackIconMaterial Kind="{Binding Icon_Play}" />
                                     </Button>
                                 </Grid>
-                                <Grid Margin="5,5,5,5" Grid.Row="3">
+                                <Grid Margin="5,5,5,5" Grid.Row="3" Grid.ColumnSpan="2">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
                                         <ColumnDefinition />
@@ -621,7 +625,7 @@
             </TabItem>
             <TabItem ToolTip="{DynamicResource ToolTip_Settings}" Header="{DynamicResource Index_tab_seting}">
                 <GroupBox >
-                   
+
                     <Grid >
                         <Grid.RowDefinitions>
                             <RowDefinition/>

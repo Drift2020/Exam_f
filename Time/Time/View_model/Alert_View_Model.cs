@@ -69,6 +69,31 @@ namespace Time.View_model
         #region Function 
 
 
+        public void Ok_key()
+        {
+
+            switch(type)
+            {
+                case Type_alert.Message:
+                    Message_result = true;
+                    is_closing = false;
+                    Closenig();
+                    break;
+            }
+        }
+
+        public void Esc_key()
+        {
+
+            switch (type)
+            {
+                case Type_alert.Message:
+                    Message_result = false;
+                    is_closing = false;
+                    Closenig();
+                    break;
+            }
+        }
 
         void TickBreak(object o)
         {
