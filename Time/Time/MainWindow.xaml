@@ -216,7 +216,18 @@
                         <StackPanel Margin="5,0,5,0">
                             <GroupBox x:Name="BigTime" Margin="5">
                                 <GroupBox.Header>
-                                    <CheckBox ToolTip="{DynamicResource ToolTip_Timer_time_big}"  x:Name="BigT" IsChecked="{Binding Is_big_timer,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Content="{DynamicResource Timer_chec_big_break}" Background="White" FontSize="16" Click="BigT_Click" Foreground="White" FontFamily="Segoe UI"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <CheckBox Grid.Column="0" ToolTip="{DynamicResource ToolTip_Timer_time_big}"  x:Name="BigT"
+                                                  IsChecked="{Binding Is_big_timer,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                                  Content="{DynamicResource Timer_chec_big_break}" Background="White" FontSize="16"
+                                                  Click="BigT_Click" Foreground="White" FontFamily="Segoe UI"/>
+                                       
+                                    </Grid>
+                                    
                                 </GroupBox.Header>
                                 <StackPanel>
                                     <Grid Margin="0,5,0,5">

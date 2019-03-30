@@ -1,0 +1,6 @@
+[30.03.2019 22:32:15.370] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.<>c__DisplayClass96_0.<Alert_box>b__0() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1547
+[30.03.2019 22:33:41.964] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.<>c__DisplayClass96_0.<Alert_box>b__0() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1547
+[30.03.2019 22:34:15.020] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.<>c__DisplayClass96_0.<Alert_box>b__0() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1547

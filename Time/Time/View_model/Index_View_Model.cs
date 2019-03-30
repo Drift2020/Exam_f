@@ -596,6 +596,21 @@ namespace Time.View_model
 
         #endregion is activ sound
 
+        #region Number_time_big
+
+        string text="None";
+
+        public string Number_time_big
+        {
+            get { return text; }
+            set
+            {
+                text = value;
+                OnPropertyChanged(nameof(Number_time_big));
+            }
+        }
+
+        #endregion Number_time_big
 
         #region is activ big timer
         Alert viewBig;
@@ -785,6 +800,7 @@ namespace Time.View_model
         #endregion is activ strict type
 
         #endregion checkbox
+
 
         #region music path
 
@@ -1400,8 +1416,8 @@ namespace Time.View_model
                 {
 
                     viewBig = new Alert();
-
-                    switch(temp.type)
+                    viewBig.ShowInTaskbar = false;
+                    switch (temp.type)
                     {
                         case Type_alert.Big:
                             {
@@ -1479,7 +1495,9 @@ namespace Time.View_model
 
                     try
                     {
-                        if (my_big_model[0].IsActiveSound && my_big_model[0].BigSoundId != -1)
+                        if (my_big_model[0].IsActiveSound && my_big_model[0].BigSoundId != -1
+                        &&
+                        List_sound != null && List_sound.Where(x => x.Id == my_big_model[0].BigSoundId).Count() > 0)
 
                             Music_Path_big.Play(List_sound.Where(x => x.Id == my_big_model[0].BigSoundId).First().Path, my_big_model[0].SoundVolume);
                     }
@@ -1494,6 +1512,8 @@ namespace Time.View_model
                 else if (temp.type == Type_alert.Short)
                 {
                     viewShort = new Alert();
+
+                    viewShort.ShowInTaskbar = false;
                     view_modelShort = new Alert_View_Model() { time_s = temp.time, type = Type_alert.Short, my_music = Music_Path_small };
 
                     viewShort.StartBreakBig = new Action(view_modelShort.ActiveteTime);
@@ -1525,9 +1545,12 @@ namespace Time.View_model
 
                     try
                     {
-                        if (my_short_model[0].IsSoundActive && my_short_model[0].ShortSoundId != -1)
-
+                        if (my_short_model[0].IsSoundActive && my_short_model[0].ShortSoundId != -1 &&
+                        List_sound != null && List_sound.Where(x => x.Id == my_short_model[0].ShortSoundId).Count() > 0)
+                        {
+                        
                             Music_Path_small.Play(List_sound.Where(x => x.Id == my_short_model[0].ShortSoundId).First().Path, my_short_model[0].SoundVolume);
+                        }
                     }
                     catch (Exception ex)
                     {
@@ -1542,6 +1565,7 @@ namespace Time.View_model
                 if(temp.type == Type_alert.ShortOne)
                 {
                     viewShort = new Alert();
+                    viewShort.ShowInTaskbar = false;
                     view_modelShort = new Alert_View_Model() { time_s = temp.time, type = Type_alert.ShortOne, my_music = Music_Path_small };
 
                     viewShort.StartBreakBig = new Action(view_modelShort.ActiveteTime);
@@ -1573,7 +1597,8 @@ namespace Time.View_model
 
                     try
                     {
-                        if (my_short_model[0].IsSoundActive && my_short_model[0].ShortSoundId != -1)
+                        if (my_short_model[0].IsSoundActive && my_short_model[0].ShortSoundId != -1 &&
+                        List_sound != null && List_sound.Where(x => x.Id == my_short_model[0].ShortSoundId).Count() > 0)
 
                             Music_Path_small.Play(List_sound.Where(x => x.Id == my_short_model[0].ShortSoundId).First().Path, my_short_model[0].SoundVolume);
                     }
@@ -1586,10 +1611,10 @@ namespace Time.View_model
                     }
                 }
 
-
                 if (temp.type == Type_alert.One)
                 {
                     viewOne = new Alert();
+                    viewOne.ShowInTaskbar = false;
                     view_modelOne = new Alert_View_Model() { time_s = temp.time, type = Type_alert.One, my_music = Music_Path_one };
 
                     viewOne.StartBreakBig = new Action(view_modelOne.ActiveteTime);
@@ -1617,8 +1642,9 @@ namespace Time.View_model
                     viewOne.DataContext = view_modelOne;
                     try
                     {
-                        if (my_ome_model[0].IsSoundActive && my_ome_model[0].OneSoundId != -1)
-                            if (Selected_Item_sound != null)
+                        if (my_ome_model[0].IsSoundActive && my_ome_model[0].OneSoundId != -1 &&
+                        List_sound != null && List_sound.Where(x => x.Id == my_ome_model[0].OneSoundId).Count() > 0)
+                    
                                 Music_Path_one.Play(List_sound.Where(x => x.Id == my_ome_model[0].OneSoundId).First().Path, my_ome_model[0].SoundVolume);
                     }
                     catch (Exception ex)
@@ -1634,9 +1660,6 @@ namespace Time.View_model
 
 
                 }
-
-
-
             });
             }
             catch (Exception ex) { Log.Write(ex); }
@@ -1723,10 +1746,10 @@ namespace Time.View_model
 
 
                 }
-                if (List_sound!=null&&List_sound.Count > 0)
-                    return List_sound[0];
-                //return null;
-                return new Sound();
+                //if (List_sound!=null&&List_sound.Count > 0)
+                 //   return List_sound[0];
+                return null;
+                //return new Sound();
             }
             set
             {

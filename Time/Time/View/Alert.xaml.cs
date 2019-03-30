@@ -187,7 +187,8 @@ namespace Time.View
 
         private void GWindow_KeyUp_1(object sender, KeyEventArgs e)
         {
-            switch (e.Key )
+            if (type == Type_alert.Message)
+                switch (e.Key )
             {
                 case Key.Enter:
                     key_Enter_Up.Invoke();
