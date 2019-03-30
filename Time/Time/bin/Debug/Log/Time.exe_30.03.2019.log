@@ -4,3 +4,111 @@
    в Time.View_model.Index_View_Model.<>c__DisplayClass96_0.<Alert_box>b__0() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1547
 [30.03.2019 22:34:15.020] [System.Linq.Enumerable.First()] ѕоследовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
    в Time.View_model.Index_View_Model.<>c__DisplayClass96_0.<Alert_box>b__0() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 1547
+[30.03.2019 22:52:44.429] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:46.482] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:47.458] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:48.903] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:49.154] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:49.908] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:50.113] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:51.841] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:52.052] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:52.565] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:52.850] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:53.026] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 900
+[30.03.2019 22:52:55.213] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 900
+[30.03.2019 22:52:55.460] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:55.525] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:55.558] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:55.624] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:55.657] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:58.892] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 887
+[30.03.2019 22:52:59.406] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 900
+[30.03.2019 22:53:02.108] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 907
+[30.03.2019 22:53:04.032] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 907
+[30.03.2019 22:53:04.190] [System.Number.StringToNumber()] ¬ходна€ строка имела неверный формат.    в System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   в System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   в System.Convert.ToInt32(String value)
+   в Time.View_model.Index_View_Model.Converts(String str) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 907
+[30.03.2019 23:27:27.663] [System.Windows.Markup.WpfXamlLoader.Load()] "«адание свойства "System.Windows.Controls.Grid.ColumnSpan" вызвало исключение.": номер строки "584" и позици€ в строке "133".    в System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   в System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   в System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   в System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   в Time.MainWindow.InitializeComponent() в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml:строка 1
+   в Time.MainWindow..ctor() в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 82
+[30.03.2019 23:27:28.449] [Time.MainWindow.Set_text_menu()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.Set_text_menu(ResourceDictionary disk) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 68
+   в Time.View_model.Index_View_Model.Set_Language(String _language) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 163
+[30.03.2019 23:27:59.674] [System.Windows.Markup.WpfXamlLoader.Load()] "«адание свойства "System.Windows.Controls.Grid.ColumnSpan" вызвало исключение.": номер строки "584" и позици€ в строке "133".    в System.Windows.Markup.WpfXamlLoader.Load(XamlReader xamlReader, IXamlObjectWriterFactory writerFactory, Boolean skipJournaledProperties, Object rootObject, XamlObjectWriterSettings settings, Uri baseUri)
+   в System.Windows.Markup.WpfXamlLoader.LoadBaml(XamlReader xamlReader, Boolean skipJournaledProperties, Object rootObject, XamlAccessLevel accessLevel, Uri baseUri)
+   в System.Windows.Markup.XamlReader.LoadBaml(Stream stream, ParserContext parserContext, Object parent, Boolean closeStream)
+   в System.Windows.Application.LoadComponent(Object component, Uri resourceLocator)
+   в Time.MainWindow.InitializeComponent() в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml:строка 1
+   в Time.MainWindow..ctor() в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 82
+[30.03.2019 23:28:00.242] [Time.MainWindow.Set_text_menu()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.Set_text_menu(ResourceDictionary disk) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 68
+   в Time.View_model.Index_View_Model.Set_Language(String _language) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 163

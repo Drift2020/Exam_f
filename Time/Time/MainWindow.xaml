@@ -225,18 +225,22 @@
                                                   IsChecked="{Binding Is_big_timer,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
                                                   Content="{DynamicResource Timer_chec_big_break}" Background="White" FontSize="16"
                                                   Click="BigT_Click" Foreground="White" FontFamily="Segoe UI"/>
-                                       
+
                                     </Grid>
-                                    
+
                                 </GroupBox.Header>
                                 <StackPanel>
                                     <Grid Margin="0,5,0,5">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition/>
+                                            <ColumnDefinition Width="auto"/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Text="{DynamicResource Timer_combo_break_duration_big}" VerticalAlignment="Center"/>
-                                        <ComboBox ToolTip="{DynamicResource ToolTip_Timer_big_break}" x:Name="BreeakT" SelectedIndex="{Binding Index_time_big,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
+                                        <iconPacks:PackIconMaterial Kind="Clock"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="5,0,5,0"/>
+                                        <ComboBox ToolTip="{DynamicResource ToolTip_Timer_big_break}"
+                                                  x:Name="BreeakT" SelectedIndex="{Binding Index_time_big,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                                  Grid.Column="2">
                                             <StackPanel   Orientation="Horizontal" Width="90">
                                                 <TextBlock   Text="20" Padding="10,0,5,0"/>
                                                 <TextBlock TextAlignment="Right" Text="{DynamicResource Timer_minutes}"  Padding="0,0,10,0"/>
@@ -283,10 +287,13 @@
                                     <Grid Margin="0,5,0,5">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition/>
+                                            <ColumnDefinition Width="auto"/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock  Text="{DynamicResource Timer_combo_break_time_big}"  VerticalAlignment="Center"/>
-                                        <ComboBox ToolTip="{DynamicResource ToolTip_Timer_big_duration}" x:Name="BreeakD" SelectedIndex="{Binding Index_duration_big,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
+                                        <iconPacks:PackIconMaterial Kind="ClockAlert"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0" />
+                                        <ComboBox ToolTip="{DynamicResource ToolTip_Timer_big_duration}" x:Name="BreeakD"
+                                                  SelectedIndex="{Binding Index_duration_big,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="2">
                                             <StackPanel  Orientation="Horizontal" Width="90" HorizontalAlignment="Center">
                                                 <TextBlock   Text="2" Padding="10,0,5,0"/>
                                                 <TextBlock TextAlignment="Right" Text="{DynamicResource Timer_minutes}" Padding="0,0,10,0"/>
@@ -332,10 +339,14 @@
                                     <Grid Margin="0,5,0,5">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition/>
+                                            <ColumnDefinition Width="auto"/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Text="{DynamicResource Timer_combo_break_duration_short}" VerticalAlignment="Center"/>
-                                        <ComboBox  ToolTip="{DynamicResource ToolTip_Timer_short_break}" x:Name="ShortTime" SelectedIndex="{Binding Index_time_short, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
+                                        <iconPacks:PackIconMaterial Kind="Clock"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="5,0,5,0"/>
+                                        <ComboBox  ToolTip="{DynamicResource ToolTip_Timer_short_break}" x:Name="ShortTime" 
+                                                   SelectedIndex="{Binding Index_time_short, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                                   Grid.Column="2">
                                             <StackPanel  Orientation="Horizontal"   Width="90">
                                                 <TextBlock   Text="5" Padding="10,0,5,0"/>
                                                 <TextBlock TextAlignment="Right" Text="{DynamicResource Timer_minutes}"  />
@@ -366,10 +377,15 @@
                                     <Grid Margin="0,5,0,5">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition/>
+                                            <ColumnDefinition Width="auto"/>
                                             <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Text="{DynamicResource Timer_combo_break_time_short}" VerticalAlignment="Center"/>
-                                        <ComboBox ToolTip="{DynamicResource ToolTip_Timer_short_duration}" x:Name="ShortDuration" SelectedIndex="{Binding Index_duration_short, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Grid.Column="1">
+                                        <iconPacks:PackIconMaterial Kind="ClockAlert"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0" />
+                                        <ComboBox ToolTip="{DynamicResource ToolTip_Timer_short_duration}" 
+                                                  x:Name="ShortDuration"
+                                                  SelectedIndex="{Binding Index_duration_short, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                                  Grid.Column="2">
                                             <StackPanel  Orientation="Horizontal" Width="90">
                                                 <TextBlock   Text="8" Padding="10,0,5,0"/>
                                                 <TextBlock TextAlignment="Right" Text="{DynamicResource Timer_second}"  Padding="0,0,10,0"/>
@@ -391,14 +407,15 @@
                                     <Grid Margin="0,5,0,5">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition/>
-                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Text="{DynamicResource Timer_combo_break_duration_one_time_break}" VerticalAlignment="Center"/>
 
-
+                                        <iconPacks:PackIconMaterial Kind="Clock"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="5,0,5,0"/>
                                         <xctk:MaskedTextBox ToolTip="{DynamicResource ToolTip_Timer_one_break}" Padding="3" x:Name="mask" Text="{Binding Time_timer_textbox,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                                             TextAlignment="Center" Mask="00:00:00" ValueDataType="{x:Type s:String}" 
-                            Grid.Column="1"></xctk:MaskedTextBox>
+                            Grid.Column="2"></xctk:MaskedTextBox>
 
                                         <!--<Controls:NumericUpDown Value="{Binding Time_duration_textbox,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" Minimum ="0"  
                                                                 Interval = "1" StringFormat="00:00:00"  Grid.Column="1"/>-->
@@ -406,14 +423,16 @@
                                     <Grid Margin="0,5,0,5">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition/>
-                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="110"/>
                                         </Grid.ColumnDefinitions>
                                         <TextBlock Text="{DynamicResource Timer_combo_break_time_one_time_break}"   VerticalAlignment="Center"/>
 
-
-                                        <xctk:MaskedTextBox ToolTip="{DynamicResource ToolTip_Timer_one_duration}" Padding="3" x:Name="mask1" Text="{Binding Time_duration_textbox,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                        <iconPacks:PackIconMaterial Kind="ClockAlert"  Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,5,0" />
+                                        <xctk:MaskedTextBox ToolTip="{DynamicResource ToolTip_Timer_one_duration}" Padding="3" x:Name="mask1"
+                                                            Text="{Binding Time_duration_textbox,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
                                                             TextAlignment="Center" Mask="00:00:00" ValueDataType="{x:Type s:String}" 
-                            Grid.Column="1"></xctk:MaskedTextBox>
+                            Grid.Column="2"></xctk:MaskedTextBox>
 
                                     </Grid>
 
@@ -557,12 +576,13 @@
 
 
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition />
-                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="175"/>
                                 </Grid.ColumnDefinitions>
 
                                 <!--<TextBlock Text="{DynamicResource Date_title}" VerticalAlignment="Center" Margin="5"/>-->
-                                <ComboBox ToolTip="{DynamicResource ToolTip_Filters_stasis_calendar}" Grid.Column="0" Margin="5" x:Name="Comboboxes" 
+                                <iconPacks:PackIconMaterial Kind="Calendar" VerticalAlignment="Center" HorizontalAlignment="Center" Height="16"  Grid.Column="0" Width="24" Margin="0,10,4,10"/>
+                                <ComboBox ToolTip="{DynamicResource ToolTip_Filters_stasis_calendar}" Grid.Column="1" Margin="5" x:Name="Comboboxes" 
                                           Controls:TextBoxHelper.Watermark="{Binding Date_statistic_title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                                         IsEditable = "False"  SelectionChanged="PickerCombo_SelectionChanged">
                                     <ComboBoxItem>

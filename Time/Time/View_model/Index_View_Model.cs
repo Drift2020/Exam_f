@@ -93,11 +93,11 @@ namespace Time.View_model
 
                 if (Time_timer_textbox == "0")
                 {
-                    Time_timer_textbox = "__:__:__";
+                    Time_timer_textbox = "00:00:00";
                 }
                 if (Time_duration_textbox == "0")
                 {
-                    Time_duration_textbox = "__:__:__";
+                    Time_duration_textbox = "00:00:00";
                 }
                 now_day = new Events_Timer(dict);
                 FirstStartAutoStart();
@@ -596,21 +596,22 @@ namespace Time.View_model
 
         #endregion is activ sound
 
-        #region Number_time_big
+        //отображени времени до перерыва
+        ////#region Number_time_big
 
-        string text="None";
+        ////string text="None";
 
-        public string Number_time_big
-        {
-            get { return text; }
-            set
-            {
-                text = value;
-                OnPropertyChanged(nameof(Number_time_big));
-            }
-        }
+        ////public string Number_time_big
+        ////{
+        ////    get { return text; }
+        ////    set
+        ////    {
+        ////        text = value;
+        ////        OnPropertyChanged(nameof(Number_time_big));
+        ////    }
+        ////}
 
-        #endregion Number_time_big
+        ////#endregion Number_time_big
 
         #region is activ big timer
         Alert viewBig;
@@ -771,6 +772,7 @@ namespace Time.View_model
                 }
                 catch (Exception ex)
                 {
+                    Log.Write(ex);
 #if test
                     System.Windows.MessageBox.Show(ex.Message, "Ups...Is_Small");
 #endif
@@ -929,9 +931,9 @@ namespace Time.View_model
                 hours = 24;
 
 
-            var end_s = (second >= 10 ? second.ToString() : "_" + (second == 0 ? "_" : second.ToString()));
-            var end_m = (minutes >= 10 ? minutes.ToString() : "_" + (minutes == 0 ? "_" : minutes.ToString()));
-            var end_h = (hours >= 10 ? hours.ToString() : "_" + (hours == 0 ? "_" : hours.ToString()));
+            var end_s = (second >= 10 ? second.ToString() : "0" + (second == 0 ? "0" : second.ToString()));
+            var end_m = (minutes >= 10 ? minutes.ToString() : "0" + (minutes == 0 ? "0" : minutes.ToString()));
+            var end_h = (hours >= 10 ? hours.ToString() : "0" + (hours == 0 ? "0" : hours.ToString()));
 
             return String.Format("{0}:{1}:{2}", end_h, end_m, end_s);
 
