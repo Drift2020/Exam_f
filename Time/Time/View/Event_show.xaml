@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Time.View"
         mc:Ignorable="d"
-        Title="Event_show" Height="303" Width="260" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
+        Title="{DynamicResource Events_Alert_title}" Height="315" Width="260" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
     <Grid Margin="5">
 
         <Grid.ColumnDefinitions>
@@ -44,7 +44,7 @@
                     <Label HorizontalAlignment="Center" Content="{DynamicResource Events_Alert_Description}"/>
                 </GroupBox.Header>
 
-                <TextBox Height="120" Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                <TextBox IsReadOnly="True" Height="120" Text="{Binding Description, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
             </GroupBox>
            
         </Grid>
@@ -60,7 +60,7 @@
                     <Label HorizontalAlignment="Center" Content="{DynamicResource Events_Alert_Location}"/>
                 </GroupBox.Header>
 
-                <TextBox Height="5" Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+                <TextBox IsReadOnly="True" Height="5" Text="{Binding Location, UpdateSourceTrigger=PropertyChanged}" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
             </GroupBox>
 
         </Grid>

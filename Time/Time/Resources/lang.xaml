@@ -110,6 +110,7 @@
     <v:String x:Key="Events_Delete_message">Do you want delete this event?</v:String>
     <v:String x:Key="Events_Delete_title">Delete event</v:String>
 
+    <v:String x:Key="Events_Alert_title">Event</v:String>
     <v:String x:Key="Events_Alert_Summary">Summary:</v:String>
     <v:String x:Key="Events_Alert_Location">Location</v:String>
     <v:String x:Key="Events_Alert_Description">Description</v:String>
