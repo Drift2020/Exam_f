@@ -65,7 +65,7 @@ namespace Time.Code
                     new FileDataStore(credPath, true)).Result;
                 Console.WriteLine("Credential file saved to: " + credPath);
             }
-
+    
             // Create Google Calendar API service.
             service = new CalendarService(new BaseClientService.Initializer()
             {
@@ -75,7 +75,8 @@ namespace Time.Code
 
 
 
-            
+
+
 
 
 
