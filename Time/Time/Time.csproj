@@ -249,6 +249,7 @@
     <Compile Include="View_model\Add_Event_View_Model.cs" />
     <Compile Include="View_model\Alert_View_Model.cs" />
     <Compile Include="View_model\Edit_Event_View_Model.cs" />
+    <Compile Include="View_model\Event_Alert_View_Model.cs" />
     <Compile Include="View_model\Index_View_Model.cs" />
     <Compile Include="View_model\View_Model_Base.cs" />
     <Page Include="MainWindow.xaml">

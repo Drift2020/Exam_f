@@ -20,16 +20,17 @@ namespace Time.Code
             dict = _dict;
         }
 
-        void ShowMessage(string info)
+        void ShowMessage(string name, string description, string location)
         {
             App.Current.Dispatcher.Invoke((Action)delegate // <--- HERE
             {
-                Alert message = new Alert();
-                message.type = Type_alert.Message;
-                Alert_View_Model message_model = new Alert_View_Model() { type = Type_alert.Message };
-                message_model.Closenig = new Action(message.Close);
-                message.Activated_message_style_2();
-                message_model.Text_info = info;
+                Event_show message = new Event_show();
+               
+                Event_Alert_View_Model message_model = new Event_Alert_View_Model();          
+              
+                message_model.Location = location;
+                message_model.Name = name;
+                message_model.Description = description;
                 message.DataContext = message_model;
                 message.Show();
             });
@@ -47,14 +48,23 @@ namespace Time.Code
                     elem.Hour== _now_Date[i].TimeStart.Value.Hour && 
                     elem.Minute == _now_Date[i].TimeStart.Value.Minute)
                     {
-                   
-                        ShowMessage(String.Format("{0}: {1}\n{2}: {3}\n{4}: {5}", dict["Sites_list_Summary"].ToString(),
-                            _now_Date[i].Summary,
-                            dict["Sites_list_Location"].ToString(),
-                            _now_Date[i].Location,
-                            dict["Sites_list_Description"].ToString(), 
-                            _now_Date[i].Description));
-                        _now_Date.RemoveAt(i);
+
+                    //ShowMessage(dict["Sites_list_Summary"].ToString(),
+                    //    _now_Date[i].Summary,
+                    //    dict["Sites_list_Location"].ToString(),
+                    //    _now_Date[i].Location,
+                    //    dict["Sites_list_Description"].ToString(), 
+                    //    _now_Date[i].Description));
+
+
+
+                    ShowMessage(
+                        _now_Date[i].Summary,
+                     
+                        _now_Date[i].Location,
+                        
+                        _now_Date[i].Description);
+            _now_Date.RemoveAt(i);
                      i--;
                     }
                 }

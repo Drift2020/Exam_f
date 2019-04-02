@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Time.View"
         mc:Ignorable="d"
-        Title="Event_show" Height="293" Width="250">
-    <Grid>
+        Title="Event_show" Height="303" Width="260" ResizeMode="NoResize" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Grid Margin="5">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>

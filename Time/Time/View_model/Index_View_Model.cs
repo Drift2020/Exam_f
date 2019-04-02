@@ -215,7 +215,6 @@ namespace Time.View_model
         }
         #endregion 
 
-
         #region Saves
 
         void SaveGrean()
@@ -389,7 +388,6 @@ namespace Time.View_model
         }
 
         #endregion Saves
-
 
         #region Timer
 
@@ -1936,7 +1934,6 @@ namespace Time.View_model
 
         #endregion Timer
 
-
         #region filter
 
         #region List
@@ -2678,8 +2675,6 @@ namespace Time.View_model
 
         #region Event 
 
-
-
         #region Login
         GoogleAPI my_google = new GoogleAPI();
         #endregion Login
@@ -2905,6 +2900,7 @@ namespace Time.View_model
         }
 
         #endregion  Button_click_add_event
+
         #region Button_click_edit_event
 
         private DelegateCommand _Command_edit_event;
@@ -2962,6 +2958,7 @@ namespace Time.View_model
         }
 
         #endregion  Button_click_delete_event
+
         //#region Button_click_test
 
         //private DelegateCommand _Command_test;
