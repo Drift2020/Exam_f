@@ -243,6 +243,9 @@
     <Compile Include="View\Alert.xaml.cs">
       <DependentUpon>Alert.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Event_show.xaml.cs">
+      <DependentUpon>Event_show.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View_model\Add_Event_View_Model.cs" />
     <Compile Include="View_model\Alert_View_Model.cs" />
     <Compile Include="View_model\Edit_Event_View_Model.cs" />
@@ -288,6 +291,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Alert.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Event_show.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
