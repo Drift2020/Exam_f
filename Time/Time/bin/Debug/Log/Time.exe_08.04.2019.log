@@ -1,0 +1,104 @@
+[08.04.2019 19:27:51.504] [System.IO.__Error.WinIOError()] ‘айл 'C:\Windows\SysWOW64\ic_timer_128_28821.ico' не найден.    в System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   в System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   в System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   в System.Drawing.Icon..ctor(String fileName, Int32 width, Int32 height)
+   в System.Drawing.Icon..ctor(String fileName)
+   в Time.MainWindow..ctor() в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 87
+[08.04.2019 19:27:55.214] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 60
+[08.04.2019 19:28:18.519] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 412
+[08.04.2019 19:28:20.066] [Time.MainWindow.Set_text_menu()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.Set_text_menu(ResourceDictionary disk) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 68
+   в Time.View_model.Index_View_Model.Set_Language(String _language) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 163
+[08.04.2019 19:28:20.425] [Time.View_model.Index_View_Model.set_Is_Small()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 779
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 120
+[08.04.2019 19:28:25.824] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 223
+[08.04.2019 19:28:25.839] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 265
+[08.04.2019 19:28:25.839] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 305
+[08.04.2019 19:28:25.839] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 335
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 374
+[08.04.2019 19:44:45.096] [System.ThrowHelper.ThrowArgumentOutOfRangeException()] »ндекс за пределами диапазона. »ндекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+»м€ параметра: index    в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в Time.View_model.Index_View_Model.get_Time_timer_textbox() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 850
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 98
+[08.04.2019 19:44:46.561] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 412
+[08.04.2019 19:44:48.175] [System.ThrowHelper.ThrowArgumentOutOfRangeException()] »ндекс за пределами диапазона. »ндекс должен быть положительным числом, а его размер не должен превышать размер коллекции.
+»м€ параметра: index    в System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+   в System.Collections.Generic.List`1.get_Item(Int32 index)
+   в System.Collections.ObjectModel.Collection`1.get_Item(Int32 index)
+   в Time.View_model.Index_View_Model.get_Is_Small() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 761
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 124
+[08.04.2019 19:45:07.450] [System.Data.Entity.Internal.InternalContext.PerformInitializationAction()] An exception occurred while initializing the database. See the InnerException for details.    в System.Data.Entity.Internal.InternalContext.PerformInitializationAction(Action action)
+   в System.Data.Entity.Internal.InternalContext.PerformDatabaseInitialization()
+   в System.Data.Entity.Internal.LazyInternalContext.<InitializeDatabase>b__4(InternalContext c)
+   в System.Data.Entity.Internal.RetryAction`1.PerformAction(TInput input)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabaseAction(Action`1 action)
+   в System.Data.Entity.Internal.LazyInternalContext.InitializeDatabase()
+   в System.Data.Entity.Internal.InternalContext.Initialize()
+   в System.Data.Entity.Internal.InternalContext.GetEntitySetAndBaseTypeForType(Type entityType)
+   в System.Data.Entity.Internal.Linq.InternalSet`1.Initialize()
+   в System.Data.Entity.Internal.Linq.InternalSet`1.GetEnumerator()
+   в System.Data.Entity.Infrastructure.DbQuery`1.System.Collections.IEnumerable.GetEnumerator()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 64
+[08.04.2019 19:45:08.868] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 412
+[08.04.2019 19:45:10.148] [Time.View_model.Index_View_Model.set_Is_Small()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 783
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 124
+[08.04.2019 19:45:11.448] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 227
+[08.04.2019 19:45:11.450] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 269
+[08.04.2019 19:45:11.451] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 309
+[08.04.2019 19:45:11.452] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 339
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 378
+[08.04.2019 19:45:27.474] [System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands()] An error occurred while executing the command definition. See the inner exception for details.    в System.Data.Entity.Core.EntityClient.Internal.EntityCommandDefinition.ExecuteStoreCommands(EntityCommand entityCommand, CommandBehavior behavior)
+   в System.Data.Entity.Core.Objects.Internal.ObjectQueryExecutionPlan.Execute[TResultType](ObjectContext context, ObjectParameterCollection parameterValues)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   в System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   в System.Data.Entity.Infrastructure.DefaultExecutionStrategy.Execute[TResult](Func`1 operation)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   в System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   в System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   в System.Data.Entity.QueryableExtensions.Load(IQueryable source)
+   в Time.View_model.Index_View_Model..ctor(ApplicationContext temp) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 64
+[08.04.2019 19:45:28.669] [Time.MainWindow.DropCalendar_SelectedDatesChanged()] —сылка на объект не указывает на экземпл€р объекта.    в Time.MainWindow.DropCalendar_SelectedDatesChanged(Object sender, SelectionChangedEventArgs e) в D:\Documents\GitHub\Exam_f\Time\Time\MainWindow.xaml.cs:строка 412
+[08.04.2019 19:45:30.113] [Time.View_model.Index_View_Model.set_Is_Small()] —сылка на объект не указывает на экземпл€р объекта.    в Time.View_model.Index_View_Model.set_Is_Small(Boolean value) в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 783
+   в Time.View_model.Index_View_Model.View_model_up() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 124
+[08.04.2019 19:45:31.319] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveGrean() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 227
+[08.04.2019 19:45:31.320] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveRed() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 269
+[08.04.2019 19:45:31.321] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveStatisticSite() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 309
+[08.04.2019 19:45:31.322] [System.Linq.Enumerable.ToList()] «начение не может быть неопределенным.
+»м€ параметра: source    в System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.SaveSoundTimer() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 339
+   в Time.View_model.Index_View_Model.Closing() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 378

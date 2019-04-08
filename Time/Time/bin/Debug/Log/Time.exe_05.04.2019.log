@@ -1,0 +1,2 @@
+[05.04.2019 14:01:55.415] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2132

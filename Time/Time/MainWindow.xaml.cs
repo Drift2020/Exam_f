@@ -406,6 +406,9 @@ namespace Time
         {
             try
             {
+
+              
+
                 Update_select_dates.Invoke(DropCalendar.SelectedDates.ToList());
             }
             catch (Exception ex)
@@ -646,5 +649,7 @@ namespace Time
         {
 
         }
+
+       
     }
 }

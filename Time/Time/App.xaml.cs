@@ -38,6 +38,18 @@ namespace Time
 
         public App()
         {
+
+
+
+            try
+            {
+                Environment.CurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
+
             try
             {
                  myLite = new ApplicationContext();
@@ -136,8 +148,16 @@ namespace Time
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-                        
-
+            try
+            {
+             
+            Environment.CurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+          
+            }
+            catch (Exception ex)
+            {
+                Log.Write(ex);
+            }
             try
             {
                 MainWindow view = new MainWindow();

@@ -1,0 +1,37 @@
+[06.04.2019 21:08:11.713] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2132
+[06.04.2019 21:08:20.945] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2132
+[06.04.2019 21:08:53.554] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2132
+[06.04.2019 21:10:51.375] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic()
+[06.04.2019 21:41:35.794] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2133
+[06.04.2019 21:44:25.715] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic()
+[06.04.2019 21:45:33.459] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic()
+[06.04.2019 21:48:15.256] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:49:35.223] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:50:19.717] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:50:28.219] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:50:38.167] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:51:48.103] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:52:55.837] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:57:42.276] [Time.Code.GoogleAPI.Set_events()] Ссылка на объект не указывает на экземпляр объекта.    в Time.Code.GoogleAPI.Set_events(DateTime days, String& Logins) в D:\Documents\GitHub\Exam_f\Time\Time\Code\GoogleAPI.cs:строка 88
+[06.04.2019 21:57:54.814] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:59:06.918] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:59:13.371] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136
+[06.04.2019 21:59:21.028] [System.Linq.Enumerable.First()] Последовательность не содержит элементов    в System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   в Time.View_model.Index_View_Model.Set_List_Statistic() в D:\Documents\GitHub\Exam_f\Time\Time\View_model\Index_View_Model.cs:строка 2136

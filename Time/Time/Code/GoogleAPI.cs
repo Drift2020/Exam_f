@@ -83,54 +83,70 @@ namespace Time.Code
         }
         public ObservableCollection<NowDate> Set_events( DateTime days, out string Logins)
         {
-            EventsResource.ListRequest request = service.Events.List("primary");
-            request.TimeMin = new DateTime(days.Year, days.Month, days.Day, 0, 0, 0);
-            request.TimeMax = new DateTime(days.Year, days.Month, days.Day, 23, 59, 59);
-            request.ShowDeleted = false;
-            request.SingleEvents = true;
-            //  request.MaxResults = int.Parse(i);
-            request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
-
-            // List events.
-            Events events = request.Execute();
-
-            ObservableCollection<NowDate> My_list = new ObservableCollection<NowDate>();
-            
-            Logins = events.Summary;
-            if (events.Items != null && events.Items.Count > 0)
+            try
             {
-                foreach (var eventItem in events.Items)
+                EventsResource.ListRequest request = service.Events.List("primary");
+                request.TimeMin = new DateTime(days.Year, days.Month, days.Day, 0, 0, 0);
+                request.TimeMax = new DateTime(days.Year, days.Month, days.Day, 23, 59, 59);
+                request.ShowDeleted = false;
+                request.SingleEvents = true;
+                //  request.MaxResults = int.Parse(i);
+                request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
+
+                // List events.
+                Events events = request.Execute();
+
+                ObservableCollection<NowDate> My_list = new ObservableCollection<NowDate>();
+
+                Logins = events.Summary;
+                if (events.Items != null && events.Items.Count > 0)
                 {
+                    foreach (var eventItem in events.Items)
+                    {
 
-                    bool temp = eventItem.Start.DateTime == eventItem.End.DateTime;
+                        bool temp = eventItem.Start.DateTime == eventItem.End.DateTime;
 
 
 
 
 
-                    My_list.Add(new NowDate() { Summary = eventItem.Summary,
-                        TimeStart = eventItem.Start.DateTime,
-                        TimeEnd = eventItem.End.DateTime,
-                        Time = eventItem.Start.DateTime == null ? null : eventItem.Start.DateTime == eventItem.End.DateTime ? String.Format("{0}:{1}",
-                             (eventItem.Start.DateTime.Value.Hour > 9 ? eventItem.Start.DateTime.Value.Hour.ToString() : "0" + eventItem.Start.DateTime.Value.Hour.ToString()),
-                              (eventItem.Start.DateTime.Value.Minute > 9 ? eventItem.Start.DateTime.Value.Minute.ToString() : "0" + eventItem.Start.DateTime.Value.Minute.ToString()))
-                              : String.Format("{0}:{1} - {2}:{3}",
-                             (eventItem.Start.DateTime.Value.Hour > 9 ? eventItem.Start.DateTime.Value.Hour.ToString() : "0" + eventItem.Start.DateTime.Value.Hour.ToString()),
-                              (eventItem.Start.DateTime.Value.Minute > 9 ? eventItem.Start.DateTime.Value.Minute.ToString() : "0" + eventItem.Start.DateTime.Value.Minute.ToString()),
-                              (eventItem.End.DateTime.Value.Hour > 9 ? eventItem.End.DateTime.Value.Hour.ToString() : "0" + eventItem.End.DateTime.Value.Hour.ToString()),
-                              (eventItem.End.DateTime.Value.Minute > 9 ? eventItem.End.DateTime.Value.Minute.ToString() : "0" + eventItem.End.DateTime.Value.Minute.ToString())
+                        My_list.Add(new NowDate()
+                        {
+                            Summary = eventItem.Summary,
+                            TimeStart = eventItem.Start.DateTime,
+                            TimeEnd = eventItem.End.DateTime,
+                            Time = eventItem.Start.DateTime == null ? null : eventItem.Start.DateTime == eventItem.End.DateTime ? String.Format("{0}:{1}",
+                                 (eventItem.Start.DateTime.Value.Hour > 9 ? eventItem.Start.DateTime.Value.Hour.ToString() : "0" + eventItem.Start.DateTime.Value.Hour.ToString()),
+                                  (eventItem.Start.DateTime.Value.Minute > 9 ? eventItem.Start.DateTime.Value.Minute.ToString() : "0" + eventItem.Start.DateTime.Value.Minute.ToString()))
+                                  : String.Format("{0}:{1} - {2}:{3}",
+                                 (eventItem.Start.DateTime.Value.Hour > 9 ? eventItem.Start.DateTime.Value.Hour.ToString() : "0" + eventItem.Start.DateTime.Value.Hour.ToString()),
+                                  (eventItem.Start.DateTime.Value.Minute > 9 ? eventItem.Start.DateTime.Value.Minute.ToString() : "0" + eventItem.Start.DateTime.Value.Minute.ToString()),
+                                  (eventItem.End.DateTime.Value.Hour > 9 ? eventItem.End.DateTime.Value.Hour.ToString() : "0" + eventItem.End.DateTime.Value.Hour.ToString()),
+                                  (eventItem.End.DateTime.Value.Minute > 9 ? eventItem.End.DateTime.Value.Minute.ToString() : "0" + eventItem.End.DateTime.Value.Minute.ToString())
 
-                              ),
-                        Location = eventItem.Location?.ToString(),
-                    Description = eventItem.Description?.ToString(),
-                    IsAll = temp,
-                    Id = eventItem.Id
+                                  ),
+                            Location = eventItem.Location?.ToString(),
+                            Description = eventItem.Description?.ToString(),
+                            IsAll = temp,
+                            Id = eventItem.Id
 
-                    });
-                   
+                        });
+
+                    }
                 }
+                return My_list;
             }
-            return My_list;
+            catch (Exception ex)
+            {
+              
+                Log.Write(ex);
+                Logins = "";
+                return null;
+#if test
+                        System.Windows.MessageBox.Show(ex.Message, "Set_events end");
+#endif
+            }
+           
         }
 
         public Event GetEvent(string id)

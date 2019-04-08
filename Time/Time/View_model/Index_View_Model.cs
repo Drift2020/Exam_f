@@ -55,7 +55,8 @@ namespace Time.View_model
 
             try
             {
-            
+          
+
                 db = temp;
                 db.GreanSites.Load();
                 db.RedSites.Load();
@@ -2087,6 +2088,8 @@ namespace Time.View_model
             {
               
                 my_dates = i;
+
+               
             
                 if (my_dates != null && my_dates.Count > 0)
                 {
@@ -2127,73 +2130,115 @@ namespace Time.View_model
             {
                 if (db != null&& db.StatisticSites!=null)
                 {
-                    var lits_temp = db.StatisticSites.ToList();
-                    List<StatisticSite> list = new List<Time.StatisticSite>();
-                    var start = (my_dates.First());
-
-                    if (start != null)
+                    try
                     {
+                        var lits_temp = db.StatisticSites.ToList();
+                        List<StatisticSite> list = new List<Time.StatisticSite>();
+                        var start = (my_dates.First());
 
-
-
-                        var end = (my_dates[my_dates.Count - 1]);
-
-                        if (end != start)
+                        if (start != null)
                         {
 
 
-                            if (start > end)
+
+                            var end = (my_dates[my_dates.Count - 1]);
+
+                            if (end != start)
                             {
-                                var temp = DateTime.Parse(start.ToString());
-                                start = end;
-                                end = temp;
-                            }
-
-                            for (var i = 0; i < lits_temp.Count; i++)
-                            {
-                                if (DateTime.Parse(lits_temp[i].Time) >= DateTime.Parse(String.Format("{0}.{1}.{2} 00:00:00", start.Day, start.Month, start.Year))
 
 
-
-
-                                    && DateTime.Parse(lits_temp[i].Time) <= DateTime.Parse(String.Format("{0}.{1}.{2} 00:00:00", end.Day, end.Month, end.Year)))
+                                if (start > end)
                                 {
-                                    list.Add(lits_temp[i]);
+                                    var temp = DateTime.Parse(start.ToString());
+                                    start = end;
+                                    end = temp;
                                 }
-                            }
+                                try
+                                {
+                                    for (var i = 0; i < lits_temp.Count; i++)
+                                    {
+                                        if (DateTime.Parse(lits_temp[i].Time) >= DateTime.Parse(String.Format("{0}.{1}.{2} 00:00:00", start.Day, start.Month, start.Year))
 
 
-                        }
-                        else
-                        {
-                            for (var i = 0; i < lits_temp.Count; i++)
-                            {
-                                var i1 = DateTime.Parse(lits_temp[i].Time);
-                                if (DateTime.Parse(lits_temp[i].Time).Year <= end.Year)
-                                    if (DateTime.Parse(lits_temp[i].Time).Month <= end.Month)
-                                        if (DateTime.Parse(lits_temp[i].Time).Day <= end.Day)
+
+
+                                            && DateTime.Parse(lits_temp[i].Time) <= DateTime.Parse(String.Format("{0}.{1}.{2} 00:00:00", end.Day, end.Month, end.Year)))
                                         {
                                             list.Add(lits_temp[i]);
                                         }
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+
+                                    Log.Write(ex);
+#if test
+                                    System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic end");
+#endif
+                                }
+
                             }
+                            else
+                            {
+                                try
+                                {
+                                    for (var i = 0; i < lits_temp.Count; i++)
+                                    {
+                                        var i1 = DateTime.Parse(lits_temp[i].Time);
+                                        if (DateTime.Parse(lits_temp[i].Time).Year <= end.Year)
+                                            if (DateTime.Parse(lits_temp[i].Time).Month <= end.Month)
+                                                if (DateTime.Parse(lits_temp[i].Time).Day <= end.Day)
+                                                {
+                                                    list.Add(lits_temp[i]);
+                                                }
+                                    }
+                                }
+                                catch (Exception ex)
+                                {
+
+                                    Log.Write(ex);
+#if test
+                                    System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic end");
+#endif
+                                }
+                            }
+
                         }
 
+                        try
+                        {
+                            if (list.ToList().Count > 0)
+                            {
+                                list_StatisticSite = list.ToList();
+                                StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
+
+                            }
+                            else
+                            {
+                                list_StatisticSite = new List<StatisticSite>();
+                                StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
+
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+
+                            Log.Write(ex);
+#if test
+                            System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic end");
+#endif
+                        }
+
+                        OnPropertyChanged(nameof(StatisticSite));
                     }
-
-
-                    if (list.ToList().Count > 0)
+                    catch (Exception ex)
                     {
-                        list_StatisticSite = list.ToList();
-                        StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
 
+                        Log.Write(ex);
+#if test
+                        System.Windows.MessageBox.Show(ex.Message, "Set_List_Statistic end");
+#endif
                     }
-                    else
-                    {
-                        list_StatisticSite = new List<StatisticSite>();
-                        StatisticSite = new ObservableCollection<Time.StatisticSite>(list_StatisticSite);
-
-                    }
-                    OnPropertyChanged(nameof(StatisticSite));
                 }
             }
             catch (Exception ex)
@@ -2558,7 +2603,7 @@ namespace Time.View_model
         }
 
 
-        bool auto_start;
+        bool auto_start=false;
         public bool Auto_start
         {
             get
