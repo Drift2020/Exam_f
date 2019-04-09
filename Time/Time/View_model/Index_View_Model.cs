@@ -55,8 +55,8 @@ namespace Time.View_model
 
             try
             {
-          
 
+                Environment.CurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
                 db = temp;
                 db.GreanSites.Load();
                 db.RedSites.Load();
@@ -2588,16 +2588,31 @@ namespace Time.View_model
         #region Settings
         void FirstStartAutoStart()
         {
-            try { 
-            RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-            if (saveKey.GetValue("Time") != null)
-            {
-                saveKey.SetValue("Time", System.Windows.Forms.Application.ExecutablePath);
-                saveKey.Close();
-                auto_start = true;
+            try {
+                using (RegistryKey saveKey = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                    if (saveKey.GetValue("Time") != null)
+                    {
+                        saveKey.SetValue("Time", System.Reflection.Assembly.GetExecutingAssembly().Location);
 
-                OnPropertyChanged(nameof(Auto_start));
-            }
+
+                        saveKey.Close();
+                        auto_start = true;
+
+                        OnPropertyChanged(nameof(Auto_start));
+                    }
+
+
+                //using (RegistryKey saveKey = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                //    if (saveKey.GetValue("Time") != null)
+                //    {
+                //        saveKey.SetValue("Time", System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+
+                //        saveKey.Close();
+                //        auto_start = true;
+
+                //        OnPropertyChanged(nameof(Auto_start));
+                //    }
             }
             catch (Exception ex) { Log.Write(ex); }
         }
@@ -2613,7 +2628,7 @@ namespace Time.View_model
             set
             {
 
-                //  RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
+                //  RegistryKey saveKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);LocalMachine
 
 
 
@@ -2621,11 +2636,17 @@ namespace Time.View_model
                 {
                     try
                     {
-                        using (RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                        using (RegistryKey rkApp = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
                         {
                             rkApp.SetValue("Time", System.Reflection.Assembly.GetExecutingAssembly().Location);
 
                         }
+
+                        //using (RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                        //{
+                        //    rkApp.SetValue("Time", System.Reflection.Assembly.GetExecutingAssembly().Location);
+
+                        //}
                     }
                     catch (Exception ex)
                     {
@@ -2642,11 +2663,17 @@ namespace Time.View_model
                 {
                     try
                     {
-                        using (RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                        using (RegistryKey rkApp = Registry.LocalMachine.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
                         {
                             rkApp.DeleteValue("Time", false);
 
                         }
+
+                        //using (RegistryKey rkApp = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true))
+                        //{
+                        //    rkApp.DeleteValue("Time", false);
+
+                        //}
                     }
                     catch (Exception ex)
                     {
@@ -2664,49 +2691,7 @@ namespace Time.View_model
 
 
                 }
-
-                //                if (value )
-                //                {
-                //                    try
-                //                    {
-                //                        using (var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true))
-                //                    { key.SetValue("Timer", System.Windows.Forms.Application.ExecutablePath);
-                //                            key.Close();
-                //                        }
-                //                } catch(Exception ex) {
-
-                //#if test
-                //                        System.Windows.MessageBox.Show(ex.Message);
-                //#endif
-                //                    }
-
-
-                //                }
-                //                else
-                //                {
-                //                    try {
-                //                    using (var key = Microsoft.Win32.Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true))
-                //                    {
-                //                        key.DeleteValue("Timer");
-                //                            key.Close();
-                //                        }
-                //                    }
-                //                     catch (Exception ex)
-                //                    {
-
-                //#if test
-                //                        System.Windows.MessageBox.Show(ex.Message);
-                //#endif
-                //                    }
-                //                    // var key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run\", true);
-                //                    //if (saveKey.GetValue("Time") != null)
-                //                    //{
-                //                    //    saveKey.DeleteValue("Time");
-                //                    //    auto_start = value;
-                //                    //}
-
-
-                //                }
+                
 
                 auto_start = value;
 
